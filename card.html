@@ -1,0 +1,1323 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>THE CARD GAME</title>
+        <meta charset="utf-8" />
+        <meta name="description" content="THE CARD GAME / カードで遊ぼう！"/>
+        <meta name="author" content="SUNSTRIPE"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link rel="stylesheet" href="./css/sns.css"/>
+        <link rel="stylesheet" href="./css/styles.css"/>
+        <!--[if lt IE 9]>
+         <script src="//cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
+         <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+         <![endif]-->
+        <link href="https://fonts.googleapis.com/css?family=Audiowide|Black+Ops+One|Cabin+Sketch|Fredericka+the+Great|Poiret+One|Press+Start+2P|VT323|Josefin+Slab" rel="stylesheet"/>
+            <link rel="shortcut icon" href=""/>
+            </head>
+    <body>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121197913-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            
+            gtag('config', 'UA-121197913-1');
+            </script>
+        <script type="text/javascript" src="./js/sns.js"></script>
+        <script type="text/javascript" src="./js/charactercard.js"></script>
+        <script type="text/javascript" src="./js/changecard.js"></script>
+        <script type="text/javascript" src="./js/itemcard.js"></script>
+        <script type="text/javascript" src="./js/scenecard.js"></script>
+        <script type="text/javascript" src="./js/actioncard.js"></script>
+        <style>
+            body {
+                color:black;
+                background-color:rgba(200,200,255,0.5);
+                font-family: 'Josefin Slab', serif;
+            }
+        </style>
+        <!-- Place your content here -->
+        <!-- SCRIPTS -->
+        <!-- Example: <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> -->
+        <header class="stagecard">
+            <h1><a href="./card.html">THE CARD GAME OFFICIAL WEB SITE</a></h1>
+            <p><span>THE CARD GAME 公式サイト</span></p>
+            <div id="snsnav">
+                <script>snsDocumentNav()</script>
+                <a href="https://line.me/R/ti/p/%40dqv6292a"><img height="36" border="0" alt="友だち追加" src="https://scdn.line-apps.com/n/line_add_friends/btn/ja.png"></a>
+            </div>
+            <nav>
+                <!--a href='./index.html'>TOP</a> |
+                 <!--a href='./news/'>NEWS</a> |
+                 <!--a href='./event/'>EVENT</a> |
+                 <!--a href='./introduction.html'>INTRODUCTION</a> |
+                 <!--a href='./member/'>MEMBER</a> |
+                 <!--a href='./link.html'>LINK</a> |
+                 <!--a href='./blog.html'>BLOG</a> |
+                 <!--a href='./about.html'>ABOUT</a> <br //-->
+                <a href='./card.html'>CARD</a> |
+                <a href='./news/index.html'>NEWS</a> |
+                <a href='./memory/index.html'>MEMORY</a> |
+                <a href='./rulebook.html'>RULEBOOK</a> |
+                <a href="https://goo.gl/forms/2yAdqEgTXWACYvm92" target="_blank">プロデュースフォーム</a> |
+                <a href="http://www.cometeo.com/room/PPMtpEGq/" target="_blank">B B S</a>
+                <!--a href='./system.html'>SYSTEM</a> |
+                 <!--a href='./shop.html'>SHOP</a> <br />
+                 <!--a href='./sitemap.html'>SITEMAP</a> |
+                 <!--a href='./contact.html'>CONTACT</a/-->
+            </nav>
+        </header>
+        
+        <!--video autoplay muted controls poster="./images/flyer.jpg" id="movie" name="flyer" controls="controls">
+         <source src="./movie/flyer.mp4" type="video/mp4" />
+         <img src="./images/flyer.jpg" />
+         </video>
+         <script>
+         var movie = document.getElementById("movie");
+         movie.controls = false;
+         </script-->
+        
+        <!-- div>
+         <div style="float:left;width:30%">
+         <h3>NEWS</h3>
+         </div>
+         <div style="float:left;width:30%">
+         <h3>GOODS</h3>
+         </div>
+         <div style="float:left;width:30%">
+         <h3>TWITTER</h3>
+         </div>
+         </div -->
+        <hr  style="clear:both;"/>
+        <div style="padding:10px;" class="stagecard">
+            
+            <h2>THE CARD GAME</h2>
+            <h3 class="stagecard">■カード■  <a href='./card.html'>CARD</a> | <a href='./news/index.html'>NEWS</a> | <a href='./memory/index.html'>MEMORY</a> | <a href="https://goo.gl/forms/2yAdqEgTXWACYvm92" target="_blank">プロデュースフォーム</a> | <a href='./rulebook.html'>RULEBOOK</a></h3>
+            
+            <!--
+             style>
+             #pr_movie {
+             position:static;
+             width:100%;
+             height:400px;
+             }
+             @media screen and ( min-width:1000px ) {
+             #pr_movie {
+             position:fixed;
+             top:300px;
+             left:400px;
+             width:40%;
+             height:300px;
+             min-width:300px;
+             min-height:200px;
+             }
+             }
+             </style>
+             
+             <iframe id="pr_movie" src="https://www.youtube.com/embed/f9s6vkVRpzM?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe
+             //-->
+            
+            <h3 id="pickup">PICKUP</h3>
+            
+            <div class="pickup" style="padding:10px;background-color:rgba(255,255,255,0.5);">
+                <div style="padding:20px;border-bottom: double 10px rgba(255,155,155,0.5);">
+                    <h4><span class="news"></span></h4>
+                    <h3 class="THECARDGAMEPublicRelations">THE CARD GAME 固定定期</h3>
+                    <a href="https://twitter.com/thecardgame_JP" target="_blank">@hecardgame_JP</a>
+                    <br />
+                    毎週 火曜日 / 土曜日 は <a href="https://twitter.com/hash=カードの日">#カードの日</a>
+                    <br />
+                    毎週 木曜日 は <a href="https://twitter.com/hash=素敵曜日ナイトスクーる">#素敵曜日ナイトスクーる</a>
+                </div>
+
+                <!-- h4><span class="news">NEW</span>６月３０日のイベントが急遽中止となりました。</h4>
+                 この度は、力不足の上、ご連絡が急になりましたため申し訳ございません
+                 <hr class="clearfix" noshade/ -->
+                
+                <!--h4><span class="news">NEW</span><a href="#pr_movie">イベント動画</a>をUPしました</h4>
+                 
+                 <hr class="clearfix" noshade/-->
+                <div style="padding:20px;border-bottom: double 10px rgba(255,155,155,0.5);">
+                    <h4><span class="news">NEW</span></h4>
+                    <h3 class="THECARDGAMEPublicRelations">THE CARD GAME 広報</h3>
+                    <a href="https://twitter.com/thecardgame_JP" target="_blank">@hecardgame_JP</a>
+                    <br />
+                    Twitterアカウント運用を開始いたしました。
+                    <hr/>
+                    <a href="#word">THE CARD GAMEの用語</a>を追加いたしました。
+                    <hr/>
+                    <a href="#word">THE CARD GAMEの地域別</a>
+                    カード化されたカードを閲覧が可能。
+                </div>
+
+                
+                
+                <div style="padding:20px;border-bottom: double 10px rgba(255,155,155,0.5);">
+                    <h4><span class="news">NEW</span></h4>
+                    <h3 class="THECARDGAMEManagement">THE CARD GAME 運営</h3>
+                    <a href="http://night-school.karaage.site/">
+                        <h4>素敵曜日！ナイトスクーる</h4>
+                    </a><br />
+                    毎週木曜日番組放送！<br />
+                    スポンサーとなります！！<br />
+                    物販などに配布され始めます！！<br />
+                    <h4>
+                        ・<a href="./card/kugimachimiyabi.html">釘町みやび</a> さん（愛知県）<br />
+                        ・<a href="./card/kentokomai.html">こまいけんと</a> さん（奈良県）<br />
+                        ・<a href="./card/kyoro.html">伊藤麻衣</a> さん（宮城県）<br />
+                        ・<a href="./card/miookamoto.html">岡本美緒</a> さん（北海道）<br />
+                        をカード化しました</h4>
+                    <a href="./card/kugimachimiyabi.html">
+                        <img class="imageHover" src="./images/card/kugimachimiyabi.png" alt="釘町みやび" title="釘町みやび" style="width:100px;"/>
+                    </a>
+                    <a href="./card/kentokomai.html">
+                        <img class="imageHover" src="./images/card/kentokomai.png" alt="こまいけんと" title="こまいけんと" style="width:100px;"/>
+                    </a>
+                    <a href="./card/kyoro.html">
+                        <img class="imageHover" src="./images/card/kyoro.png" alt="伊藤麻衣" title="伊藤麻衣" style="width:100px;"/>
+                    </a>
+                    <a href="./card/miookamoto.html">
+                        <img class="imageHover" src="./images/card/miookamoto.png" alt="岡本美緒" title="岡本美緒" style="width:100px;"/>
+                    </a>
+                    <h5><span>更新日：2018/10/17</span></h5>
+                </div>
+
+                
+                
+                <div style="padding:20px;border-bottom: double 10px rgba(255,155,155,0.5);">
+                    <h4 hidden><span class="news">NEW</span></h4>
+                    <h3 class="THECARDGAMESystem">THE CARD GAME システム</h3>
+                    <a href="./card/chinaminishikawa.html">
+                        <h4>推しカード のハートを押すと音が出ます。</h4>
+                    </a>
+                    いつもTHE CARD GAMEをご利用いただき誠にありがとうございます。<br />
+                    ハートの機能に音を付ける機能を追加しました。<br />
+                    <br />
+                    AIシステムを採用しております。プロデューサーの意見や様々なアドバイスによって学習して行きますので何卒よろしくお願いいたします。<br />
+                    <h5><span>更新日：2018/09/06</span></h5>
+                </div>
+                
+                <div style="padding:20px;border-bottom: double 10px rgba(255,155,155,0.5);">
+                    <h4 hidden><span class="news">NEW</span></h4>
+                    <h3 class="RegionalActivationProject">地域活性化プロジェクト</h3>
+                    
+                    <h4>
+                        ・<a href="./card/vanillafukazawa.html">深沢ばにら</a> さん（福岡県）<br />
+                        ・<a href="./card/harunaaharu.html">はるなあはる</a> さん（沖縄県）<br />
+                        ・<a href="./card/hotarunhime.html">ほたるんひめ</a> さん（東京都）<br />
+                        をカード化しました</h4>
+                    <a href="./card/vanillafukazawa.html">
+                        <img class="imageHover" src="./images/card/vanillafukazawa.png" alt="深沢ばにら" title="深沢ばにら" style="width:100px;"/>
+                    </a>
+                    <a href="./card/harunaaharu.html">
+                        <img class="imageHover" src="./images/card/harunaaharu.png" alt="はるなあはる" title="はるなあはる" style="width:100px;"/>
+                    </a>
+                    <a href="../card/hotarunhime.html">
+                        <img class="imageHover" src="./images/card/hotarunhime.png" alt="ほたるんひめ" title="ほたるんひめ" style="width:100px;"/>
+                    </a>
+                </div>
+                
+                <div style="padding:20px;border-bottom: double 10px rgba(255,155,155,0.5);">
+                    <h4><span class="news">NEW</span></h4>
+                    <h3 class="THECARDGAMEManagement">THE CARD GAME 運営</h3>
+                    <a href="https://audition9.com/audition6150.html">
+                        <h4>「THE CARD GAME」オーディション開催中</h4>
+                    </a>
+                    いつもTHE CARD GAMEをご利用いただき誠にありがとうございます。<br />
+                    THE CARD GAME オープンに伴い、THE CARD GAMEのアンバサダーオーディションを開催！！<br />
+                    <br />
+                    次回の更新は１１月の中頃を予定しております。<br />
+                    引き続き、今後ともTHE CARD GAMEをよろしくお願いいたします。
+                    <h5><span>更新日：2018/10/17</span></h5>
+                </div>
+                
+                <div style="padding:20px;border-bottom: double 10px rgba(255,155,155,0.5);">
+                    <h4 hidden><span class="news">NEW</span></h4>
+                    <h3 class="RegionalActivationProject">地域活性化プロジェクト</h3>
+                    <h4>
+                        ・<a href="./card/mokuseigekijo.html">木星劇場</a>さん<br />
+                        ・<a href="./card/soubistudio.html">装美スタジオ</a>さん<br />
+                        をカード化しました</h4>
+                    <a href="./card/soubistudio.html">
+                        <img class="imageHover" src="./images/card/soubistudio.png" alt="木星劇場" title="木星劇場" style="width:100px;"/>
+                    </a>
+                    <a href="./card/mokuseigekijo.html">
+                        <img class="imageHover" src="./images/card/mokuseigekijo.png" alt="装美スタジオ" title="装美スタジオ" style="width:100px;"/>
+                    </a>
+                    
+                </div>
+                
+                <hr class="clearfix" noshade/>
+                <div style="padding:20px;border-bottom: double 10px rgba(255,155,155,0.5);">
+                    <h4 hidden><span class="news">NEW</span></h4>
+                    <h3 class="THECARDGAMEPublicRelations">THE CARD GAME 広報</h3>
+                    
+                    <div style="float:left;width:100%;max-width:500px;">
+                        <div style="position:relative;max-width:560px;width:100%;height:100%;min-height:300px;"><div style="padding-bottom:56.25%;" role="presentation"></div><iframe style="position:absolute;top:0;left:0;width:100%;height:100%" title="【18/06/14OA 高画質オリジナルデータ版】アシスタントＭＣ：小嶋菜月　下北ＦＭ！旬なアイドルをゲストにお迎えして下北沢よりお届け！ | FRESH!（フレッシュ） - 生放送がログイン不要・高画質で見放題" src="https://freshlive.tv/embed/216494" frameborder="0" allowfullscreen></iframe></div>
+                    </div>
+                    <div style="float:right;width:*">
+                        <h4><span class="news"> </span>番組に取り上げられました！</h4>
+                        <a href="https://freshlive.tv/shimokitafm/216494" target="_blank">
+                            下北FM「ライストゥーミートユー」番組に取り上げていただきました！
+                        </a>
+                    </div>
+                    <hr class="clearfix" noshade/>
+                </div>
+                
+                
+                <hr class="clearfix" noshade/>
+                
+                <div style="padding:20px;border-bottom: double 10px rgba(255,155,155,0.5);">
+                    <h4 hidden><span class="news">NEW</span></h4>
+                    <h3 class="THECARDGAMEEvent">THE CARD GAME イベント</h3>
+                    
+                    <h4>２０１８年 ６月 ２５日＠装美スタジオ　開催</h4>
+                    <h4><span class="news"></span>
+                        ・<a href="./card/chinaminishikawa.html">にしかわちなみ</a> さん（青森県）<br />
+                        ・<a href="./card/hotarunhime.html">古澤菜奈美</a> さん（北海道）<br />
+                        ・<a href="./card/harunaaharu.html">青桐亜子</a> さん（大阪府）<br />
+                        をカード化しました</h4>
+                    <a href="./card/chinaminishikawa.html">
+                        <img class="imageHover" src="./images/card/chinamiishikawa.png" alt="にしかわちなみ" title="にしかわちなみ" style="width:100px;"/>
+                    </a>
+                    <a href="#./card/nanamifurusawa.html">
+                        <img class="imageHover" src="./images/card/nanamifurusawa.png" alt="古澤菜奈美" title="古澤菜奈美" style="width:100px;"/>
+                    </a>
+                    <a href="#./card/aogiriako.html">
+                        <img class="imageHover" src="./images/card/aogiriako.png" alt="青桐亜子" title="青桐亜子" style="width:100px;"/>
+                    </a>
+                    
+                </div>
+                <hr />
+                
+                <!-- h4><span class="news">NEW</span>２０１８年 ６月 ３０日＠木星劇場</h4>
+                 <a href="#kanaekokoro">叶枝心 さん出演決定！！</a>
+                 <a href="#a1_rinrin">相沢凛 さん出演決定！！</a>
+                 <a href="#chamy235318731">にしかわちなみ さん出演決定！！</a>
+                 <hr /-->
+                
+            </div>
+            
+            <hr class="clearfix" noshade/>
+            <a name="word">>>></a>
+            
+            <h1 class="subtitle">THE CARD GAME 運営</h1>
+            <section>
+                
+                <achive style="float:left;width:50%">
+                    <h1 class="sublabel">カード制作</h1>
+                    <h5 class="sublabel">主な制作</h5>
+                    <h3 class="sublabel">THE CARD GAME</h3>
+                    <a href="http://stage-card.karaage.site/card.html" target="_blank">
+                        <img class="imageHover" src="./images/thecardgame_icon.png" alt="THE CARD GAME" title="THE CARD GAME" style="max-width:300px;width:100%;background-color:white"/>
+                    </a>
+                    <h3 class="sublabel">カード化プロジェクト</h3>
+                    <a href="http://stage-card.karaage.site/card.html" target="_blank">
+                        <img class="imageHover" src="./images/link/card-game_pr.png" alt="THE CARD GAME" title="THE CARD GAME" style="max-width:300px;width:100%;background-color:black"/>
+                    </a>
+                </achive>
+                
+                <achive style="float:left;width:50%">
+                    <h1 class="sublabel">番組制作</h1>
+                    <h5 class="sublabel">主な番組</h5>
+                    <h3 class="sublabel">下北FM「素敵曜日！ナイトスクーる」</h3>
+                    <div>
+                        <a href="http://night-school.karaage.site/" target="_blank">
+                            <img class="imageHover" src="./images/link/night-school_logo.png" alt="素敵曜日！ナイトスクーる" title="素敵曜日！ナイトスクーる" style="max-width:300px;width:100%;background-color:black"/>
+                        </a>
+                    </div>
+                    <hr class="clearfix" noshade/>
+                    <h3 class="sublabel">下北FM「ライストゥーミートユー」</h3>
+                    <div>
+                        <a href="http://welkome.sunstripe-main.jp/" target="_blank">
+                            <img class="imageHover" src="./images/link/welkome_logo.png" alt="ライストゥーミートユー" title="ライストゥーミートユー" style="max-width:300px;width:100%;background-color:black"/>
+                        </a>
+                    </div>
+                    <hr class="clearfix" noshade/>
+                </achive>
+                
+                <achive style="float:left;width:50%">
+                    <h1 class="sublabel">地域活動</h1>
+                    <h4 class="sublabel">地域活性化プロジェクト</h4>
+                    <div>
+                    <a href="https://www.facebook.com/RegionalActivationProject/" target="_blank">
+                        <img class="imageHover" src="./images/link/areaproject.png" alt="地域活性化プロジェクト" title="地域活性化プロジェクト" style="max-width:300px;width:100%;background-color:black"/>
+                    </a>
+                    </div>
+                </achive>
+                
+                <achive style="float:left;width:50%">
+                    <h1 class="sublabel">ショップ販売</h1>
+                    <h4 class="sublabel">THE CARD GAME 通販</h4>
+                    <div>
+                    <a href="https://thecardgame.base.shop" target="_blank">
+                        <img class="imageHover" src="./images/thecardgame_icon.png" alt="THE CARD GAME 通販" title="THE CARD GAME 通販" style="max-width:300px;width:100%;background-color:white"/>
+                    </a>
+                    </div>
+                    
+                </achive>
+
+                <achive style="float:left;width:50%" hidden>
+                    <h1 class="sublabel">ワークショップ運営</h1>
+                </achive>
+            </section>
+            <hr class="clearfix" noshade/>
+            <section style="background-color:white;">
+                <h1 class="subtitle">THE CARD GAME 運営のノウハウ</h1>
+                <h4 class="sublabel">「声優・タレント・アーティスト」アンバサダーをサポートする「THE CARD GAME」</h4>
+                <div style="padding:20px;border-bottom: double 10px rgba(255,155,155,0.5);">
+                    THE CARD GAMEの「開設」・「運営」・「集客」３つのカテゴリでアンバサダーを支えるコンテンツをお届けしています。
+                </div>
+            <hr class="clearfix" noshade/>
+            </section>
+            <section style="background-color:white;">
+                <h3 class="subtitle">THE CARD GAME 開設</h3>
+                <h4 class="sublabel">【新規 THE CARD GAME /無料】随時開催中！</h4>
+                <div style="padding:20px;border-bottom: double 10px rgba(255,155,155,0.5);">
+                「THE CARD GAME開設準備」のこの世界の入り口<br />
+                </div>
+                <h3 class="subtitle">THE CARD GAME 運営</h3>
+                <h4 class="sublabel">アンバサダーを支えるプロデューサーにもアプローチを！</h4>
+                <div style="padding:20px;border-bottom: double 10px rgba(255,155,155,0.5);">
+                ～あなたの魅力的な能力を強化させる～<br />
+                ～あなたの能力をプロデュースしてくれるプロデューサーを募集しよう〜<br />
+                ～イベントに参加してさらにプロデューサーとの距離を〜<br />
+                「プロデューサーポイントについて」
+                </div>
+                <h3 class="subtitle">THE CARD GAME すゝめ</h3>
+                <h4 class="sublabel">タレント、アーティスト、芸能活動のフリー活動、運用しているマネジメントしている方へ</h4>
+                <div style="padding:20px;border-bottom: double 10px rgba(255,155,155,0.5);">
+                新しいコンテンツは次、何をしたら良いのかわからない！？<br />
+                これで解決！THE CARD GAMEで自分の「<a href="https://thecardgame.base.shop">THE CARD SHOP</a>」を開設!!<br />
+                あなたのファン（プロデューサー）を増やし、さらにあなただけの <a href="#omoideck">思いデッキ</a> を完成させよう！！
+                </div>
+                <hr class="clearfix" noshade/>
+            </section>
+
+            <a name="word">>>></a>
+            <h3 class="subtitle">THE CARD GAME 用語集</h3>
+            <div class="accbox">
+                <!--ラベル 1-->
+                <label for="label1">アンバサダーカード（通称：普及カード）</label>
+                <input type="checkbox" id="label1" class="cssacc" />
+                <div class="accshow">
+                    <!--ここに隠す中身-->
+                    <p>
+                    「アンバサダーカード」とは、通称：普及カードとして「キャラクターカード」の場合、オール３の能力になります。<br />
+                        SHOWROOMやTwitter、Facebook、公式サイトなどの記載がされている特徴です。<br />
+                    <b>入手先</b>：イベントに参加するともらえるらしい・・・。
+                    </p>
+                </div>
+                <!--//ラベル 1-->
+                <!--ラベル 2-->
+                <label for="label2">特有キャラクターカード（通称：推しカード）</label>
+                <input type="checkbox" id="label2" class="cssacc" />
+                <div class="accshow">
+                    <!--ここに隠す中身-->
+                    <p>
+                    「特有キャラクターカード」とは、通称：推しカードとして、パーソナルな面でのカードになります。<br />
+                    それぞれの能力にはいろんな能力があるのでこのゲームの展開を切り開くためには必要なカードとなります。<br />
+                    「素敵曜日！ナイトスクーる」毎月１回 または、その他 THE CARD GAME 主催イベントにて 用意されている。<br />
+                    <b>入手先</b>：「素敵曜日！ナイトスクーる」または、その他 THE CARD GAME 主催イベント時、¥1,000 - で、ご予約をされた方のみ販売されるらしい・・・。<br />
+                    その他入手、物販にスタッフへお問い合わせください！！
+                    </p>
+                </div>
+                <!--//ラベル 2-->
+                <!--ラベル 3-->
+                <label for="label4">特有キャラクターデッキ（通称：思いデッキ）</label>
+                <input type="checkbox" id="label4" class="cssacc" />
+                <div class="accshow">
+                    <!--ここに隠す中身-->
+                    <p>
+                    「特有キャラクターデッキ」とは、通称：思いデッキとして、パーソナルな面での推しカードの束になります。<br />
+                    推しカードにはいろんな能力があるので、このゲームの展開にはこのデッキの中身が重要になっていきます。<br />
+                    「<a href="http://night-school.karaage.site" target="_blank">素敵曜日！ナイトスクーる</a>」毎月１回 、その他 THE CARD GAME 主催イベントにて作成される作成する推しカードのひとまとめにしたもの（デッキ）種類によっては、４０ー１００枚以上になります。<br />
+                    <span style="color:red;">絶賛作成中</span><br />
+                    <b>入手先</b>：「<a href="http://night-school.karaage.site" target="_blank">素敵曜日！ナイトスクーる</a>」または、その他 THE CARD GAME 主催イベント時、推しカードを集めてみてね！！<br />
+                    </p>
+                </div>
+                <!--//ラベル 3-->
+
+                <!--ラベル 4-->
+                <label for="label3">プロデュースカード</label>
+                <input type="checkbox" id="label3" class="cssacc" />
+                <div class="accshow">
+                    <!--ここに隠す中身-->
+                    <p>
+                    「プロデュースカード」とは、推しカードを応援するためのカードになります。<br />
+                    このカードは、それぞれの推しカードを応援するアイテムとして用いられます。
+                    <h4>１）実際に推しプロデュースカードをプロデュース！</h4>
+                    <a href="https://goo.gl/forms/2yAdqEgTXWACYvm92">プロデュースカードフォーム</a>
+                    <br />
+                    <h4>２）クラウドファンディングとして推しカードをプロデュース！！</h4>
+                    クラウドファンディング企画の１口として利用することが可能です。<br />
+                    <br />
+                    <h4>３）THE CARD GAMEのゲームで使える！！</h4>
+                    このTHE CARD GAMEの世界でカードゲームの要素もあり、実際にカードゲームで遊ぶことで使用することが可能です。
+                    <br />
+                    詳しい内容に関しては、しばらくお待ちください。（11/12より開始予定！！）<br />
+                    ネットでも販売されている。<br />
+                    <b>入手先</b>：「<a href="https://thecardgame.base.shop">THE CARD SHOP</a>」 にて販売、¥1,000 - <br />
+                    その他　イベントに参加したり、カードを入手した時に手に入れられるらしい・・・。
+                    </p>
+                </div>
+                <!--//ラベル 4-->
+            </div><!--//.accbox-->
+
+            <!--h2 class="event_title">オリジナルカードゲームを作成バラエティ番組#出張編(#event002)</h2>
+             
+             <a href="mailto:info@sunstripe.main.jp?subject=カードゲーム出演者募集係"><span style="color:red">出演者募集中</span></a> 7/2 締め切り 6/30 キャスト5名まで
+             <div class="card" style="clear:both;background-color:rgba(255,255,255,0.5);max-width:500px;width:100%;">
+             THE カードゲーム（出張版）<br />
+             <br />
+             オリジナルカードゲームを作成バラエティ番組！！！<br />
+             <table>
+             <tr>
+             <td>▶︎</td><td>キャラクターを作ろう！<a href="./memory/index.html">MEMORY</a></td>
+             </tr>
+             <tr>
+             <td></td><td>シーンを作ろう！</td>
+             </tr>
+             <tr>
+             <td></td><td>アイテムを作ろう！</td>
+             </tr>
+             <tr>
+             <td></td><td>アクションを作ろう！</td>
+             </tr>
+             <tr>
+             <td></td><td>ストーリーを考えよう！</td>
+             </tr>
+             <tr>
+             <td></td><td>シナリオを作ろう！</td>
+             </tr>
+             <tr>
+             <td></td><td>ゲームのルールを作ろう！</td>
+             </tr>
+             <tr>
+             <td></td><td>新しいルールでゲームをプレイしてみよう！</td>
+             </tr>
+             </table>
+             </div>
+             <br />
+             <div class="card" style="clear:both;background-color:rgba(255,255,255,0.5);float:right;max-width:500px;width:100%;">
+             <ul>
+             <li>対象：アナログゲームを楽しんでくれる方</li>
+             <li>日付：２０１８年 ６月 ３０日</li>
+             <li>時間：19:00 - 20:00</li>
+             <li>会場：木星劇場</li>
+             <li>料金：¥1,500 - ご予算 ¥5,000</li>
+             <li>定員：20-30名</li>
+             <li>
+             <h4>出演者</h4>
+             <div class="event_box text_center">
+             <h1><a name="kanaekokoro">叶枝心</a><span style="font-size:0.5em;">さん</span></h1>
+             <a href="http://stage-card.karaage.site/card.html#kanaekokoro"><img src="./images/event/kanaekokoro.png" style="width:100%;max-width:400px;"/></a>
+             <h3>TWITTER</h3>
+             <a href="https://twitter.com/kanaekokoro" target="_blank">@kanaekokoro</a><br />
+             <a href="mailto:info@karaage.site?subject=カードゲームEVENT003予約@叶枝心">お問い合わせ</a>
+             <a href="https://tiget.net/events/31230" target="_blank">
+             <h3 class="reserve_button">ご予約</h3>
+             </a>
+             <h4>撮影会参加：モデル</h4>
+             </div>
+             <div class="event_box text_center">
+             <h1><a name="a1_rinrin">相沢凛</a><span style="font-size:0.5em;">さん</span></h1>
+             <a href="http://stage-card.karaage.site/card.html#a1_rinrin"><img src="./images/event/a1_rinrin.png" style="width:100%;max-width:400px;"/></a>
+             <h3>TWITTER</h3>
+             <a href="https://twitter.com/a1_rinrin" target="_blank">@a1_rinrin</a><br />
+             <a href="mailto:info@karaage.site?subject=カードゲームEVENT003予約@相沢凛">お問い合わせ</a>
+             <a href="https://tiget.net/events/31230" target="_blank">
+             <h3 class="reserve_button">ご予約</h3>
+             </a>
+             </div>
+             
+             <div class="event_box text_center">
+             <h1><a name="chamy235318731">にしかわちなみ</a><span style="font-size:0.5em;">さん</span></h1>
+             <a href="http://stage-card.karaage.site/card.html#chamy235318731"><img src="./images/event/chamy235318731.png" style="width:100%;max-width:400px;"/></a>
+             <h3>TWITTER</h3>
+             <a href="https://twitter.com/chamy235318731" target="_blank">@chamy235318731</a><br />
+             <a href="mailto:info@karaage.site?subject=カードゲームEVENT003予約@にしかわちなみ">お問い合わせ</a>
+             <a href="https://tiget.net/events/31230" target="_blank">
+             <h3 class="reserve_button">ご予約</h3>
+             </a>
+             </div>
+             
+             <div class="event_box text_center">
+             <h5 style="color:rgba(0,126,125,1.0);">(仮)THE CARD GAME</h5>
+             <a href="https://tiget.net/events/31230" target="_blank">
+             <img src="./images/event/tiget.png" style="width:100%;"/>
+             </a>
+             出演 : きゃらあげ / 叶枝心 / 相沢凛 / にしかわちなみ<br />
+             <br />
+             会場 : 木星劇場<br />
+             <br />
+             開催日 : 2018年06月30日(土)<br />
+             2018年06月20日00:00受付開始<br />
+             <br />
+             <a href="https://tiget.net/events/31230" target="_blank">
+             <h2 class="reserve_button">予約ページ</h2>
+             </a>
+             </div>
+             </li>
+             <li>持ち物：筆記用具 / 飲食類</li>
+             <li>申し込み入力要項：お名前 / 学校・会社・事務所・劇団など / 性別 / 緊急連絡先</li>
+             予約開始：６月２０日より
+             <a href="https://tiget.net/events/30197" target="_blank">予約フォーム</a>
+             <a href="mailto:info@karaage.site?subject=カードゲームEVENT003予約">お問い合わせ</a>
+             </ul>
+             </div>
+             <div class="card" style="clear:both;background-color:rgba(255,255,255,0.5);float:left;max-width:500px;width:100%;">
+             <ul>
+             <li>番組：「THE CARD GAME」出張版</li>
+             <li>紹介：オリジナルカードゲームを作成バラエティ番組</li>
+             <li>時間帯：ーーーーー</li>
+             <li>プロデューサー：<a href="http://karaage.site/">きゃらあげ</a></li>
+             <li>構成/デザイン：<a href="http://karaage.site/">きゃらあげ</a></li>
+             <li>収録場所：<a href="https://t.livepocket.jp/e/vzuyl/map" target="_blank">装美スタジオ</a></li>
+             </ul>
+             </div-->
+            
+            <!--hr class="clearfix" noshade/>
+             
+             <h2 class="event_title">オリジナルカードゲームを作成バラエティ番組#２(#event003)</h2>
+             
+             <a href="mailto:info@sunstripe.main.jp?subject=カードゲーム出演者募集係"><span style="color:red">出演者募集中</span></a> 締め切り 6/30 キャスト5名まで
+             <div class="card" style="clear:both;background-color:rgba(255,255,255,0.5);max-width:500px;width:100%;">
+             THE カードゲーム<br />
+             <br />
+             オリジナルカードゲームを作成バラエティ番組！！！<br />
+             <table>
+             <tr>
+             <td></td><td style="color:gray;">キャラクターを作ろう！<a href="./memory/index.html">MEMORY</a></td>
+             </tr>
+             <tr>
+             <td>▶︎</td><td><strong>シーンを作ろう！</strong></td>
+             </tr>
+             <tr>
+             <td></td><td>アイテムを作ろう！</td>
+             </tr>
+             <tr>
+             <td></td><td>アクションを作ろう！</td>
+             </tr>
+             <tr>
+             <td></td><td>ストーリーを考えよう！</td>
+             </tr>
+             <tr>
+             <td></td><td>シナリオを作ろう！</td>
+             </tr>
+             <tr>
+             <td></td><td>ゲームのルールを作ろう！</td>
+             </tr>
+             <tr>
+             <td></td><td>新しいルールでゲームをプレイしてみよう！</td>
+             </tr>
+             </table>
+             </div>
+             <br />
+             <div class="card" style="clear:both;background-color:rgba(255,255,255,0.5);float:right;max-width:500px;width:100%;">
+             <ul>
+             <li>対象：アナログゲームを楽しんでくれる方</li>
+             <li>日付：２０１８年 ７月 ２日</li>
+             <li>時間：18:30 - 21:00</li>
+             <li>会場：<a href="https://t.livepocket.jp/e/vzuyl/map" target="_blank">装美スタジオ</a></li>
+             <li>料金：¥1,500　1h 1オーダー制</li>
+             <li>予約特典：1時間分　オーダーパス券</li>
+             <li>定員：20名</li>
+             <li>持ち物：筆記用具 / 飲食類</li>
+             <li>申し込み入力要項：お名前 / 学校・会社・事務所・劇団など / 性別 / 緊急連絡先</li>
+             予約開始：６月２８日より
+             <!--a href="https://tiget.net/events/30197" target="_blank">予約フォーム</a>
+             </ul>
+             </div>
+             <div class="card" style="clear:both;background-color:rgba(255,255,255,0.5);float:left;max-width:500px;width:100%;">
+             <ul>
+             <li>番組：「THE CARD GAME」</li>
+             <li>紹介：オリジナルカードゲームを作成バラエティ番組</li>
+             <li>毎週月曜日 １９時００分 ー ２０時００分</li>
+             <li>プロデューサー：<a href="http://karaage.site/">きゃらあげ</a></li>
+             <li>構成/デザイン：<a href="http://karaage.site/">きゃらあげ</a></li>
+             <li>スタジオ：<a href="https://t.livepocket.jp/e/vzuyl/map" target="_blank">装美スタジオ</a></li>
+             </ul>
+             </div-->
+            
+            <hr class="clearfix" noshade/>
+            <a name="place">>>></a>
+            <h3 class="subtitle">THE CARD GAME 地域別</h3>
+            <div class="accbox">
+                <!--ラベル 1-->
+                <label for="hokkaidoarea">北海道地方</label>
+                <input type="checkbox" id="hokkaidoarea" class="cssacc" />
+                <div class="accshow">
+                    <!--ここに隠す中身-->
+                    <p>
+                    <h3>北海道</h3>
+                    
+                    <div class="profile_text profile_right;">
+                        <div class="event_box text_center">
+                            <h1><a name="_milky_073">古澤菜奈美</a><span style="font-size:0.5em;">さん</span></h1>
+                            <a href="#_milky_073"><img class="imageHover" src="./images/card/nanamifurusawa.png" style="width:100%;max-width:400px;"/></a>
+                            <h3>TWITTER</h3>
+                            <a href="https://twitter.com/_milky_073/media" target="_blank">@_milky_073/media</a>
+                            <h3>SHOWROOM</h3>
+                            <a href="https://www.showroom-live.com/room/profile?room_id=177772" target="_blank">「なーみのほしぐみさんルーム」</a><br />
+                            <!--a href="mailto:info@karaage.site?subject=カードゲームEVENT001予約@にしかわちなみ">ご予約</a-->
+                        </div>
+                    </div>
+                    
+                    </p>
+                </div>
+                <!--//ラベル 1-->
+                
+                <!--ラベル 2-->
+                <label for="tohokuarea">東北地方</label>
+                <input type="checkbox" id="tohokuarea" class="cssacc" />
+                <div class="accshow">
+                    <!--ここに隠す中身-->
+                    <p>
+                    <h3>青森県</h3>
+                    
+                    <div class="profile_text profile_left;">
+                        <div class="event_box text_center">
+                            <h1><a name="chamy235318731">にしかわちなみ</a><span style="font-size:0.5em;">さん</span></h1>
+                            <a href="./card/chinaminishikawa.html"><img class="imageHover" src="./images/card/chinamiishikawa.png" style="width:100%;max-width:400px;"/></a>
+                            <h3>TWITTER</h3>
+                            <a href="https://twitter.com/chamy235318731" target="_blank">@chamy235318731</a><br /><br />
+                            <span style="color:red;">NEW</span><a href="./card/chinaminishikawa.html">普及カード</a><br />
+                            ハートを推すと何かが起こるかも？！
+                            <br />
+                            <!--a href="mailto:info@karaage.site?subject=カードゲームEVENT001予約@にしかわちなみ">ご予約</a-->
+                            <!--a href="https://t.livepocket.jp/e/vzuyl" target="_blank">
+                             <h2 class="reserve_button">6/24 撮影会 予約ページ</h2>
+                             </a-->
+                            <!--a href="https://tiget.net/events/31230" target="_blank">
+                             <h2 class="reserve_button">6/30 予約ページ</h2>
+                             </a-->
+                            
+                        </div>
+                    </div>
+
+                    <h3>岩手県</h3>
+                    <h3>宮城県</h3>
+                    <h3>秋田県</h3>
+                    <h3>山形県</h3>
+                    <h3>福島県</h3>
+                    </p>
+                </div>
+                <!--//ラベル 2-->
+
+                <!--ラベル 3-->
+                <label for="kantoarea">関東地方</label>
+                <input type="checkbox" id="kantoarea" class="cssacc" />
+                <div class="accshow">
+                    <!--ここに隠す中身-->
+                    <p>
+                    <h3>新潟県</h3>
+                    <h3>栃木県</h3>
+                    <h3>群馬県</h3>
+                    <h3>埼玉県</h3>
+                    <h3>千葉県</h3>
+                    <h3>東京都</h3>
+                    <h4>人物</h4>
+                    <div class="profile_text profile_left;">
+                        <div class="event_box text_center">
+                            <h1><a name="chamy235318731">ほたるんひめ</a><span style="font-size:0.5em;">さん</span></h1>
+                            <a href="./card/hotarunhime.html"><img class="imageHover" src="./images/card/hotarunhime.png" style="width:100%;max-width:400px;"/></a>
+                            <h3>TWITTER</h3>
+                            <a href="https://twitter.com/" target="_blank">@</a><br /><br />
+                            <a href="./card/hotarunhime.html">普及カード</a><br />
+                            ハートを推すと何かが起こるかも？！
+                            <br />
+                            <!--a href="mailto:info@karaage.site?subject=カードゲームEVENT001予約@にしかわちなみ">ご予約</a-->
+                            <!--a href="https://t.livepocket.jp/e/vzuyl" target="_blank">
+                             <h2 class="reserve_button">6/24 撮影会 予約ページ</h2>
+                             </a-->
+                            <!--a href="https://tiget.net/events/31230" target="_blank">
+                             <h2 class="reserve_button">6/30 予約ページ</h2>
+                             </a-->
+                            
+                        </div>
+                    </div>
+                    
+                    <h4>会場</h4>
+                    <h3>豊島区</h3>
+                    <a href="./card/mokuseigekijo.html">
+                        <img class="imageHover" src="./images/card/mokuseigekijo.png" alt="木星劇場" title="木星劇場" style="width:100px;"/>
+                    </a>
+                    <h3>渋谷区</h3>
+                    <a href="./card/soubistudio.html">
+                        <img class="imageHover" src="./images/card/soubistudio.png" alt="装美スタジオ" title="装美スタジオ" style="width:100px;"/>
+                    </a>
+
+                    <h3>神奈川県</h3>
+                    </p>
+                </div>
+                <!--//ラベル 3-->
+                
+                <!--ラベル 4-->
+                <label for="chubuarea">中部地方</label>
+                <input type="checkbox" id="chubuarea" class="cssacc" />
+                <div class="accshow">
+                    <!--ここに隠す中身-->
+                    <p>
+                    <h3>新潟県</h3>
+                    <h3>富山県</h3>
+                    <h3>石川県</h3>
+                    <h3>福井県</h3>
+                    <h3>山梨県</h3>
+                    <h3>長野県</h3>
+                    <h3>岐阜県</h3>
+                    <h3>静岡県</h3>
+                    <h3>愛知県</h3>
+                    </p>
+                </div>
+                <!--//ラベル 4-->
+                
+                <!--ラベル 5-->
+                <label for="kinkiarea">近畿地方</label>
+                <input type="checkbox" id="kinkiarea" class="cssacc" />
+                <div class="accshow">
+                    <!--ここに隠す中身-->
+                    <p>
+                    <h3>三重県</h3>
+                    <h3>滋賀県</h3>
+                    <h3>京都府</h3>
+                    <h3>大阪府</h3>
+                    
+                    <div class="profile_text profile_left;">
+                        <div class="event_box text_center">
+                            <h1><a name="ako_vater">青桐亜子</a><span style="font-size:0.5em;">さん</span></h1>
+                            <a href="#ako_vater"><img class="imageHover" src="./images/card/aogiriako.png" style="width:100%;max-width:400px;"/></a>
+                            <h3>TWITTER</h3>
+                            <a href="https://twitter.com/ako_vater" target="_blank">@ako_vater</a>
+                            <h3>SHOWROOM</h3>
+                            <a href="https://www.showroom-live.com/room/profile?room_id=140293" target="_blank">「あこ語りたいっす！」</a><br />
+                            <!--a href="mailto:info@karaage.site?subject=カードゲームEVENT001予約@にしかわちなみ">ご予約</a-->
+                        </div>
+                    </div>
+                    
+                    <h3>兵庫県</h3>
+                    <h3>奈良県</h3>
+                    <h3>和歌山県</h3>
+                    </p>
+                </div>
+                <!--//ラベル 5-->
+                
+                <!--ラベル 6-->
+                <label for="chugokuarea">中国地方</label>
+                <input type="checkbox" id="chugokuarea" class="cssacc" />
+                <div class="accshow">
+                    <!--ここに隠す中身-->
+                    <p>
+                    <h3>鳥取県</h3>
+                    <h3>島根県</h3>
+                    <h3>岡山県</h3>
+                    <h3>広島県</h3>
+                    <h3>山口県</h3>
+                    </p>
+                </div>
+                <!--//ラベル 6-->
+                
+                <!--ラベル 7-->
+                <label for="shikokuarea">四国地方</label>
+                <input type="checkbox" id="shikokuarea" class="cssacc" />
+                <div class="accshow">
+                    <!--ここに隠す中身-->
+                    <p>
+                    <h3>徳島県</h3>
+                    <h3>香川県</h3>
+                    <h3>愛媛県</h3>
+                    <h3>高知県</h3>
+                    </p>
+                </div>
+                <!--//ラベル 7-->
+                
+                <!--ラベル 8-->
+                <label for="kyushuarea">九州地方</label>
+                <input type="checkbox" id="kyushuarea" class="cssacc" />
+                <div class="accshow">
+                    <!--ここに隠す中身-->
+                    <p>
+                    <h3>福岡県</h3>
+                    
+                    <div class="profile_text profile_left;">
+                        <div class="event_box text_center">
+                            <h1><a name="ako_vater">深沢ばにら</a><span style="font-size:0.5em;">さん</span></h1>
+                            <a href="./card/vanillafukazawa.html"><img class="imageHover" src="./images/card/vanillafukazawa.png" style="width:100%;max-width:400px;" alt="深沢ばにら" title="深沢ばにら" /></a>
+                            <h3>TWITTER</h3>
+                            <a href="https://twitter.com/ako_vater" target="_blank">@ako_vater</a>
+                            <h3>SHOWROOM</h3>
+                            <a href="https://www.showroom-live.com/room/profile?room_id=140293" target="_blank">「深沢ばにらのばに☆らぼ」</a><br />
+                            <a href="./card/vanillafukazawa.html">普及カード</a><br />
+                            ハートを推すと何かが起こるかも？！
+                            <!--a href="mailto:info@karaage.site?subject=カードゲームEVENT001予約@にしかわちなみ">ご予約</a-->
+                        </div>
+                    </div>
+                    
+                    <h3>佐賀県</h3>
+                    <h3>長崎県</h3>
+                    <h3>熊本県</h3>
+                    <h3>大分県</h3>
+                    <h3>宮崎県</h3>
+                    <h3>鹿児島県</h3>
+                    <h3>沖縄県</h3>
+                    
+                    <div class="profile_text profile_left;">
+                        <div class="event_box text_center">
+                            <h1><a name="ako_vater">はるなあはる</a><span style="font-size:0.5em;">さん</span></h1>
+                            <a href="./card/harunaaharu.html"><img class="imageHover" src="./images/card/harunaaharu.png" style="width:100%;max-width:400px;"alt="はるなあはる" title="はるなあはる" /></a>
+                            <h3>TWITTER</h3>
+                            <a href="https://twitter.com/ako_vater" target="_blank">@ako_vater</a>
+                            <h3>SHOWROOM</h3>
+                            <a href="https://www.showroom-live.com/room/profile?room_id=140293" target="_blank">「はるなあはる」</a><br />
+                            <a href="./card/harunaaharu.html">普及カード</a><br />
+                            ハートを推すと何かが起こるかも？！
+                            <!--a href="mailto:info@karaage.site?subject=カードゲームEVENT001予約@にしかわちなみ">ご予約</a-->
+                        </div>
+                    </div>
+
+                    </p>
+                </div>
+                <!--//ラベル 8-->
+                
+            </div><!--//.accbox-->
+            
+            <hr class="clearfix" noshade/>
+            
+            
+            <div id="stage" style="background-color:white;color:black;padding:10px;width:97%;">
+                <h4>PR</h4>
+                <div>
+                    <a href="https://goo.gl/forms/hJKHehtXvaAWnKIg2" target="_blank">
+                        <img class="imageHover" src="./images/link/oedoclub_ad.png" alt="お江戸倶楽部" title="お江戸倶楽部" style="width:100%;background-color:black"/>
+                    </a>
+                </div>
+            </div>
+            
+            <hr class="clearfix" noshade/>
+            
+            <style>
+                body {
+                    background-image: url("./img/bg.png");
+                    background-repeat: repeat;
+                    background-attachment: fixed;
+                    background-position: right bottom
+                }
+            </style>
+            
+            <hr class="clearfix" noshade/>
+            
+            <div id="stage" style="background-color:white;color:black;padding:10px;width:97%;text-align:center;">
+                <h4>PR</h4>
+                <div id="cardgameproject">
+                    <a href="http://stage-card.karaage.site/card.html" target="_blank">
+                        <img class="imageHover" src="http://stage-card.karaage.site/images/link/card-game_pr.png" alt="カードゲーム化プロジェクト" title="カードゲーム化プロジェクト" style="width:100%;"/>
+                    </a>
+                </div>
+                宣伝協力
+                <h3 id="cardgameprojectButton" class="reserve_button">コピーする</h3>
+            </div>
+            
+            <script>
+                function execCopy(string) {
+                    var temp = document.createElement('div');
+                    
+                    temp.appendChild(document.createElement('pre')).textContent = string;
+                    
+                    var s = temp.style;
+                    s.position = 'fixed';
+                    s.left = '-100%';
+                    
+                    document.body.appendChild(temp);
+                    document.getSelection().selectAllChildren(temp);
+                    
+                    var result = document.execCommand('copy');
+                    
+                    document.body.removeChild(temp);
+                    // true なら実行できている falseなら失敗か対応していないか
+                    return result;
+                }
+            var cardgameproject = document.getElementById('cardgameproject');
+            var cardgameprojectButton = document.getElementById('cardgameprojectButton');
+            cardgameprojectButton.onclick = function()
+            {
+                var succeeded = execCopy(cardgameproject.innerHTML);
+                
+                if(succeeded){
+                    alert('コピーできました');
+                }
+                else {
+                    alert('このブラウザでは対応していません');
+                }
+            };
+            </script>
+            
+            
+            <hr class="clearfix" noshade/>
+            イベントの様子
+            
+            <div style="width:97%;">
+                <table claaa="memory_list" style="width:100%;">
+                    <tr>
+                        <td class="memory_item">
+                            <div class="event_box text_center">
+                                <h1>イベントの様子（１）</h1>
+                                <a href="#ako_vater"><img class="imageHover" src="./images/memory/event2018060419000001.jpg" style="width:100%;max-width:400px;" alt="イベントの様子（１）" title="イベントの様子（１）" class="memory_img"/></a>
+                            </div>
+                        </td>
+                        <td class="memory_item">
+                            <div class="event_box text_center">
+                                <h1>イベントの様子（２）</h1>
+                                <a href="#ako_vater"><img class="imageHover" src="./images/memory/event2018060419000002.jpg" style="width:100%;max-width:400px;" alt="イベントの様子（２）" title="イベントの様子（２）" class="memory_img"/></a>
+                            </div>
+                        </td>
+                        <!--td class="memory_item">
+                         <div class="event_box text_center">
+                         <h1>イベントの様子（１）</h1>
+                         <a href="#ako_vater"><img src="./images/memory/event2018060419000001.jpg" style="width:100%;max-width:400px;" alt="イベントの様子（１）" title="イベントの様子（１）" class="memory_img"/></a>
+                         </div>
+                         </td>
+                         <td class="memory_item">
+                         <div class="event_box text_center">
+                         <h1>イベントの様子（２）</h1>
+                         <a href="#ako_vater"><img src="./images/memory/event2018060419000002.jpg" style="width:100%;max-width:400px;" alt="イベントの様子（２）" title="イベントの様子（２）" class="memory_img"/></a>
+                         </div>
+                         </td>
+                         <td class="memory_item">
+                         <div class="event_box text_center">
+                         <h1>イベントの様子（１）</h1>
+                         <a href="#ako_vater"><img src="./images/memory/event2018060419000001.jpg" style="width:100%;max-width:400px;" alt="イベントの様子（１）" title="イベントの様子（１）" class="memory_img"/></a>
+                         </div>
+                         </td>
+                         <td class="memory_item">
+                         <div class="event_box text_center">
+                         <h1>イベントの様子（２）</h1>
+                         <a href="#ako_vater"><img src="./images/memory/event2018060419000002.jpg" style="width:100%;max-width:400px;" alt="イベントの様子（２）" title="イベントの様子（２）" class="memory_img"/></a>
+                         </div>
+                         </td>
+                         <td class="memory_item">
+                         <div class="event_box text_center">
+                         <h1>イベントの様子（１）</h1>
+                         <a href="#ako_vater"><img src="./images/memory/event2018060419000001.jpg" style="width:100%;max-width:400px;" alt="イベントの様子（１）" title="イベントの様子（１）" class="memory_img"/></a>
+                         </div>
+                         </td>
+                         <td class="memory_item">
+                         <div class="event_box text_center">
+                         <h1>イベントの様子（２）</h1>
+                         <a href="#ako_vater"><img src="./images/memory/event2018060419000002.jpg" style="width:100%;max-width:400px;" alt="イベントの様子（２）" title="イベントの様子（２）" class="memory_img"/></a>
+                         </div>
+                         </td-->
+                    </tr>
+                </table>
+            </div>
+            <!--div class="memory_left">
+             <img src="./images/card/uchidamayu.png" alt="内田麻友" title="内田麻友" class="profile_img"/>
+             </div-->
+            <hr class="clearfix" noshade/>
+            
+            <!--hr  style="clear:both;"/>
+             スマホDEカード
+             <br />
+             連動サービス
+             <br /-->
+            ＊ QRコードを用いて、カードや冊子、謎解きを駆使して情報共有し、サイトのサービスを使いこなそう！<br />
+             <br />
+            ＊ 閲覧するたびに改善ポイントなどもいただきたいので予期せぬ変更・削除などはございます、<br />
+            ＊ 本人・団体の許可を得て、掲載させていただいております。<br />
+            ＊ このシステムは、AI機能を採用しており、徐々に学習して成長していきます。<br />
+            ＊ 「いいね」の数、「リツイート」の数、「閲覧」の数、「ハート」を押す回数、「プロデューサー」の応援数、「ダウンロード」の数などの情報により変動いたします。</div>
+        
+        <!-- シェアボタン [ここからコピー] -->
+        <script>
+            snsDocument();
+            </script>
+        <!-- シェアボタン [ここまでコピー] -->
+        
+        <hr class="clearfix" noshade/>
+        
+        <div id="stage"  class="event_box" style="background-color:white;color:black;padding:10px;width:97%;">
+            <h3>協力</h3>
+            
+            <achive style="float:left;width:50%">
+                <a href="#area">
+                    <h1>番組制作</h1>
+                </a>
+                <h4>下北FM「素敵曜日！ナイトスクーる」</h4>
+                <a href="http://night-school.karaage.site/" target="_blank">
+                    <h3>下北FM「素敵曜日！ナイトスクーる」</h3>
+                    <img class="imageHover" src="./images/link/night-school_logo.png" alt="素敵曜日！ナイトスクーる" title="素敵曜日！ナイトスクーる" style="max-width:300px;width:100%;background-color:black"/>
+                </a>
+                <h4>下北FM「ライストゥーミートユー」</h4>
+                <a href="http://welkome.sunstripe-main.jp/" target="_blank">
+                    <h3>下北FM「ライストゥーミートユー」</h3>
+                    <img class="imageHover" src="./images/link/welkome_logo.png" alt="ライストゥーミートユー" title="ライストゥーミートユー" style="max-width:300px;width:100%;background-color:black"/>
+                </a>
+            </achive>
+            
+            
+            <achive style="float:left;width:50%">
+                <a href="#area">
+                    <h1>若者支援活動</h1>
+                </a>
+                <h4>エルモノプロジェクト</h4>
+                <a href="https://www.facebook.com/elumonoproject/" target="_blank">
+                    <h3>頑張る人を応援する団</h3>
+                    <img class="imageHover" src="./images/link/areaproject.png" alt="エルモノプロジェクト" title="エルモノプロジェクト" style="max-width:300px;width:100%;background-color:black"/>
+                </a>
+            </achive>
+            
+            <achive style="float:left;width:50%">
+                <a href="#area">
+                    <h1>制作部</h1>
+                </a>
+                <h4>サンストライプ</h4>
+                <a href="http://sunstripe-main.jp" target="_blank">
+                    <h3>サンストライプ</h3>
+                    <img class="imageHover" src="./images/link/areaproject.png" alt="地域活性化プロジェクト" title="地域活性化プロジェクト" style="max-width:300px;width:100%;background-color:black"/>
+                </a>
+                
+                <h5>メディア制作</h5>
+                <a href="https://the.themedia.jp" target="_blank">THE Media</a>
+                <h5>主なWEB制作</h5>
+                <a href="https://qiita.com/sunstripe">https://qiita.com/sunstripe</a>
+                
+                <h5>主なホームページ制作</h5>
+                <a href="http://montage-typec.sunstripe-main.jp/">
+                    舞台「モンタージュ」<br />
+                    ＠ゆめまち劇場
+                </a>
+                <br />
+                <a href="http://http://dks.sunstripe-main.jp/">
+                    舞台「大脚色」<br />
+                    ＠ゆめまち劇場
+                </a>
+                
+            </achive>
+            
+            <achive style="float:left;width:50%">
+                <a href="#area">
+                    <h1>マネジメント部</h1>
+                </a>
+                <h4>キャスティング</h4>
+                <a href="https://www.facebook.com/RegionalActivationProject/" target="_blank">
+                    <h3>アサインプロモーション</h3>
+                    <img class="imageHover" src="./images/link/areaproject.png" alt="アサインプロモーション" title="アサインプロモーション" style="max-width:300px;width:100%;background-color:black"/>
+                </a>
+                <br />
+                預かりなど
+                <h5>主な取引先</h5>
+                渋谷原宿女子会議<br />
+                ゆめまち劇場<br />
+                TV/ラジオ番組<br />
+            </achive>
+            
+            <achive style="float:left;width:50%">
+                <a href="#area">
+                    <h1>スタジオ部</h1>
+                </a>
+                <h4>渋谷区</h4>
+                <a href="http://oedo.club/" target="_blank">
+                    <h3>お江戸倶楽部</h3>
+                    <img class="imageHover" src="./images/link/oedoclub_logo.png" alt="お江戸倶楽部" title="お江戸倶楽部" style="max-width:300px;width:100%;background-color:black"/>
+                </a>
+            </achive>
+            
+            <hr class="clearfix" noshade/>
+        </div>
+        
+        <hr class="clearfix" noshade/>
+        
+        <a href="./card.html">THE カードゲーム THE CARD GAME</a> <br />
+
+        <table id="sitemap" style="width:100%">
+            <tr>
+                <th>コンテンツ</th>
+                <th>アカウント</th>
+                <th>サポートヘルプ</th>
+            </tr>
+            <tr>
+                <td>
+                    トピックス<br />
+                    イントロダクション<br />
+                    キャラクター<br />
+                    ゲームシステム<br />
+                    <a href="./rulebook.html">RULEBOOK</a> <br />
+                    <a href="https://goo.gl/forms/2yAdqEgTXWACYvm92" target="_blank">プロデュースフォーム</a> <br />
+                    スペシャル<br />
+                </td>
+                <td>
+                    <h2>公式SNS</h2>
+                    <a href="https://twitter.com/thecardgame_JP" target="_blank">公式Twitter</a><br />
+                    公式LINE＠<br />
+                    公式Facebook<br />
+                    攻略情報<br />
+                    よくあるお問合せ<br />
+                    <a href="https://peing.net/ja/thecardgame" target="_blank">質問箱</a>
+                </td>
+                <td>
+                    <h2>運営情報</h2>
+                    ご利用にあたって<br />
+                    <a href="https://thecardgame.base.shop/privacy" target="">プライバシーポリシー</a><br />
+                    <a href="https://thecardgame.base.shop/law" target="">特定商取引法に基づく表記</a><br />
+                    利用規約
+                    利用規約( AppStore , GooglePlay )<br />
+                    資金決済法に基づく表示( AppStore , GooglePlay )<br />
+                    <a href="./ad.html">広告掲載して見ませんか？</a> <br />
+                </td>
+            </tr>
+        </table>
+        
+        <div style="background-color:rgba(255,255,255,0.8);color:black;padding:10px;">
+            <table style="max-width:500px;width:90%;margin:auto;">
+                <tr>
+                    <td></td><td colspan="2">みなさんの「こうしてほしい」をお聞かせください。<br />
+                        <br />
+                        この投稿にお返事はしておりません、ご了承ください。<br />
+                        サイト改善に役立てさせていただきます。<br /></td>
+                </tr>
+                <tr>
+                    <td>ご意見箱</td><td></td><td></td>
+                </tr>
+                <tr>
+                    <td colspan="3"><input type="text" id="send-comment" name="send-comment" size="10" maxlength="200" style="width:100%;height:120px;" /></td>
+                </tr>
+                <tr>
+                    <td>名前</td><td>*</td><td><input type="text" id="send-nama" name="send-nama" size="40" maxlength="30" style="width:100%;height:30px;font-size:1.2em;" required/></td>
+                </tr>
+                <tr>
+                    <td>メールアドレス</td><td>*</td><td><input type="text" id="send-mailaddress" name="send-mail" style="width:100%;height:30px;font-size:1.2em;" required/></td>
+                </tr>
+                <tr>
+                    <td>サイト</td><td></td><td></td>
+                </tr>
+                <tr>
+                    <td colspan="3"><input type="text" id="send-site" name="send-site" size="10" style="width:100%;height:30px;font-size:1.2em;" /></td>
+                </tr>
+                
+                <tr hidden>
+                    <td colspan="3"><input type="checkbox" id="send-checkbox-notification" name="send-checkbox-notification" size="10" /> 新しいコメントをメールで通知</td>
+                </tr>
+                <tr>
+                    <td colspan="3"><input type="checkbox" id="send-checkbox-mail" name="send-checkbox-mail" size="10" /> 新しい投稿をメールで受け取る</td>
+                </tr>
+                <tr>
+                    <td colspan="3" style="text-align:center;"><button style="width:50%;height:50px;background-color:rgba(100,100,255,0.8);color:white;font-size:1.0em;" class="button-styles" onclick="sendtoMail();"/>意見を送る</button></td>
+                </tr>
+            </table>
+        </div>
+        <div id="friend-qr">
+            <a href="https://line.me/R/ti/p/%40dqv6292a"><img height="36" border="0" alt="友だち追加" src="https://scdn.line-apps.com/n/line_add_friends/btn/ja.png"></a><br />
+            <img src="http://qr-official.line.me/L/viofM09uGU.png" />
+        </div>
+        
+        
+        <hr class="clearfix" noshade/>
+        <h1 class="subtitle">THE CARD GAME おすすめ シーンカード</h1>
+        <div style="background-color:white;color:black;padding:10px;width:97%">
+            <p style="float:left;">
+            おすすめする会場、地域、場所などを一部を紹介致します。<br />
+            地域活性のためいろんな場所やいろんなエリアを紹介して行きます！！<br />
+            ・ここはいってほしい場所<br />
+            ・ホットな場所<br />
+            ・神社仏閣<br />
+            取材および交渉の後カードになるかも？<br />
+            もしおすすめしたい場所などがありましたら<br />
+            
+            ・タイトル<br />
+            ・カードの名前<br />
+            ・エピソードや詳しいこと<br />
+            ・差し支えがなければ、お名前とご連絡先<br />
+            
+            ぜひご意見箱にお知らせください。<br />
+            </p>
+            <a href="https://www.facebook.com/RegionalActivationProject/" target="_blank">
+                <img src="./images/link/areaproject.png" alt="地域活性化プロジェクト" title="地域活性化プロジェクト" style="max-width:300px;width:100%;background-color:black;float:left;"/>
+            </a>
+            <hr class="clearfix" noshade/>
+        </div>
+        <script>
+            //
+            // シーンカードの一覧もしくは一部を紹介。
+            for (var s = 0;s < scenecardData.length; s++)
+            {
+                sceneCardList(scenecardData,s);
+            }
+        </script>
+        
+        <hr class="clearfix" noshade/>
+        <h1 class="subtitle">THE CARD GAME おすすめ アクションカード</h1>
+        <div style="background-color:white;color:black;padding:10px;width:97%">
+            <p style="float:left;">
+            おすすめするイベント、地域活動、その他アクションとなるものを一部を紹介致します。<br />
+            地域活性のためこんな活動してます！やいろんなイベントを紹介して参ります！！<br />
+            ・ここのイベントはおすすめ<br />
+            ・ホットなイベント<br />
+            ・地域のイベント<br />
+            取材および交渉の後、カードになるかも？<br />
+            もしおすすめしたいイベントなどがありましたら<br />
+            ・タイトル<br />
+            ・カードの名前<br />
+            ・エピソードや詳しいこと<br />
+            ・差し支えがなければ、お名前とご連絡先<br />
+            ぜひご意見箱にお知らせください。<br />
+            </p>
+            <a href="https://www.facebook.com/RegionalActivationProject/" target="_blank">
+                <img class="imageHover" src="./images/link/areaproject.png" alt="地域活性化プロジェクト" title="地域活性化プロジェクト" style="max-width:300px;width:100%;background-color:black;float:left;"/>
+            </a>
+            <hr class="clearfix" noshade/>
+        </div>
+        <script>
+            //
+            // アクションカードの一覧もしくは一部を紹介。
+            for (var s = 0;s < actioncardData.length; s++)
+            {
+                actionCardList(actioncardData,s);
+            }
+        </script>
+        
+        <hr class="clearfix" noshade/>
+        <h1 class="subtitle">THE CARD GAME おすすめ アイテムカード</h1>
+        <div style="background-color:white;color:black;padding:10px;width:97%">
+            <p style="float:left;">
+            おすすめする道具、地域物産、必需品などを一部を紹介致します。<br />
+            地域活性のためいろんな物産やいろんなアイテムを紹介して行きます！！<br />
+            ・ここは手に入れてほしい必需品<br />
+            ・ホットなアイテム<br />
+            ・地域物産<br />
+            取材および交渉の後カードになるかも？<br />
+            もしおすすめしたい場所などがありましたら<br />
+            ぜひご意見箱にお知らせください。<br />
+            </p>
+            <a href="https://www.facebook.com/RegionalActivationProject/" target="_blank">
+                <img class="imageHover" src="./images/link/areaproject.png" alt="地域活性化プロジェクト" title="地域活性化プロジェクト" style="max-width:300px;width:100%;background-color:black;float:left;"/>
+            </a>
+            <hr class="clearfix" noshade/>
+        </div>
+        <script>
+            //
+            // アイテムカードの一覧もしくは一部を紹介。
+            for (var s = 0;s < itemcardData.length; s++)
+            {
+                itemCardList(itemcardData,s);
+            }
+        </script>
+        
+        <div id="stage" style="background-color:white;color:black;padding:10px;width:97%;">
+            <h4>PR</h4>
+            <div>
+                <a href="http://assignpromotion.sunstripe-main.jp/" target="_blank">
+                    <img class="imageHover" src="./images/link/assingpromotion_pr.png" alt="和DE撮影会モデル募集中！" title="和DE撮影会モデル募集中！" style="width:100%;background-color:black"/>
+                </a>
+            </div>
+        </div>
+        
+        
+        <footer>
+            <p>このホームページに記載の画像・文章の著作権は「(仮)THE カードゲーム」もしくは、作品・情報の提供者に帰属します。無断転載・利用を禁じます。</p>
+            Copyright(C)2018-<span class="stagecard"><a href="./card.html">(仮)THE カードゲーム</a></span>. All rihts Reserved .
+        </footer>
+    </body>
+</html>
+

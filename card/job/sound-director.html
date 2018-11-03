@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>THE CARD GAME - 音響監督</title>
+        <meta charset="utf-8" />
+        <meta name="robots" content="noindex, nofollow" />
+        <meta name="description" content="THE CARD GAME - カドつく JobCard 音響監督">
+            <meta name="author" content="SUNSTRIPE"/>
+            <meta name="viewport" content="width=device-width, initial-scale=1"/>
+            <link rel="stylesheet" href="../../css/sns.css"/>
+            <link rel="stylesheet" href="../../css/styles.css"/>
+            <!--[if lt IE 9]>
+             <script src="//cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
+             <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+             <![endif]-->
+            <link href="https://fonts.googleapis.com/css?family=Audiowide|Black+Ops+One|Cabin+Sketch|Fredericka+the+Great|Poiret+One|Press+Start+2P|VT323|Josefin+Slab" rel="stylesheet"/>
+            <link rel="shortcut icon" href=""/>
+            </head>
+    <style>
+        header {
+            height:899px;
+            background-color:black;
+            /*background-image: url("../images/card-bg.jpg");*/
+            background-position: right bottom;
+        }
+    #movie {
+        position:absolute;
+        top:-200px;
+        left:10px;
+        width:100%;
+        min-width:1200px;
+        height:1200px;
+    }
+    
+    @media screen and ( min-width:400px ) {
+        header {
+            width:100%;
+            position:relative;
+            overflow:scroll;
+        }
+    }
+    
+        </style>
+    <body>
+        
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121197913-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            
+            gtag('config', 'UA-121197913-1');
+            </script>
+        
+        <script type="text/javascript" src="../../js/sns.js"></script>
+        <script type="text/javascript" src="../../js/cardgame.js"></script>
+        
+        <style>
+            body {
+                color:black;
+                background-color:rgba(200,200,255,0.5);
+                font-family: 'Josefin Slab', serif;
+            }
+        a {
+            color:white;
+            text-decoration:none;
+        }
+        </style>
+        
+        <header class="stagecard">
+            <video autoplay muted controls loop poster="../../images/card-bg.jpg" id="movie" name="cyber" controls="controls" preload="none">
+                <source src="../../movie/cyber.mp4" type="video/mp4" />
+                <img src="../../images/card-bg.jpg" />
+            </video>
+            
+            <script>
+                var movie = document.getElementById("movie");
+                movie.controls = false;
+                </script>
+        </header>
+        
+        <div id="flipcard_div" class="flip-boards">
+            <div class="board left">
+                <div class="front">
+                    <a href="./sound-director.html">
+                        <img src="../../images/card/no-image.png" style="width:350px;padding:30px;background-color:rgba(255,255,255,0.5);border-radius:6px;" />
+                    </a>
+                </div>
+                <div class="flipped" style="text-align:center;width:100%;">
+                    <a href="./sound-director.html">
+                        <img src="../../images/card/no-image.png" style="width:350px;padding:30px;background-color:rgba(255,255,255,0.5);border-radius:6px;" />
+                    </a>
+                </div>
+            </div>
+            <a href="../card.html"><h1 style="text-align:center;width:100%;height:600px;">THE CARD GAME</h1></a>
+        </div>
+        
+        <div id="thisLikes_div" class="flip-heart">
+            <div class="board left">
+                <div class="front">
+                    <img src="../../images/likes/icon_heart.png" style="width:50px;border-radius:6px;" />
+                </div>
+                <div class="flipped">
+                    <img src="../../images/likes/icon_heart.png" style="width:50px;border-radius:6px;" />
+                </div>
+            </div>
+        </div>
+        
+        <div id="left-buuton" style="position:absolute;top:300px;left:30px;width:100px;height:100px;">
+            <img src="../../img/left-button.png" style="width:100%"/>
+        </div>
+        <div id="right-buuton" style="position:absolute;top:300px;right:30px;width:100px;height:100px;">
+            <img src="../../img/right-button.png" style="width:100%"/>
+        </div>
+        
+        <script>
+            
+            var screen = {
+                width:document.body.clientWidth,
+                height:document.body.clientHeight,
+            }
+        
+        var flipcard = {
+            top:60,
+            left:(screen.width/2.0) - 320,
+        };
+        
+        var flipcardDiv = document.getElementById("flipcard_div");
+        var thisLikesDiv = document.getElementById("thisLikes_div");
+        flipcardDiv.style.position = 'absolute';
+        flipcardDiv.style.top = flipcard.top + 'px';
+        flipcardDiv.style.left = flipcard.left + 'px';
+        
+        if ( flipcard ) {
+            changeFlipCard( flipcard );
+            changeFlipHeart( flipcard );
+        }
+        
+        function changeFlipCard ( _flipcard ) {
+            flipcardDiv.style.position = 'absolute';
+            flipcardDiv.style.top = _flipcard.top + 'px';
+            flipcardDiv.style.left = _flipcard.left + 'px';
+        }
+        function changeFlipHeart ( _flipcard ) {
+            thisLikesDiv.style.position = 'absolute';
+            thisLikesDiv.style.top = (_flipcard.top + 560) + 'px';
+            thisLikesDiv.style.left = _flipcard.left + 'px';
+        }
+        //読み込み時の表示
+        window_load();
+        
+        //ウィンドウサイズ変更時に更新
+        window.onresize = window_load;
+        
+        //サイズの表示
+        function window_load() {
+            screen.width = document.body.clientWidth;
+            screen.height = document.body.clientHeight;
+            flipcard.left = (screen.width/2.0) - 320;
+            changeFlipCard( flipcard );
+            changeFlipHeart( flipcard );
+        }
+        
+            </script>
+        
+        <hr class="clearfix" noshade/>
+        
+        <div id="myWallet" hidden>
+        </div>
+        
+        <script type="text/javascript" src="../../js/myWallet.js"></script>
+        <script>
+            thisLikes_div.onclick = function () {
+                //mywallet_point.innerHTML = (mywallet_point.innerHTML - 1);
+                var event_label = "thisLikes?" + location.href;
+                gtag('event', "thisLikesOnClick", {
+                     'event_category': "thisLikes",
+                     'event_label': event_label,
+                     'value': 1
+                     });
+            }
+        </script>
+        <hr class="clearfix" noshade/>
+        
+        <style>
+            
+            #sound-directorProfile
+            {
+                border-radius:3px;
+                margin-top:10px;
+                width:97%;
+            }
+        
+            </style>
+        
+        <div id="sound-directorProfile" class="card_title">
+            <h3 style="padding:20px;">プロフィール</h3>
+        </div>
+        
+        <table class="card stagecard" style="width:97%;background-color:rgba(255,255,255,0.5);" hidden>
+            <tr style="background-color:rgba(255,255,255,0.5);">
+                <th style="min-width:50px;width:20%">項目</th>
+                <th>内容 <a name="nomal"> </a></th>
+            </tr>
+            <tr style="background-color:rgba(255,255,255,0.5);height:50px;">
+                <th>種類</th>
+                <td>Character Card</td>
+            </tr>
+            <tr style="background-color:rgba(255,255,255,0.5);height:50px;">
+                <th>カードID</th>
+                <td><a href="./sound-director.html#nomal">sound-director</a></td>
+            </tr>
+            <tr style="background-color:rgba(255,255,255,0.5);height:50px;">
+                <th>タイトル</th>
+                <td>にしかわちなみ</td>
+            </tr>
+            <tr style="background-color:rgba(255,255,255,0.5);height:50px;">
+                <th>セリフ</th>
+                <td>がおぉ〜</td>
+            </tr>
+            <tr style="background-color:rgba(255,255,255,0.5);height:50px;">
+                <th>行動力</th>
+                <td>３</td>
+            </tr>
+            <tr style="background-color:rgba(255,255,255,0.5);height:50px;">
+                <th>攻撃力</th>
+                <td>３</td>
+            </tr>
+            <tr style="background-color:rgba(255,255,255,0.5);height:50px;">
+                <th>守備力</th>
+                <td>３</td>
+            </tr>
+            <tr style="background-color:rgba(255,255,255,0.5);height:50px;">
+                <th>詳細</th>
+                <td>Twtter <a href="http://twitter.com/chamy235318731">@chamy235318731</a></td>
+            </tr>
+            <tr style="background-color:rgba(255,255,255,0.5);height:50px;">
+                <th>NEXT</th>
+                <td><spna id="sound-directorNomalCardNext"></span></td>
+            </tr>
+            
+        </table>
+        
+        <script>
+            var sound-directorNomalCardNext = document.getElementById("sound-directorNomalCardNext");
+            nextLevel(sound-directorNomalCardNext,2);
+            </script>
+        
+        <table class="card stagecard" style="width:97%;background-color:rgba(255,255,255,0.5);">
+            <tr style="background-color:rgba(255,255,255,0.5);">
+                <th style="min-width:50px;width:20%">項目</th>
+                <th>内容 <a name="example"> </a></th>
+            </tr>
+            <tr style="background-color:rgba(255,255,255,0.5);height:50px;">
+                <th>種類</th>
+                <td>Character Card</td>
+            </tr>
+            <tr style="background-color:rgba(255,255,255,0.5);height:50px;">
+                <th>カードID</th>
+                <td><a href="./sound-director.html#example">sound-director#example</a></td>
+            </tr>
+            <tr style="background-color:rgba(255,255,255,0.5);height:50px;">
+                <th>タイトル</th>
+                <td>音響監督</td>
+            </tr>
+            <tr style="background-color:rgba(255,255,255,0.5);height:50px;">
+                <th>セリフ</th>
+                <td>・・・</td>
+            </tr>
+            <tr style="background-color:rgba(255,255,255,0.5);height:50px;">
+                <th>行動力</th>
+                <td>３</td>
+            </tr>
+            <tr style="background-color:rgba(255,255,255,0.5);height:50px;">
+                <th>攻撃力</th>
+                <td>３</td>
+            </tr>
+            <tr style="background-color:rgba(255,255,255,0.5);height:50px;">
+                <th>守備力</th>
+                <td>３</td>
+            </tr>
+            <tr style="background-color:rgba(255,255,255,0.5);height:50px;">
+                <th>詳細</th>
+                <td>このキャラクターはスタッフカードとして扱う。<br />
+                    スキル「音響」「音響監督」<br />
+                    レコーディング / 収録 / 編集 / TVロケ / イベント / 舞台 / ライブ / ゲーム / アニメ / 映画</td>
+            </tr>
+            <tr style="background-color:rgba(255,255,255,0.5);height:50px;">
+                <th>NEXT</th>
+                <td><spna id="sound-directorExampleCardNext"></span></td>
+            </tr>
+            
+        </table>
+        
+        <script>
+            var sound-directorExampleCardNext = document.getElementById("sound-directorExampleCardNext");
+            nextLevel(sound-directorExampleCardNext,0);
+            </script>
+        
+        <table name="roid" class="card stagecard" style="width:97%;background-color:rgba(255,255,255,0.5);" hidden>
+            <tr style="background-color:rgba(255,255,255,0.5);">
+                <th style="min-width:50px;width:20%">項目</th>
+                <th>内容 <a name="roid"> </a></th>
+            </tr>
+            <tr style="background-color:rgba(255,255,255,0.5);height:50px;">
+                <th>種類</th>
+                <td>Character Card</td>
+            </tr>
+            <tr style="background-color:rgba(255,255,255,0.5);height:50px;">
+                <th>カードID</th>
+                <td><a href="./sound-director.html#roid">sound-director#roid</a></td>
+            </tr>
+            <tr style="background-color:rgba(255,255,255,0.5);height:50px;">
+                <th>タイトル</th>
+                <td>ロイド</td>
+            </tr>
+            <tr style="background-color:rgba(255,255,255,0.5);height:50px;">
+                <th>セリフ</th>
+                <td>おんでやんせ</td>
+            </tr>
+            <tr style="background-color:rgba(255,255,255,0.5);height:50px;">
+                <th>行動力</th>
+                <td>３</td>
+            </tr>
+            <tr style="background-color:rgba(255,255,255,0.5);height:50px;">
+                <th>攻撃力</th>
+                <td>２</td>
+            </tr>
+            <tr style="background-color:rgba(255,255,255,0.5);height:50px;">
+                <th>守備力</th>
+                <td>１</td>
+            </tr>
+            <tr style="background-color:rgba(255,255,255,0.5);height:50px;">
+                <th>詳細</th>
+                <td>チャージ１ / ドロー＋２</td>
+            </tr>
+            <tr style="background-color:rgba(255,255,255,0.5);height:50px;">
+                <th>NEXT</th>
+                <td><spna id="sound-directorRoidCardNext"></span></td>
+            </tr>
+            
+        </table>
+        
+        <script>
+            var card_no = 0;
+            var cardList = [
+                            {
+                            "name":"nomal",
+                            "img":"no-image.png",
+                            },
+                            ];
+                            
+                            
+                            var leftButtonDiv = document.getElementById("left-buuton");
+                            var rightButtonDiv = document.getElementById("right-buuton");
+                            leftButtonDiv.onclick = function leftButton () {
+                                card_no--;
+                                if (card_no < 0) {
+                                    card_no = cardList.length - 1;
+                                }
+                                flipcardDiv.innerHTML = '<div class="board left"><div class="front"><a href="'
+                                + "./sound-director.html#" + cardList[card_no].name + '"><img src="' + "../../images/card/" + cardList[card_no].img + '" style="width:350px;padding:30px;background-color:rgba(255,255,255,0.5);border-radius:6px;" /></a></div><div class="flipped" style="text-align:center;width:100%;"><a href="' + "./sound-director.html#" + cardList[card_no].name + '"><img src="' + "../../images/card/" + cardList[card_no].img +  '" style="width:350px;padding:30px;background-color:rgba(255,255,255,0.5);border-radius:6px;" /></a></div></div><a href="../card.html"><h1 style="text-align:center;width:100%;height:600px;">THE CARD GAME</h1></a>';
+                            }
+        rightButtonDiv.onclick = function rightButton () {
+            card_no++;
+            if (cardList.length - 1 < card_no) {
+                card_no = 0;
+            }
+            flipcardDiv.innerHTML = '<div class="board left"><div class="front"><a href="'
+            + "./sound-director.html#" + cardList[card_no].name + '"><img src="' + "../../images/card/" + cardList[card_no].img + '" style="width:350px;padding:30px;background-color:rgba(255,255,255,0.5);border-radius:6px;" /></a></div><div class="flipped" style="text-align:center;width:100%;"><a href="' + "./sound-director.html#" + cardList[card_no].name + '"><img src="' + "../../images/card/" + cardList[card_no].img + '" style="width:350px;padding:30px;background-color:rgba(255,255,255,0.5);border-radius:6px;" /></a></div></div><a href="../card.html"><h1 style="text-align:center;width:100%;height:600px;">THE CARD GAME</h1></a>';
+        }
+        </script>
+        
+        
+        <script>
+            var sound-directorRoidCardNext = document.getElementById("sound-directorRoidCardNext");
+            nextLevel(sound-directorRoidCardNext,0);
+            </script>
+        
+        
+        
+        <hr class="clearfix" noshade/>
+        
+        <style>
+            
+            #sound-directorJobworking
+            {
+                border-radius:3px;
+                margin-top:10px;
+                width:97%;
+            }
+        
+            </style>
+        
+        <div id="sound-directorJobworking" class="card_title">
+            <h3 style="padding:20px;">なりたい自分になるには？</h3>
+        </div>
+        <table class="card stagecard" style="width:97%;background-color:rgba(255,255,255,0.5);">
+            <tr style="background-color:rgba(255,255,255,0.5);">
+                <th hidden>JOBID</th>
+                <th style="width:150px;">記事元</th>
+                <th>概要</th>
+            </tr>
+            <tr style="background-color:rgba(255,255,255,0.5);height:50px;">
+                <td hidden>sound-director00001</td>
+                <td><a href="https://ja.wikipedia.org/wiki/音響監督" target="_blank">Wikipedia</a></td>
+                <td>音響監督（おんきょうかんとく）とは、主にアニメーションやゲームなどの作品において音声面の演出を行うスタッフのこと。</td>
+            </tr>
+            <tr style="background-color:rgba(255,255,255,0.5);height:50px;">
+                <td hidden>sound-director00002</td>
+                <td><a href="https://g.co/kgs/f81ptG" target="_blank">音響監督とは</a></td>
+                <td>音響監督とは、主にアニメーションやゲームなどの作品において音声面の演出を行うスタッフのこと。便宜上、外画と総称する外国語映画、海外ドラマ、海外アニメーション等の日本語吹き替え版の演出家についても本記事で言及する。別名で「録音監督」「音響演出」と呼ばれる。</td>
+            </tr>
+            <tr style="background-color:rgba(255,255,255,0.5);height:50px;">
+                <td hidden>sound-director00003</td>
+                <td><a href="https://siyuukingdum-animeaudition.com/animation-engilabo/anime-kanntoku-narikata-2592" target="_blank">アニメ声優演技研究所</a></td>
+                <td>アニメの音響監督ってどうやったらなれるの？</td>
+            </tr>
+            
+            <tr style="background-color:rgba(255,255,255,0.5);height:50px;">
+                <td hidden>sound-director00004</td>
+                <td><a href="https://www.famitsu.com/news/201208/22019955.html" target="_blank">ファミ通.com</a></td>
+                <td>声優＆音響監督・郷田ほづみ氏が明かす収録現場の理想と現実</td>
+            </tr>
+        </table>
+        
+        <hr class="clearfix" noshade/>
+        
+        
+        <style>
+            
+            #sound-directorHistory
+            {
+                border-radius:3px;
+                margin-top:10px;
+                width:97%;
+            }
+        
+            </style>
+        
+        <div id="sound-directorHistory" class="card_title">
+            <h3 style="padding:20px;">履歴</h3>
+        </div>
+        <table class="card stagecard" style="width:97%;background-color:rgba(255,255,255,0.5);">
+            <tr style="background-color:rgba(255,255,255,0.5);">
+                <th hidden>履歴ID</th>
+                <th>カードID</th>
+                <th>詳細を見る</th>
+            </tr>
+            <tr style="background-color:rgba(255,255,255,0.5);height:50px;">
+                <td hidden>sound-director00001</td>
+                <td><a href="./sound-director.html">sound-director</a></td>
+                <td>ページが更新されました</td>
+            </tr>
+            <tr style="background-color:rgba(255,255,255,0.5);height:50px;" hidden>
+                <td hidden>sound-director00002</td>
+                <td><a href="./sound-director.html">sound-director</a></td>
+                <td>関連グッズ 入荷されました</td>
+            </tr>
+            <tr style="background-color:rgba(255,255,255,0.5);height:50px;" hidden>
+                <td hidden>sound-director00003</td>
+                <td><a href="./sound-director.html#nomal">sound-director</a></td>
+                <td>普及カード プロフィール作成</td>
+            </tr>
+            <tr style="background-color:rgba(255,255,255,0.5);height:50px;" hidden>
+                <td hidden>sound-director00004</td>
+                <td><a href="./sound-director.html#roid">sound-director#roid</a></td>
+                <td>オリジナルカード プロフィール作成</td>
+            </tr>
+            <tr style="background-color:rgba(255,255,255,0.5);height:50px;">
+                <td hidden>sound-director00005</td>
+                <td><a href="./sound-director.html#example">sound-director#example</a></td>
+                <td>仮カード プロフィール作成</td>
+            </tr>
+        </table>
+        
+        <hr class="clearfix" noshade/>
+        
+        <style>
+            
+            #sound-directorService {
+                border-radius:3px;
+                margin-top:10px;
+                width:97%;
+            }
+        
+            </style>
+        
+        <div id="sound-directorService"  class="card_title" hidden>
+            <h3 style="padding-top:20px;padding-left:20px;">関連グッズ</h3>
+            <table class="stagecard" style="width:100%;text-align:center;">
+                <tr>
+                    <td style="width:50%">
+                        <iframe frameborder="0" style="height:480px;width:320px;" src="https://thecardgame.base.shop/items/11885096/widget/large" ></iframe>
+                    </td>
+                </tr>
+            </table>
+            <div style="padding:20px;">
+                <span style="color:red;">NEW</span> 入荷されました
+            </div>
+        </div>
+        
+        <hr class="clearfix" noshade/>
+        
+        <div id="myService">
+            <h3 style="padding-top:20px;padding-left:20px;">関連サービス</h3>
+            <table class="stagecard" style="width:100%;text-align:center;">
+                <tr>
+                    <td style="width:50%">
+                        <a href="../../card.html">
+                            <h2 class="list_button marginLeft20" style="width:80%;height:25px;">公式サイト</h2>
+                        </a>
+                    </td>
+                    <td style="width:50%">
+                        <a href="../../card.html">
+                            <h2 class="list_button marginLeft20" style="width:80%;height:25px;">THE CARD GAME</h2>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width:50%">
+                        <a href="../../memory/index.html">
+                            <h2 class="list_button marginLeft20" style="width:80%;height:25px;">MEMORY</h2>
+                        </a>
+                    </td>
+                    <td style="width:50%">
+                        <a href="../../rulebook.html">
+                            <h2 class="list_button marginLeft20" style="width:80%;height:25px;">RULEBOOK</h2>
+                        </a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        
+        <hr class="clearfix" noshade/>
+        
+        
+        <div style="padding:10px;" class="stagecard">
+            
+            <h2>THE CARD GAME</h2>
+            <h2>(仮)THE カードゲーム </h2>
+            <h3 class="stagecard">■カード■  <a href='../../card.html'>CARD</a> | <a href='../../memory/index.html'>MEMORY</a> | <a href='../../rulebook.html'>RULEBOOK</a></h3>
+            <div class="card" style="clear:both;background-color:rgba(255,255,255,0.5);max-width:500px;width:100%;">
+                
+                <!--div class="flip-boards">
+                 　<div class="board left">
+                 　　<div class="front"><h2>パネル：表</h2></div>
+                 　　<div class="flipped"><h2>パネル：裏</h2></div>
+                 　</div>
+                 </div-->
+                ＊ 回を追うごとに改善ポイントなどもいただきたいので予期せぬ変更などはございます<br />
+                ＊ タイトルなどに関しては、公的なものができるまでは外部に出さないようにお願いいたします。<br />
+            </div>
+        </div>
+        <style>
+            body {
+                background-image: url("../../img/bg.png");
+                background-repeat: repeat;
+                background-attachment: fixed;
+                background-position: right bottom
+            }
+        </style>
+        
+        <div class="card_title">
+            <h3 style="padding:20px;">カード一覧</h3>
+        </div>
+        
+        <div id="card_list">
+            <h2><span style="font-size:0.5em;" hidden> ー 管理者のみに表示されます</span></h2>
+            <table class="card stagecard" style="width:97%;background-color:rgba(255,255,255,0.5);">
+                <tr style="background-color:rgba(255,255,255,0.5);">
+                    <th hidden>カードID</th>
+                    <th>カード名</th>
+                    <th>詳細を見る</th>
+                </tr>
+                <tr style="background-color:rgba(255,255,255,0.5);height:50px;">
+                    <td hidden>sound-director</td>
+                    <td>音響監督</td>
+                    <td><a href="../job/sound-director.html">詳細を見る</a></td>
+                </tr>
+                <tr style="background-color:rgba(255,255,255,0.5);height:50px;">
+                    <td hidden>chinaminishikawa</td>
+                    <td>にしかわちなみ</td>
+                    <td><a href="../chinaminishikawa.html">詳細を見る</a></td>
+                </tr>
+                <tr style="background-color:rgba(255,255,255,0.5);height:50px;">
+                    <td hidden>soubistudio</td>
+                    <td>装美スタジオ</td>
+                    <td><a href="../soubistudio.html">詳細を見る</a></td>
+                </tr>
+                <tr style="background-color:rgba(255,255,255,0.5);height:50px;">
+                    <td hidden>mokuseigekijo</td>
+                    <td>木星劇場</td>
+                    <td><a href="../mokuseigekijo.html">詳細を見る</a></td>
+                </tr>
+                
+            </table>
+        </div>
+        <br />
+        <hr class="clearfix" noshade/>
+        <!-- シェアボタン [ここからコピー] -->
+        <script>
+            snsDocument();
+            </script>
+        <!-- シェアボタン [ここまでコピー] -->
+        
+        <hr class="clearfix" noshade/>
+        
+        <div id="stage" style="background-color:white;color:black;padding:10px;width:97%;text-align:center;">
+            <h4>PR</h4>
+            <div id="cardgameproject">
+                <a href="http://stage-card.karaage.site/card.html" target="_blank">
+                    <img src="http://stage-card.karaage.site/images/link/card-game_pr.png" alt="カードゲーム化プロジェクト" title="カードゲーム化プロジェクト" style="width:100%;"/>
+                </a>
+            </div>
+            宣伝協力
+            <h3 id="cardgameprojectButton" class="reserve_button">コピーする</h3>
+        </div>
+        
+        <script>
+            function execCopy(string){
+                var temp = document.createElement('div');
+                
+                temp.appendChild(document.createElement('pre')).textContent = string;
+                
+                var s = temp.style;
+                s.position = 'fixed';
+                s.left = '-100%';
+                
+                document.body.appendChild(temp);
+                document.getSelection().selectAllChildren(temp);
+                
+                var result = document.execCommand('copy');
+                
+                document.body.removeChild(temp);
+                // true なら実行できている falseなら失敗か対応していないか
+                return result;
+            }
+        var cardgameproject = document.getElementById('cardgameproject');
+        var cardgameprojectButton = document.getElementById('cardgameprojectButton');
+        cardgameprojectButton.onclick = function()
+        {
+            var succeeded = execCopy(cardgameproject.innerHTML);
+            
+            if(succeeded){
+                alert('コピーできました');
+            }
+            else {
+                alert('このブラウザでは対応していません');
+            }
+        };
+        </script>
+        
+        <hr class="clearfix" noshade/>
+        
+        <div id="stage" style="background-color:white;color:black;padding:10px;">
+            <div class="event_box" style="width:97%;">
+                <div class="text_left" style="float:left;width:50%;">
+                    <a name="soubistudio"><h4>【　会　場　】</h4></a>
+                    装美スタジオ<br />
+                    ソウビスタジオ<br />
+                    <br />
+                    〒150-0011<br />
+                    東京都東京都渋谷区東2-23-6 装美スタジオ（現、忍者茶房内）<br />
+                    <br />
+                    TEL： 03-5778-4419<br />
+                    <h5>【H  P】</h5>
+                    <a href="http://oedo.club/" target="_blank">http://soubi.studio/</a><br />
+                    <h5>【アクセス】</h5>
+                    JR渋谷南口16b（恵比寿方面）出口　徒歩10分<br />
+                </div>
+                <div class="text_center" style="float:right;width:50%;">
+                    <a href="../soubistudio.html">
+                        <img src="../../images/card/soubistudio.png" style="max-width:400px;width:100%;"/>
+                    </a><br />
+                    <span style="color:red">NEW</span>カード化しました！
+                </div>
+                <hr class="clearfix" noshade/>
+            </div>
+        </div>
+        
+        <hr class="clearfix" noshade/>
+        
+        <div id="stage" style="background-color:white;color:black;padding:10px;">
+            <div class="event_box" style="width:97%;">
+                <div class="text_left" style="float:right;width:50%;">
+                    <a name="mokuseigekijo"><h4>【　会　場　】</h4></a>
+                    cafe＆bar 木星劇場<br />
+                    モクセイゲキジョウ<br />
+                    <br />
+                    〒171-0021<br />
+                    東京都豊島区西池袋5-1-5 第二春谷ビルB1<br />
+                    TEL： 03-5927-8998<br />
+                    <a href="http://mokusei-cafe.com/access/" target="_blank">http://mokusei-cafe.com/</a><br />
+                    <h5>【アクセス】</h5>
+                    池袋駅西口側 C3出口から徒歩約10秒。<br />
+                </div>
+                <div class="text_center" style="float:left;width:50%;">
+                    <a href="../mokuseigekijo.html">
+                        <img src="../../images/card/mokuseigekijo.png" style="max-width:400px;width:100%;"/>
+                    </a><br />
+                    <span style="color:red">NEW</span>カード化しました！
+                </div>
+                <hr class="clearfix" noshade/>
+            </div>
+            
+            
+        </div>
+        
+        <hr class="clearfix" noshade/>
+        
+        <div id="stage" style="background-color:white;color:black;padding:10px;">
+            <h4>PR</h4>
+            <div>
+                <a href="http://assignpromotion.sunstripe-main.jp/" target="_blank">
+                    <img src="../../images/link/assingpromotion_pr.png" alt="和DE撮影会モデル募集中！" title="和DE撮影会モデル募集中！" style="width:100%;background-color:black"/>
+                </a>
+            </div>
+        </div>
+        
+        <hr class="clearfix" noshade/>
+        
+        <div id="stage"  class="event_box" style="background-color:white;color:black;padding:10px;">
+            <h3>協力</h3>
+            <div style="float:left;">
+                <h4>会場</h4>
+                <a href="http://oedo.club/" target="_blank">
+                    <h3>お江戸倶楽部</h3>
+                    <img src="../../images/link/oedoclub_logo.png" alt="お江戸倶楽部" title="お江戸倶楽部" style="max-width:300px;width:100%;background-color:black"/>
+                </a>
+            </div>
+            <div style="float:left;">
+                <h4>番組</h4>
+                <a href="http://welkome.sunstripe-main.jp/" target="_blank">
+                    <h3>下北FM「ライストゥーミートユー」</h3>
+                    <img src="../../images/link/welkome_logo.png" alt="ライストゥーミートユー" title="ライストゥーミートユー" style="max-width:300px;width:100%;background-color:black"/>
+                </a>
+            </div>
+            <hr class="clearfix" noshade/>
+        </div>
+        
+        <hr class="clearfix" noshade/>
+        
+        <div id="sitemap">
+            <a href="../../card.html">TOP</a> <br />
+            <a href="../../rulebook.html">RULEBOOK</a> <br />
+            <a href="../../ad.html">広告掲載して見ませんか？</a> <br />
+        </div>
+        
+        <div id="friend-qr">
+            <a href="https://line.me/R/ti/p/%40dqv6292a"><img height="36" border="0" alt="友だち追加" src="https://scdn.line-apps.com/n/line_add_friends/btn/ja.png"></a><br />
+            <img src="http://qr-official.line.me/L/viofM09uGU.png" />
+        </div>
+        
+        <footer>
+            <p>このホームページに記載の画像・文章の著作権は「(仮)THE カードゲーム」もしくは、作品・情報の提供者に帰属します。無断転載・利用を禁じます。</p>
+            Copyright(C)2018-<span class="stagecard"><a href="../card.html">(仮)THE カードゲーム</a></span>. All rihts Reserved .
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,763 @@
+html {
+    width:100%;
+}
+* {
+    padding:0;
+    margin:0;
+}
+body {
+    color: #FFFFFF;
+    background-color: #000000;
+    width:100%;
+    background-image: url("../images/flyer.png");
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-position: right bottom;
+    font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+
+}
+h1{
+    font-size:2.0em;
+}
+
+@media screen and ( min-width:1000px ) {
+    h1{
+        font-size:4.0vw;
+    }
+}
+
+.marginLeft20 {
+    margin-left:20px;
+}
+
+@media screen and ( max-width:800px ) {
+    h2{
+        font-size:4.0vw;
+    }
+    .marginLeft20 {
+        margin-left:0;
+    }
+}
+
+.main {
+    background-color:rgba(255,255,255,0.5);
+    max-width:800px;
+    margin:10px;
+    padding-left:1000px;
+    width:100%;
+    text-shadow:
+    #000000 2px 0px,  #000000 -2px 0px,
+    #000000 0px -2px, #000000 0px 2px,
+    #000000 2px 2px , #000000 -2px 2px,
+    #000000 2px -2px, #000000 -2px -2px,
+    #000000 1px 2px,  #000000 -1px 2px,
+    #000000 1px -2px, #000000 -1px -2px,
+    #000000 2px 1px,  #000000 -2px 1px,
+    #000000 2px -1px, #000000 -2px -1px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px #ccc;
+}
+@media screen and ( min-width:500px ) {
+    .main {
+        width:98%;
+        padding:20px;
+        clear:both;
+    }
+}
+
+.submain {
+    background-color:rgba(0,0,0,0.5);
+    width:98%;
+    padding:20px;
+}
+
+#snsnav {
+    position:static;
+    width:100%;
+    height:50px;
+    text-align:right;
+}
+
+@media screen and ( min-width:800px ) {
+    #snsnav {
+        position:absolute;
+        right:0px;
+        width:40%;
+        text-align:right;
+    }
+}
+@media screen and ( min-width:800px ) {
+}
+
+footer {
+    text-align:center;
+    color: #A1A4A2;
+    font-size:1.0vw;
+}
+
+.stagecard a {
+    color: #FFFFFF;
+    text-decoration: none;
+    text-shadow:
+    #FFddee 2px 0px,  #FFddee -2px 0px,
+    #FFddee 0px -2px, #FFddee 0px 2px,
+    #FFddee 2px 2px , #FFddee -2px 2px,
+    #FFddee 2px -2px, #FFddee -2px -2px,
+    #FFddee 1px 2px,  #FFddee -1px 2px,
+    #FFddee 1px -2px, #FFddee -1px -2px,
+    #FFddee 2px 1px,  #FFddee -2px 1px,
+    #FFddee 2px -1px, #FFddee -2px -1px;
+}
+/* キーフレームを作成 */
+@-webkit-keyframes fadeout {
+    0%{
+        opacity:1;
+    }
+    75%{
+        opacity:0.5;
+    }
+    100% {
+        opacity:0;
+    }
+}
+@keyframes horizontal {
+    0% { transform:translateX( -3px); }
+    100% { transform:translateX(  0px); }
+}
+.stagecard a:hover  {
+    color: #ffffff;
+    text-shadow:
+    #21A757 2px 0px,  #21A757 -2px 0px,
+    #21A757 0px -2px, #21A757 0px 2px,
+    #21A757 2px 2px , #21A757 -2px 2px,
+    #21A757 2px -2px, #21A757 -2px -2px,
+    #21A757 1px 2px,  #21A757 -1px 2px,
+    #21A757 1px -2px, #21A757 -1px -2px,
+    #21A757 2px 1px,  #21A757 -2px 1px,
+    #21A757 2px -1px, #21A757 -2px -1px;
+    -webkit-animation: fluffy 3s ease infinite;
+}
+
+.stagecard a:active{
+    color: #FFFFFF;
+    text-shadow:
+    #000055 2px 0px,  #000055 -2px 0px,
+    #000055 0px -2px, #000055 0px 2px,
+    #000055 2px 2px , #000055 -2px 2px,
+    #000055 2px -2px, #000055 -2px -2px,
+    #000055 1px 2px,  #000055 -1px 2px,
+    #000055 1px -2px, #000055 -1px -2px,
+    #000055 2px 1px,  #000055 -2px 1px,
+    #000055 2px -1px, #000055 -2px -1px;
+    -webkit-animation: horizontal 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes fluffy {
+    from { -webkit-transform:translateX(0) }
+    to { -webkit-transform:translateY(1000px) }
+}
+
+.card {
+    padding:10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px #ccc;
+}
+
+.profile_left {
+    float:left;
+}
+.profile_right {
+    float:right;
+}
+.profile_text{
+}
+.profile_img{
+    max-width:300px;
+    margin: 30px auto;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px #ccc;
+}
+.memory_left {
+    float:left;
+}
+.memory_img {
+    max-width:300px;
+    margin: 30px auto;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px #ccc;
+}
+
+.memory_list {
+    overflow: scroll;
+}
+.memory_item {
+    min-width:300px;
+    margin: 30px auto;
+}
+
+/* FONT */
+.fontPoiretOne {
+    font-family: 'Poiret One', cursive;
+}
+
+.fontOrbitron {
+    font-family: 'Orbitron', sans-serif;
+}
+.fontAudiowide {
+    font-family: 'Audiowide', cursive;
+}
+.fontCabinSketch {
+    font-family: 'Cabin Sketch', cursive;
+}
+.fontVT323 {
+    font-family: 'VT323', monospace;
+}
+.fontPressStart2P {
+    font-family: 'Press Start 2P', cursive;
+}
+
+.text_center {
+    text-align:center;
+}
+
+.text_left {
+    text-align:left;
+}
+
+.text_right {
+    text-align:right;
+}
+
+.news {
+    color:red;
+}
+
+.event_color {
+    
+}
+
+.card_title {
+    background-color:rgba(100,0,0,1.0);
+    background-image: url("../img/bg.png");
+    color: #F7DE05;
+    padding-top:10px;
+    padding-left:20px;
+    padding-bottom:10px;
+    background-image: url("../img/bg.png");
+
+}
+
+.event_title {
+    background-color:rgba(100,0,0,1.0);
+    color: #F7DE05;
+    padding-top:10px;
+    padding-left:20px;
+    padding-bottom:10px;
+    background-image: url("../img/bg.png");
+}
+
+.event_box {
+    padding: 0.5em 1em;
+    margin: 2em 0;
+    color: #7d6eff;
+    background: #ebe9ff;
+    border-top: solid 10px #ff7d6e;
+}
+.event_box a {
+    color: #FFFFFF;
+    text-decoration: none;
+    text-shadow:
+    #0055bb 2px 0px,  #0055bb -2px 0px,
+    #0055bb 0px -2px, #0055bb 0px 2px,
+    #0055bb 2px 2px , #0055bb -2px 2px,
+    #0055bb 2px -2px, #0055bb -2px -2px,
+    #0055bb 1px 2px,  #0055bb -1px 2px,
+    #0055bb 1px -2px, #0055bb -1px -2px,
+    #0055bb 2px 1px,  #0055bb -2px 1px,
+    #0055bb 2px -1px, #0055bb -2px -1px;
+}
+
+.event_box p {
+    margin: 0;
+    padding: 0;
+}
+
+.bg {
+    background-color:rgba(100,0,0,1.0);
+    color: #F7DE05;
+    padding-top:10px;
+    padding-left:20px;
+    padding-bottom:10px;
+    background-image: url("../img/bg.png");
+}
+.description {
+    background-color:rgba(0,0,0,0.6);
+    color: #FFFFFF;
+    border-radius: 5px;
+    padding-top:10px;
+    padding-left:20px;
+    padding-bottom:10px;
+    margin-bottom:10px;
+    background-image: url("../img/bg.png");
+}
+
+#pickup {
+    background-color:rgba(100,0,0,1.0);
+    color: #F7DE05;
+    padding-top:10px;
+    padding-left:20px;
+    padding-bottom:10px;
+    background-image: url("../img/bg.png");
+}
+
+.pickup {
+    height:300px;
+    overflow: scroll;
+}
+.pickup a{
+    color: #FFFFFF;
+    text-decoration: none;
+    text-shadow:
+    #0055bb 2px 0px,  #0055bb -2px 0px,
+    #0055bb 0px -2px, #0055bb 0px 2px,
+    #0055bb 2px 2px , #0055bb -2px 2px,
+    #0055bb 2px -2px, #0055bb -2px -2px,
+    #0055bb 1px 2px,  #0055bb -1px 2px,
+    #0055bb 1px -2px, #0055bb -1px -2px,
+    #0055bb 2px 1px,  #0055bb -2px 1px,
+    #0055bb 2px -1px, #0055bb -2px -1px;
+}
+
+#news-contents {
+    background-color:rgba(100,0,0,1.0);
+    color: #F7DE05;
+    padding-top:10px;
+    padding-left:20px;
+    padding-bottom:10px;
+    background-image: url("../img/bg.png");
+}
+
+.news-contents {
+
+}
+
+
+#myLikes {
+    
+}
+
+#myWallet {
+    background-color:white;
+    border-radius:3px;
+    margin-top:10px;
+    width:97%;
+}
+
+.mywallet {
+    float:left;
+    padding:10px;
+}
+.icons {
+    border-radius:100px;
+}
+#mywallet_yen {
+    font-size:2.0em;
+}
+
+#addButton {
+    
+}
+.add_button {
+    float:right;
+    margin:10px;
+    padding:10px;
+}
+.add_button_img {
+    
+}
+
+#friend-qr {
+    width: 100%;
+    text-align:center;
+}
+
+.flip-boards{ position: relative; }
+.flip-boards .board
+{
+    float:left;
+    margin: 2em 8em;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+}
+.flip-boards .board div
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    /* border: 1px solid #ccc; */
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility:    hidden;
+    -ms-backface-visibility:     hidden;
+    backface-visibility:     hidden;
+}
+.flip-boards .board .front
+{
+    /*
+     color:#eee;
+     background: rgb(207,231,250); Old browsers
+     background: -moz-linear-gradient(top,  rgba(207,231,250,1) 0%, rgba(99,147,193,1) 100%);
+     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(207,231,250,1)), color-stop(100%,rgba(99,147,193,1)));
+     background: -webkit-linear-gradient(top,  rgba(207,231,250,1) 0%,rgba(99,147,193,1) 100%);
+     background: -o-linear-gradient(top,  rgba(207,231,250,1) 0%,rgba(99,147,193,1) 100%);
+     background: -ms-linear-gradient(top,  rgba(207,231,250,1) 0%,rgba(99,147,193,1) 100%);
+     background: linear-gradient(to bottom,  rgba(207,231,250,1) 0%,rgba(99,147,193,1) 100%);
+     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cfe7fa', endColorstr='#6393c1',GradientType=0 );
+     */
+}
+.flip-boards .board .flipped
+{
+    /*
+     color:#555;
+     background: rgb(238,238,238); Old browsers
+     background: -moz-linear-gradient(top,  rgba(238,238,238,1) 0%, rgba(238,238,238,1) 100%);
+     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(238,238,238,1)), color-stop(100%,rgba(238,238,238,1)));
+     background: -webkit-linear-gradient(top,  rgba(238,238,238,1) 0%,rgba(238,238,238,1) 100%);
+     background: -o-linear-gradient(top,  rgba(238,238,238,1) 0%,rgba(238,238,238,1) 100%);
+     background: -ms-linear-gradient(top,  rgba(238,238,238,1) 0%,rgba(238,238,238,1) 100%);
+     background: linear-gradient(to bottom,  rgba(238,238,238,1) 0%,rgba(238,238,238,1) 100%);
+     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#eeeeee',GradientType=0 );
+     */
+}
+.flip-boards .board h2{
+    margin-top:80px;
+    font-size: 1em;
+}
+.flip-boards .board.top:hover
+{
+    -webkit-transform: rotateX( 180deg );
+    -moz-transform: rotateX( 180deg );
+    -ms-transform: rotateX( 180deg );
+    transform: rotateX( 180deg );
+}
+.flip-boards .board.top .flipped
+{
+    -webkit-transform: rotateX( 180deg );
+    -moz-transform: rotateX( 180deg );
+    -ms-transform: rotateX( 180deg );
+    transform: rotateX( 180deg );
+}
+.flip-boards .board.left:hover
+{
+    -webkit-transform: rotateY( 180deg );
+    -moz-transform: rotateY( 180deg );
+    -ms-transform: rotateY( 180deg );
+    transform: rotateY( 180deg );
+}
+.flip-boards .board.left .flipped
+{
+    -webkit-transform: rotateY( 180deg );
+    -moz-transform: rotateY( 180deg );
+    -ms-transform: rotateY( 180deg );
+    transform: rotateY( 180deg );
+}
+
+#thisLikes {
+    position:absolute;
+    top:600px;
+}
+
+.flip-heart{ position: relative; }
+.flip-heart .board
+{
+    float:left;
+    margin: 2em 8em;
+    position: relative;
+    width: 400px;
+    height: 100px;
+    cursor: pointer;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+}
+.flip-heart .board div
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility:    hidden;
+    -ms-backface-visibility:     hidden;
+    backface-visibility:     hidden;
+}
+.flip-heart .board .front
+{
+}
+.flip-heart .board .flipped
+{
+}
+.flip-heart .board h2{
+    margin-top:80px;
+    font-size: 1em;
+}
+.flip-heart .board.top:hover
+{
+    -webkit-transform: rotateX( 180deg );
+    -moz-transform: rotateX( 180deg );
+    -ms-transform: rotateX( 180deg );
+    transform: rotateX( 180deg );
+}
+.flip-heart .board.top .flipped
+{
+    -webkit-transform: rotateX( 180deg );
+    -moz-transform: rotateX( 180deg );
+    -ms-transform: rotateX( 180deg );
+    transform: rotateX( 180deg );
+}
+.flip-heart .board.left:hover
+{
+    -webkit-transform: rotateY( 180deg );
+    -moz-transform: rotateY( 180deg );
+    -ms-transform: rotateY( 180deg );
+    transform: rotateY( 180deg );
+}
+.flip-heart .board.left .flipped
+{
+    -webkit-transform: rotateY( 180deg );
+    -moz-transform: rotateY( 180deg );
+    -ms-transform: rotateY( 180deg );
+    transform: rotateY( 180deg );
+}
+.flip-heart .board.left:active {
+    -ms-transform: translateY(-50px);
+    -webkit-transform: translateY(-50px);
+    transform: translateY(-50px);/*上に動く*/
+}
+
+.imageHover:hover {
+    opacity: 0.5;
+}
+
+#myService {
+    background-color:white;
+    border-radius:3px;
+    margin-top:10px;
+    width:97%;
+}
+
+.StageCard {
+    background-color:white;
+    color:black;
+    padding:10px;
+    width:97%;
+}
+
+.reserve_button{
+    background-image: url("../img/bg.png");
+    padding: 0.5em 1em;
+    text-decoration: none;
+    border: solid 1px rgba(200,200,200,0.1);
+    border-bottom: solid 4px rgba(200,200,200,0.1);
+    border-radius: 3px;
+}
+.reserve_button:active {/*ボタンを押したとき*/
+    -ms-transform: translateY(4px);
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);/*下に動く*/
+    border: solid 0px rgba(200,200,200,0.0);
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);/*影を小さく*/
+    border-bottom: none;
+}
+
+.list_button
+{
+    background-image: url("../img/bg.png");
+    padding: 0.5em 1em;
+    border: solid 1px rgba(200,200,200,0.1);
+    border-bottom: solid 4px rgba(200,200,200,0.5);
+    border-radius: 3px;
+}
+.list_button:active
+{/*ボタンを押したとき*/
+    -ms-transform: translateY(4px);
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);/*下に動く*/
+    border: solid 0px rgba(200,200,200,0.0);
+    border-bottom: none;
+    border-bottom: solid 4px rgba(200,200,200,0.1);
+}
+
+.button-styles {
+    border-radius:30px;
+}
+
+.clearfix {
+    margin:0px 0;
+    padding:0;
+    clear:both;　/* floatを解除する */
+    height:0;　/* ＜hr＞の実線を消す */
+    border: 0 none;
+    border: 0;
+    border-top: 0px dashed rgba(255,255,255,0.1);
+}
+
+
+.subtitle {
+    background-color:rgba(100,0,0,1.0);
+    color: #F7DE05;
+    padding-top:10px;
+    padding-left:20px;
+    padding-bottom:10px;
+    background-image: url("../img/bg.png");
+}
+
+.sublabel {
+    display: block;
+    margin: 1.5px 0;
+    padding : 11px 12px;
+    color :#2f8fcf;
+    font-weight: bold;
+    background :#a4cbf3;
+    cursor :pointer;
+    transition: all 0.5s;
+    background-image: url("../img/bg.png");
+}
+.sublabel:hover {
+    background :#85baef;
+    background-image: url("../img/bg.png");
+}
+
+.subarea {
+    padding:20px;
+    border-bottom:
+    double 10px rgba(255,155,155,0.5);
+}
+
+
+/*ボックス全体*/
+.accbox {
+    margin: 2em 0;
+    padding: 0;
+    width: 100%; /*最小幅*/
+    min-width: 320px;/*最小幅*/
+    background-image: url("../img/bg.png");
+}
+
+/*ラベル*/
+.accbox label {
+    display: block;
+    margin: 1.5px 0;
+    padding : 11px 12px;
+    color :#2f8fcf;
+    font-weight: bold;
+    background :#a4cbf3;
+    cursor :pointer;
+    transition: all 0.5s;
+    background-image: url("../img/bg.png");
+}
+
+/*ラベルホバー時*/
+.accbox label:hover {
+    background :#85baef;
+    background-image: url("../img/bg.png");
+}
+
+/*チェックは隠す*/
+.accbox input {
+    display: none;
+}
+
+/*中身を非表示にしておく*/
+.accbox .accshow {
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: 0.8s;
+}
+
+/*クリックで中身表示*/
+.cssacc:checked + .accshow {
+    height: auto;
+    padding: 5px;
+    background: #eaeaea;
+    background-image: url("../img/bg.png");
+
+    opacity: 1;
+}
+
+
+.RegionalActivationProject {
+    background-image: url("../img/bg.png");
+    background: linear-gradient(-135deg, rgba(200,150,0,0.5), rgba(255,200,100,0.8));
+    color:white;
+    border-radius:30px;
+    width:300px;
+    margin:10px;
+    padding:10px;
+    padding-left:30px;
+}
+
+.THECARDGAMEManagement {
+    background-image: url("../img/bg.png");
+    background: linear-gradient(-135deg, rgba(50,50,50,0.5), rgba(100,100,100,0.8));
+    color:white;
+    border-radius:30px;
+    width:300px;
+    margin:10px;
+    padding:10px;
+    padding-left:30px;
+}
+
+.THECARDGAMESystem {
+    background-image: url("../img/bg.png");
+    background: linear-gradient(-135deg, rgba(0,0,50,0.5), rgba(0,0,100,0.8));
+    color:white;
+    border-radius:30px;
+    width:300px;
+    margin:10px;
+    padding:10px;
+    padding-left:30px;
+}
+
+.THECARDGAMEPublicRelations {
+    background-image: url("../img/bg.png");
+    background: linear-gradient(-135deg, rgba(100,0,0,0.5), rgba(255,0,0,0.8));
+    color:white;
+    border-radius:30px;
+    width:300px;
+    margin:10px;
+    padding:10px;
+    padding-left:30px;
+}
+
+.THECARDGAMEEvent {
+    background-image: url("../img/bg.png");
+    background: linear-gradient(-135deg, rgba(100,100,0,0.5), rgba(255,255,0,0.8));
+    color:white;
+    border-radius:30px;
+    width:300px;
+    margin:10px;
+    padding:10px;
+    padding-left:30px;
+}
+
+

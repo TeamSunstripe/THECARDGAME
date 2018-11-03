@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>THE CARD GAME</title>
+        <meta charset="utf-8" />
+        <meta name="robots" content="noindex, nofollow" />
+        <meta name="description" content="(仮)THE カードゲーム / カードで遊ぼう！">
+            <meta name="author" content="SUNSTRIPE"/>
+            <meta name="viewport" content="width=device-width, initial-scale=1"/>
+            <link rel="stylesheet" href="../css/sns.css"/>
+            <link rel="stylesheet" href="../css/styles.css"/>
+            <!--[if lt IE 9]>
+             <script src="//cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
+             <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+             <![endif]-->
+            <link href="https://fonts.googleapis.com/css?family=Audiowide|Black+Ops+One|Cabin+Sketch|Fredericka+the+Great|Poiret+One|Press+Start+2P|VT323|Josefin+Slab" rel="stylesheet"/>
+            <link rel="shortcut icon" href=""/>
+            </head>
+    <body>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121197913-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            
+            gtag('config', 'UA-121197913-1');
+            </script>
+
+        <script type="text/javascript" src="../js/sns.js"></script>
+        <style>
+            body {
+                color:black;
+                background-color:rgba(200,200,255,0.5);
+                font-family: 'Josefin Slab', serif;
+            }
+        a {
+            color:white;
+            text-decoration:none;
+        }
+        </style>
+        <style>
+            header {
+                height:899px;
+                background-image: url("../images/card-bg.jpg");
+                background-position: right bottom;
+            }
+        
+        .flip-boards{ position: relative; }
+        .flip-boards .board
+        {
+            float:left;
+            margin: 2em 8em;
+            position: relative;
+            width: 200px;
+            height: 200px;
+            cursor: pointer;
+            -webkit-transform-style: preserve-3d;
+            -moz-transform-style: preserve-3d;
+            -ms-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+            -webkit-transition: all 1s ease;
+            -moz-transition: all 1s ease;
+            -ms-transition: all 1s ease;
+            transition: all 1s ease;
+        }
+        .flip-boards .board div
+        {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            /* border: 1px solid #ccc; */
+            -webkit-backface-visibility: hidden;
+            -moz-backface-visibility:    hidden;
+            -ms-backface-visibility:     hidden;
+            backface-visibility:     hidden;
+        }
+        .flip-boards .board .front
+        {
+            /*
+             color:#eee;
+             background: rgb(207,231,250); Old browsers
+             background: -moz-linear-gradient(top,  rgba(207,231,250,1) 0%, rgba(99,147,193,1) 100%);
+             background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(207,231,250,1)), color-stop(100%,rgba(99,147,193,1)));
+             background: -webkit-linear-gradient(top,  rgba(207,231,250,1) 0%,rgba(99,147,193,1) 100%);
+             background: -o-linear-gradient(top,  rgba(207,231,250,1) 0%,rgba(99,147,193,1) 100%);
+             background: -ms-linear-gradient(top,  rgba(207,231,250,1) 0%,rgba(99,147,193,1) 100%);
+             background: linear-gradient(to bottom,  rgba(207,231,250,1) 0%,rgba(99,147,193,1) 100%);
+             filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cfe7fa', endColorstr='#6393c1',GradientType=0 );
+             */
+        }
+        .flip-boards .board .flipped
+        {
+            /*
+             color:#555;
+             background: rgb(238,238,238); Old browsers
+             background: -moz-linear-gradient(top,  rgba(238,238,238,1) 0%, rgba(238,238,238,1) 100%);
+             background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(238,238,238,1)), color-stop(100%,rgba(238,238,238,1)));
+             background: -webkit-linear-gradient(top,  rgba(238,238,238,1) 0%,rgba(238,238,238,1) 100%);
+             background: -o-linear-gradient(top,  rgba(238,238,238,1) 0%,rgba(238,238,238,1) 100%);
+             background: -ms-linear-gradient(top,  rgba(238,238,238,1) 0%,rgba(238,238,238,1) 100%);
+             background: linear-gradient(to bottom,  rgba(238,238,238,1) 0%,rgba(238,238,238,1) 100%);
+             filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#eeeeee',GradientType=0 );
+             */
+        }
+        .flip-boards .board h2{
+            margin-top:80px;
+            font-size: 1em;
+        }
+        .flip-boards .board.top:hover
+        {
+            -webkit-transform: rotateX( 180deg );
+            -moz-transform: rotateX( 180deg );
+            -ms-transform: rotateX( 180deg );
+            transform: rotateX( 180deg );
+        }
+        .flip-boards .board.top .flipped
+        {
+            -webkit-transform: rotateX( 180deg );
+            -moz-transform: rotateX( 180deg );
+            -ms-transform: rotateX( 180deg );
+            transform: rotateX( 180deg );
+        }
+        .flip-boards .board.left:hover
+        {
+            -webkit-transform: rotateY( 180deg );
+            -moz-transform: rotateY( 180deg );
+            -ms-transform: rotateY( 180deg );
+            transform: rotateY( 180deg );
+        }
+        .flip-boards .board.left .flipped
+        {
+            -webkit-transform: rotateY( 180deg );
+            -moz-transform: rotateY( 180deg );
+            -ms-transform: rotateY( 180deg );
+            transform: rotateY( 180deg );
+        }
+        
+        #thisLikes {
+            position:absolute;
+            top:600px;
+        }
+        
+        .flip-heart{ position: relative; }
+        .flip-heart .board
+        {
+            float:left;
+            margin: 2em 8em;
+            position: relative;
+            width: 400px;
+            height: 100px;
+            cursor: pointer;
+            -webkit-transform-style: preserve-3d;
+            -moz-transform-style: preserve-3d;
+            -ms-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+            -webkit-transition: all 1s ease;
+            -moz-transition: all 1s ease;
+            -ms-transition: all 1s ease;
+            transition: all 1s ease;
+        }
+        .flip-heart .board div
+        {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            -webkit-backface-visibility: hidden;
+            -moz-backface-visibility:    hidden;
+            -ms-backface-visibility:     hidden;
+            backface-visibility:     hidden;
+        }
+        .flip-heart .board .front
+        {
+        }
+        .flip-heart .board .flipped
+        {
+        }
+        .flip-heart .board h2{
+            margin-top:80px;
+            font-size: 1em;
+        }
+        .flip-heart .board.top:hover
+        {
+            -webkit-transform: rotateX( 180deg );
+            -moz-transform: rotateX( 180deg );
+            -ms-transform: rotateX( 180deg );
+            transform: rotateX( 180deg );
+        }
+        .flip-heart .board.top .flipped
+        {
+            -webkit-transform: rotateX( 180deg );
+            -moz-transform: rotateX( 180deg );
+            -ms-transform: rotateX( 180deg );
+            transform: rotateX( 180deg );
+        }
+        .flip-heart .board.left:hover
+        {
+            -webkit-transform: rotateY( 180deg );
+            -moz-transform: rotateY( 180deg );
+            -ms-transform: rotateY( 180deg );
+            transform: rotateY( 180deg );
+        }
+        .flip-heart .board.left .flipped
+        {
+            -webkit-transform: rotateY( 180deg );
+            -moz-transform: rotateY( 180deg );
+            -ms-transform: rotateY( 180deg );
+            transform: rotateY( 180deg );
+        }
+        .flip-heart .board.left:active {
+            -ms-transform: translateY(-50px);
+            -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);/*上に動く*/
+        }
+        </style>
+        
+        <header class="stagecard">
+        </header>
+        
+        <div id="flipcard_div" class="flip-boards">
+            <div class="board left">
+                <div class="front">
+                    <img src="../images/card/chinamiishikawa.png" style="width:350px;padding:30px;background-color:rgba(255,255,255,0.5);border-radius:6px;" />
+                </div>
+                <div class="flipped" style="text-align:center;width:100%;">
+                    <img src="../images/card/chinamiishikawa.png" style="width:350px;padding:30px;background-color:rgba(255,255,255,0.5);border-radius:6px;" />
+                </div>
+            </div>
+            <a href="../card.html"><h1 style="text-align:center;width:100%;height:600px;">THE CARD GAME</h1></a>
+        </div>
+        
+        <div id="thisLikes_div" class="flip-heart">
+            <div class="board left">
+                <div class="front">
+                    <img src="../images/likes/icon_heart.png" style="width:50px;border-radius:6px;" />
+                </div>
+                <div class="flipped">
+                    <img src="../images/likes/icon_heart.png" style="width:50px;border-radius:6px;" />
+                </div>
+            </div>
+        </div>
+        
+        <script>
+            
+            var screen = {
+                width:document.body.clientWidth,
+                height:document.body.clientHeight,
+            }
+        
+        var flipcard = {
+            top:60,
+            left:(screen.width/2.0) - 320,
+        };
+        
+        var flipcardDiv = document.getElementById("flipcard_div");
+        var thisLikesDiv = document.getElementById("thisLikes_div");
+        flipcardDiv.style.position = 'absolute';
+        flipcardDiv.style.top = flipcard.top + 'px';
+        flipcardDiv.style.left = flipcard.left + 'px';
+        
+        if ( flipcard ) {
+            changeFlipCard( flipcard );
+            changeFlipHeart( flipcard );
+        }
+        
+        function changeFlipCard ( _flipcard ) {
+            flipcardDiv.style.position = 'absolute';
+            flipcardDiv.style.top = _flipcard.top + 'px';
+            flipcardDiv.style.left = _flipcard.left + 'px';
+        }
+        function changeFlipHeart ( _flipcard ) {
+            thisLikesDiv.style.position = 'absolute';
+            thisLikesDiv.style.top = (_flipcard.top + 600) + 'px';
+            thisLikesDiv.style.left = _flipcard.left + 'px';
+        }
+        //読み込み時の表示
+        window_load();
+        
+        //ウィンドウサイズ変更時に更新
+        window.onresize = window_load;
+        
+        //サイズの表示
+        function window_load() {
+            screen.width = document.body.clientWidth;
+            screen.height = document.body.clientHeight;
+            flipcard.left = (screen.width/2.0) - 320;
+            changeFlipCard( flipcard );
+            changeFlipHeart( flipcard );
+        }
+        
+            </script>
+        
+        <hr class="clearfix" noshade/>
+        
+        <div id="myWallet" hidden>
+            <div class="mywallet">
+                <span id="myWalletYen">
+                    <span id="mywallet_yen">0</span> <img src="../images/wallet/icon_en.png" class="icons" style="width:30px;" />
+                </span>
+                <br />
+                <span id="myWalletPoint">
+                    <img src="../images/wallet/icon_point.png" class="icons" style="width:10px;" /><span id="mywallet_point">5</span> ポイント
+                </span>
+                <span id="myWalletCoin">
+                    <img src="../images/wallet/icon_coin.png" class="icons" style="width:10px;" /> <span id="mywallet_coin">0</span> コイン
+                </span>
+            </div>
+            <div class="add_button" hidden>
+                <img id="addButton" class="icons" src="../images/wallet/icon_add_button.png" class="icons" style="width:50px;" />
+            </div>
+            <hr class="clearfix" noshade/>
+        </div>
+        
+        <script type="text/javascript" src="../js/myWallet.js"></script>
+        <script>
+            thisLikes_div.onclick = function () {
+                mywallet_point.innerHTML = (mywallet_point.innerHTML - 1);
+            }
+        </script>
+        
+        <hr class="clearfix" noshade/>
+        
+        <div id="myService">
+            <h3 style="padding-top:20px;padding-left:20px;">関連サービス</h3>
+            <table class="stagecard" style="width:100%;text-align:center;">
+                <tr>
+                    <td style="width:50%">
+                        <a href="../card.html">
+                            <h2 class="list_button marginLeft20" style="width:80%;height:25px;">公式サイト</h2>
+                        </a>
+                    </td>
+                    <td style="width:50%">
+                        <a href="../card.html">
+                            <h2 class="list_button marginLeft20" style="width:80%;height:25px;">THE CARD GAME</h2>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width:50%">
+                        <a href="../memory/index.html">
+                            <h2 class="list_button marginLeft20" style="width:80%;height:25px;">MEMORY</h2>
+                        </a>
+                    </td>
+                    <td style="width:50%">
+                        <a href="../rulebook.html">
+                            <h2 class="list_button marginLeft20" style="width:80%;height:25px;">RULEBOOK</h2>
+                        </a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        
+        <hr class="clearfix" noshade/>
+        
+        
+        <div style="padding:10px;" class="stagecard">
+            
+            <h2>THE CARD GAME</h2>
+            <h2>(仮)THE カードゲーム </h2>
+            <h3 class="stagecard">■カード■  <a href='../card.html'>CARD</a> | <a href='../memory/index.html'>MEMORY</a> | <a href='../rulebook.html'>RULEBOOK</a></h3>
+            <div class="card" style="clear:both;background-color:rgba(255,255,255,0.5);max-width:500px;width:100%;">
+                
+                <!--div class="flip-boards">
+                 　<div class="board left">
+                 　　<div class="front"><h2>パネル：表</h2></div>
+                 　　<div class="flipped"><h2>パネル：裏</h2></div>
+                 　</div>
+                 </div-->
+                ＊ 回を追うごとに改善ポイントなどもいただきたいので予期せぬ変更などはございます<br />
+                ＊ タイトルなどに関しては、公的なものができるまでは外部に出さないようにお願いいたします。<br />
+            </div>
+        </div>
+        <style>
+            body {
+                background-image: url("../img/bg.png");
+                background-repeat: repeat;
+                background-attachment: fixed;
+                background-position: right bottom
+            }
+        </style>
+        <div id="card_list">
+            <h2>カード一覧管理<span style="font-size:0.5em;"> ー 管理者のみに表示されます</span></h2>
+            <table class="card stagecard" style="width:97%;background-color:rgba(255,255,255,0.5);">
+                <tr style="background-color:rgba(255,255,255,0.5);">
+                    <th>カードID</th>
+                    <th>カード名</th>
+                    <th>詳細を見る</th>
+                </tr>
+                <tr style="background-color:rgba(255,255,255,0.5);height:50px;">
+                    <td>chinaminishikawa</td>
+                    <td>にしかわちなみ</td>
+                    <td><a href="./chinaminishikawa.html">詳細を見る</a></td>
+                </tr>
+            </table>
+        </div>
+        <br />
+        <hr class="clearfix" noshade/>
+        <!-- シェアボタン [ここからコピー] -->
+        <script>
+            snsDocument();
+            </script>
+        <!-- シェアボタン [ここまでコピー] -->
+        
+        <hr style="clear:both;"/>
+        
+        <div id="sitemap">
+            <a href="../card.html">TOP</a> <br />
+            <a href="../rulebook.html">RULEBOOK</a> <br />
+            <a href="../ad.html">広告掲載して見ませんか？</a> <br />
+        </div>
+        
+        <footer>
+            <p>このホームページに記載の画像・文章の著作権は「(仮)THE カードゲーム」もしくは、作品・情報の提供者に帰属します。無断転載・利用を禁じます。</p>
+            Copyright(C)2018-<span class="stagecard"><a href="../card.html">(仮)THE カードゲーム</a></span>. All rihts Reserved .
+        </footer>
+    </body>
+</html>

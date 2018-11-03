@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>THE CARD GAME - OPEN GATE</title>
+        <meta charset="utf-8" />
+        <meta name="robots" content="noindex, nofollow" /-->
+            <meta name="description" content="(仮)THE カードゲーム / カードで遊ぼう！">
+                <meta name="author" content="SUNSTRIPE"/>
+                <meta name="viewport" content="width=device-width, initial-scale=1"/>
+                <link rel="stylesheet" href="./css/sns.css"/>
+                <link rel="stylesheet" href="./css/styles.css"/>
+                <!--[if lt IE 9]>
+                 <script src="//cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
+                 <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+                 <![endif]-->
+                <link href="https://fonts.googleapis.com/css?family=Audiowide|Black+Ops+One|Cabin+Sketch|Fredericka+the+Great|Poiret+One|Press+Start+2P|VT323|Josefin+Slab" rel="stylesheet"/>
+                <link rel="shortcut icon" href=""/>
+                
+                </head>
+    <body>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121197913-1"></script>
+        <script src="./js/audiojs/audio.min.js"></script>
+        <script src="./js/anime-master/anime.min.js"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            
+            gtag('config', 'UA-121197913-1');
+            </script>
+        <script>
+            audiojs.events.ready(function() {
+                                 var as = audiojs.createAll();
+                                 });
+            </script>
+        <script type="text/javascript" src="../js/sns.js"></script>
+        <style>
+            body {
+                color:black;
+                background-color:rgba(100,0,0,1.0);
+                font-family: 'Josefin Slab', serif;
+            }
+        </style>
+        
+        <style>
+            body {
+                background-image: url("./img/bg.png");
+                background-repeat: repeat;
+                background-attachment: fixed;
+                background-position: right bottom
+            }
+        .cardframe {
+            width:300px;padding:30px;background-color:rgba(255,255,255,0.5);border-radius:6px;
+        }
+        </style>
+
+        <div id="animation">
+            <div id="welcome" style="text-align:center;position: absolute;top: 100px;width:100%;color:#FFFFFF;">
+                <h2>
+                <span style="color:#FF0000;">W</span>
+                <span style="color:#FF5500;">E</span>
+                <span style="color:#FF5555;">L</span>
+                <span style="color:#FFAA00;">C</span>
+                <span style="color:#FFAA55;">O</span>
+                <span style="color:#FFAAAA;">M</span>
+                <span style="color:#FFFF00;">E </span>
+                
+                <span style="color:#FFFF55;">T</span>
+                <span style="color:#FFFFFF;">O </span>
+                <br />
+
+                <span style="color:#FF0055;">T</span>
+                <span style="color:#FF55AA;">H</span>
+                <span style="color:#FF55FF;">E </span>
+                <span style="color:#FF00AA;">C</span>
+                <span style="color:#FF00FF;">A</span>
+                <span style="color:#00FF00;">R</span>
+                <span style="color:#00FF55;">D </span>
+                <span style="color:#00FFAA;">G</span>
+                <span style="color:#00AA00;">A</span>
+                <span style="color:#00AA55;">M</span>
+                <span style="color:#00AAFF;">E </span>
+                <br />
+
+                <span style="color:#000055;">W</span>
+                <span style="color:#0000AA;">O</span>
+                <span style="color:#0000FF;">R</span>
+                <span style="color:#55AA00;">L</span>
+                <span style="color:#55AA55;">D</span>
+                <span style="color:#55AAAA;">!</span>
+                <span style="color:#55AAFF;">!</span>
+                </h2>
+                <br />
+                参加アンバサダー 100人以上　総プロデューサー数 1000人<br />
+                <br />
+                THE CARD GAME（ ザ・カードゲーム ）は<br />
+                女性アーティストやタレントや声優、表現される方の<br />
+                新しいコンテンツです<br />
+                <br />
+                カードゲームを作りながら応援できる<br />
+                コミュニティが広がり、もっと好きになれます<br />
+            </div>
+
+            <a id="animation_urls" href="">
+                <img id="animation_images" src="" style="width:300px;padding:30px;background-color:rgba(255,255,255,0.5);border-radius:6px;"/>
+            </a>
+            
+            <hr class="clearfix" noshade/>
+            
+            <table style="width:100%;text-align:center;">
+                <tr>
+                    <td><h3 style="background-color:rgba(0,0,0,0.5);border-radius:6px;color:white;">もっと知りたい方</h3></td>
+                    <td><h3 style="background-color:rgba(0,0,0,0.5);border-radius:6px;color:white;">初めての方</h3></td>
+                    <td><h3 style="background-color:rgba(0,0,0,0.5);border-radius:6px;color:white;">登録済みの方</h3></td>
+                </tr>
+                <tr>
+                    <td><h3 style="background-color:rgba(200,200,255,0.5);border-radius:30px;color:white;padding:20px;"><a href="./about.html">ABOUT</a></h3></td>
+                    <td><h3 style="background-color:rgba(255,200,200,0.5);border-radius:30px;color:white;padding:20px;"><a href="./entry.html">新規登録</a></h3></td>
+                    <td><h3 style="background-color:rgba(200,255,200,0.5);border-radius:30px;color:white;padding:20px;"><a href="./login.html">LOGIN</a></h3></td>
+                </tr>
+            </table>
+            
+            <hr class="clearfix" noshade/>
+            
+            <div id="event">
+                <h3 style="background-color:rgba(0,0,0,0.5);border-radius:6px;color:white;padding:10px;padding-left:20px;">EVENT</h3>
+                
+                <div style="background-color:rgba(0,0,0,0.5);border-radius:6px;color:white;padding:10px;padding-left:20px;">
+                    
+                    <a href="./event/">MORE</a>
+                    
+                    <div>
+                        <h2>みんなでプロデュース！！推しの『ボイスサンプル』付きカード作成＆カードサイト掲載！！</h2>
+                        7/31 - 8/5 にしかわちなみ、...
+                    </div>
+                    <hr />
+                    <div>
+                        <h2>みんなでプロデュース！！推しの『紹介ページ』作成！！</h2>
+                        
+                        7/31 - 8/5 にしかわちなみ、...
+                    </div>
+                    <hr />
+                    <div>
+                        <h2>みんなでプロデュース！！推しの『ライストゥーミートユー化』カード作成！！！</h2>
+                        
+                        8/1 - 8/31 にしかわちなみ
+                    </div>
+                </div>
+            </div>
+            
+            <hr class="clearfix" noshade/>
+            
+            <div id="hotcard">
+                <div style="text-align:right;">更新 2018/08/05</div>
+                <h3 style="background-color:rgba(0,0,0,0.5);border-radius:6px;color:white;padding:10px;padding-left:20px;">急上昇</h3>
+                
+                <div style="background-color:rgba(0,0,0,0.5);border-radius:6px;color:white;padding:10px;padding-left:20px;width:98%;overflow:scroll;">
+                    
+                    <table style="width:100%;padding-right:20px;">
+                        <tr>
+                            <td style="text-align:center;">
+                                <img class="cardframe" src="./images/card/harunaaharu.png" alt="はるなあはる" title="はるなあはる" />
+                                <h3><a href="./card/harunaaharu.html">はるなあはる</a></h3>
+                                <div hidden>25pv</div>
+                            </td>
+                            <td style="text-align:center;">
+                                <img class="cardframe" src="./images/card/hotarunhime.png" alt="ほたるんひめ" title="ほたるんひめ" />
+                                <h3><a href="./card/hotarunhime.html">ほたるんひめ</a></h3>
+                                <div hidden>17pv</div>
+                            </td>
+                            <td style="text-align:center;">
+                                <img class="cardframe" src="./images/card/chinamiishikawa_ninja.png" alt="にしかわちなみ" title="にしかわちなみ"/>
+                                <h3><a href="./card/chinaminishikawa.html">にしかわちなみ</a></h3>
+                                <div hidden>16pv</div>
+                            </td>
+                            <td style="text-align:center;">
+                                <img class="cardframe" src="./images/card/nanamifurusawa.png" alt="古澤菜奈美" title="古澤菜奈美" />
+                                <h3><a href="#nanamifurusawa">古澤菜奈美</a></h3>
+                                <div hidden>0pv</div>
+                            </td>
+                            <td style="text-align:center;">
+                                <img class="cardframe" src="./images/card/aogiriako.png" alt="青桐亜子" title="青桐亜子" />
+                                <h3><a href="#aogiriako">青桐亜子</a></h3>
+                                <div hidden>0pv</div>
+                            </td>
+
+                        </tr>
+                    </table>
+                    <div style="text-align:right;"><a href="./event/">MORE</a></div>
+                </div>
+            </div>
+            
+            <hr class="clearfix" noshade/>
+            
+            <div id="voicecard" hidden>
+                <div style="text-align:right;">更新 2018/08/05</div>
+                <h3 style="background-color:rgba(0,0,0,0.5);border-radius:6px;color:white;padding:10px;padding-left:20px;">ボイスサンプルが聞ける</h3>
+                
+                <div style="background-color:rgba(0,0,0,0.5);border-radius:6px;color:white;padding:10px;padding-left:20px;width:98%;overflow:scroll;">
+                    
+                    
+                    <table style="width:100%;padding-right:20px;">
+                        <tr>
+                            <td style="text-align:center;">
+                                <img class="cardframe" src="./images/card/chinamiishikawa_example.png" alt="にしかわちなみ" title="にしかわちなみ"  />
+                                <h3>にしかわちなみ</h3>
+                            </td>
+                            <td style="text-align:center;">
+                                <img class="cardframe" src="./images/card/chinamiishikawa_ninja.png" alt="にしかわちなみ" title="にしかわちなみ" />
+                                <h3>にしかわちなみ</h3>
+                            </td>
+                            <td style="text-align:center;">
+                                <img class="cardframe" src="./images/card/harunaaharu.png" alt="はるなあはる" title="はるなあはる" />
+                                <h3>はるなあはる</h3>
+                            </td>
+                            <td style="text-align:center;">
+                                <img class="cardframe" src="./images/card/chinamiishikawa_roid.png" alt="にしかわちなみ" title="にしかわちなみ" />
+                                <h3>にしかわちなみ</h3>
+                            </td>
+                            <td style="text-align:center;">
+                                <img class="cardframe" src="./images/card/nanamifurusawa.png" alt="古澤菜奈美" title="古澤菜奈美" />
+                                <h3>古澤菜奈美</h3>
+                            </td>
+                            <td style="text-align:center;">
+                                <img class="cardframe" src="./images/card/hotarunhime.png" alt="ほたるんひめ" title="ほたるんひめ" />
+                                <h3>ほたるんひめ</h3>
+                            </td>
+                        </tr>
+                    </table>
+                    <div style="text-align:right;"><a href="./event/">MORE</a></div>
+                </div>
+            </div>
+            
+            <hr class="clearfix" noshade hidden/>
+            
+            <div id="hotcard">
+                <div style="text-align:right;">更新 2018/08/05</div>
+                <h3 style="background-color:rgba(0,0,0,0.5);border-radius:6px;color:white;padding:10px;padding-left:20px;">新着カード</h3>
+                
+                <div style="background-color:rgba(0,0,0,0.5);border-radius:6px;color:white;padding:10px;padding-left:20px;width:98%;overflow:scroll;">
+
+                    <table style="width:100%;padding-right:20px;">
+                        <tr>
+                            <td style="text-align:center;">
+                                <img class="cardframe" src="./images/card/harunaaharu.png" alt="はるなあはる" title="はるなあはる" />
+                                <h3>はるなあはる</h3>
+                            </td>
+                            <td style="text-align:center;">
+                                <img class="cardframe" src="./images/card/hotarunhime.png" alt="ほたるんひめ" title="ほたるんひめ" />
+                                <h3>ほたるんひめ</h3>
+                            </td>
+                            <td style="text-align:center;">
+                                <img class="cardframe" src="./images/card/chinamiishikawa_example.png" alt="にしかわちなみ" title="にしかわちなみ"  />
+                                <h3>にしかわちなみ</h3>
+                            </td>
+                            <td style="text-align:center;">
+                                <img class="cardframe" src="./images/card/chinamiishikawa_ninja.png" alt="にしかわちなみ" title="にしかわちなみ" />
+                                <h3>にしかわちなみ</h3>
+                            </td>
+                            <td style="text-align:center;">
+                                <img class="cardframe" src="./images/card/chinamiishikawa_roid.png" alt="にしかわちなみ" title="にしかわちなみ" />
+                                <h3>にしかわちなみ</h3>
+                            </td>
+                            <td style="text-align:center;">
+                                <img class="cardframe" src="./images/card/nanamifurusawa.png" alt="古澤菜奈美" title="古澤菜奈美" />
+                                <h3>古澤菜奈美</h3>
+                            </td>
+                        </tr>
+                    </table>
+                    <div style="text-align:right;"><a href="./event/">MORE</a></div>
+                </div>
+            </div>
+            
+            <hr class="clearfix" noshade/>
+            
+            <div id="impression">
+                <div style="text-align:right;">更新 2018/08/05</div>
+                <h3 style="background-color:rgba(0,0,0,0.5);border-radius:6px;color:white;padding:10px;padding-left:20px;">インプレッション数</h3>
+                
+                <div style="background-color:rgba(0,0,0,0.5);border-radius:6px;color:white;padding:10px;padding-left:20px;width:98%;overflow:scroll;">
+                    
+                    <table style="width:100%;padding-right:20px;">
+                        <tr>
+                            <td style="text-align:center;">
+                                <img class="cardframe" src="./images/card/harunaaharu.png" alt="はるなあはる" title="はるなあはる" />
+                                <h3>はるなあはる</h3>
+                                <div hidden>42</div>
+                            </td>
+                            <td style="text-align:center;">
+                                <img class="cardframe" src="./images/card/chinamiishikawa_example.png" alt="にしかわちなみ" title="にしかわちなみ"  />
+                                <h3>にしかわちなみ</h3>
+                            </td>
+                            <td style="text-align:center;">
+                                <img class="cardframe" src="./images/card/chinamiishikawa_ninja.png" alt="にしかわちなみ" title="にしかわちなみ" />
+                                <h3>にしかわちなみ</h3>
+                            </td>
+                            <td style="text-align:center;">
+                                <img class="cardframe" src="./images/card/chinamiishikawa_roid.png" alt="にしかわちなみ" title="にしかわちなみ" />
+                                <h3>にしかわちなみ</h3>
+                            </td>
+                            <td style="text-align:center;">
+                                <img class="cardframe" src="./images/card/nanamifurusawa.png" alt="古澤菜奈美" title="古澤菜奈美" />
+                                <h3>古澤菜奈美</h3>
+                            </td>
+                            <td style="text-align:center;">
+                                <img class="cardframe" src="./images/card/hotarunhime.png" alt="ほたるんひめ" title="ほたるんひめ" />
+                                <h3>ほたるんひめ</h3>
+                            </td>
+                        </tr>
+                    </table>
+                    <div style="text-align:right;"><a href="./event/">MORE</a></div>
+
+                </div>
+            </div>
+            
+            
+            <hr class="clearfix" noshade/>
+            
+            <div id="nice">
+                <div style="text-align:right;">更新 2018/08/05</div>
+                <h3 style="background-color:rgba(0,0,0,0.5);border-radius:6px;color:white;padding:10px;padding-left:20px;">いいね数</h3>
+                
+                <div style="background-color:rgba(0,0,0,0.5);border-radius:6px;color:white;padding:10px;padding-left:20px;width:98%;overflow:scroll;">
+                    
+                    <table style="width:100%;padding-right:20px;">
+                        <tr>
+                            <td style="text-align:center;">
+                                <img class="cardframe" src="./images/card/harunaaharu.png" alt="はるなあはる" title="はるなあはる" />
+                                <h3>はるなあはる</h3>
+                                <div hidden>2</div>
+                            </td>
+                            <td style="text-align:center;">
+                                <img class="cardframe" src="./images/card/chinamiishikawa_example.png" alt="にしかわちなみ" title="にしかわちなみ"  />
+                                <h3>にしかわちなみ</h3>
+                            </td>
+                            <td style="text-align:center;">
+                                <img class="cardframe" src="./images/card/chinamiishikawa_ninja.png" alt="にしかわちなみ" title="にしかわちなみ" />
+                                <h3>にしかわちなみ</h3>
+                            </td>
+                            <td style="text-align:center;">
+                                <img class="cardframe" src="./images/card/chinamiishikawa_roid.png" alt="にしかわちなみ" title="にしかわちなみ" />
+                                <h3>にしかわちなみ</h3>
+                            </td>
+                            <td style="text-align:center;">
+                                <img class="cardframe" src="./images/card/nanamifurusawa.png" alt="古澤菜奈美" title="古澤菜奈美" />
+                                <h3>古澤菜奈美</h3>
+                            </td>
+                            <td style="text-align:center;">
+                                <img class="cardframe" src="./images/card/hotarunhime.png" alt="ほたるんひめ" title="ほたるんひめ" />
+                                <h3>ほたるんひめ</h3>
+                            </td>
+                        </tr>
+                    </table>
+                    <div style="text-align:right;"><a href="./event/">MORE</a></div>
+                    
+                </div>
+            </div>
+            
+            
+            <hr class="clearfix" noshade/>
+            
+        
+            <div id="click">
+                <div style="text-align:right;">更新 2018/08/05</div>
+                <h3 style="background-color:rgba(0,0,0,0.5);border-radius:6px;color:white;padding:10px;padding-left:20px;">総クリック数</h3>
+                
+                <div style="background-color:rgba(0,0,0,0.5);border-radius:6px;color:white;padding:10px;padding-left:20px;width:98%;overflow:scroll;">
+                    
+                    <table style="width:100%;padding-right:20px;">
+                        <tr>
+                            <td style="text-align:center;">
+                                <img class="cardframe" src="./images/card/harunaaharu.png" alt="はるなあはる" title="はるなあはる" />
+                                <h3>はるなあはる</h3>
+                                <div hidden>5</div>
+                            </td>
+                            <td style="text-align:center;">
+                                <img class="cardframe" src="./images/card/chinamiishikawa_example.png" alt="にしかわちなみ" title="にしかわちなみ"  />
+                                <h3>にしかわちなみ</h3>
+                            </td>
+                            <td style="text-align:center;">
+                                <img class="cardframe" src="./images/card/chinamiishikawa_ninja.png" alt="にしかわちなみ" title="にしかわちなみ" />
+                                <h3>にしかわちなみ</h3>
+                            </td>
+                            <td style="text-align:center;">
+                                <img class="cardframe" src="./images/card/chinamiishikawa_roid.png" alt="にしかわちなみ" title="にしかわちなみ" />
+                                <h3>にしかわちなみ</h3>
+                            </td>
+                            <td style="text-align:center;">
+                                <img class="cardframe" src="./images/card/nanamifurusawa.png" alt="古澤菜奈美" title="古澤菜奈美" />
+                                <h3>古澤菜奈美</h3>
+                            </td>
+                            <td style="text-align:center;">
+                                <img class="cardframe" src="./images/card/hotarunhime.png" alt="ほたるんひめ" title="ほたるんひめ" />
+                                <h3>ほたるんひめ</h3>
+                            </td>
+                        </tr>
+                    </table>
+                    <div style="text-align:right;"><a href="./event/">MORE</a></div>
+                    
+                </div>
+            </div>
+            
+            
+            <hr class="clearfix" noshade/>
+            
+            <div id="engagement">
+                <div style="text-align:right;">更新 2018/08/05</div>
+                <h3 style="background-color:rgba(0,0,0,0.5);border-radius:6px;color:white;padding:10px;padding-left:20px;">エンゲージメント総数</h3>
+                
+                <div style="background-color:rgba(0,0,0,0.5);border-radius:6px;color:white;padding:10px;padding-left:20px;width:98%;overflow:scroll;">
+                    
+                    <table style="width:100%;padding-right:20px;">
+                        <tr>
+                            <td style="text-align:center;">
+                                <img class="cardframe" src="./images/card/harunaaharu.png" alt="はるなあはる" title="はるなあはる" />
+                                <h3>はるなあはる</h3>
+                                <div hidden>22</div>
+                            </td>
+                            <td style="text-align:center;">
+                                <img class="cardframe" src="./images/card/chinamiishikawa_example.png" alt="にしかわちなみ" title="にしかわちなみ"  />
+                                <h3>にしかわちなみ</h3>
+                            </td>
+                            <td style="text-align:center;">
+                                <img class="cardframe" src="./images/card/chinamiishikawa_ninja.png" alt="にしかわちなみ" title="にしかわちなみ" />
+                                <h3>にしかわちなみ</h3>
+                            </td>
+                            <td style="text-align:center;">
+                                <img class="cardframe" src="./images/card/chinamiishikawa_roid.png" alt="にしかわちなみ" title="にしかわちなみ" />
+                                <h3>にしかわちなみ</h3>
+                            </td>
+                            <td style="text-align:center;">
+                                <img class="cardframe" src="./images/card/nanamifurusawa.png" alt="古澤菜奈美" title="古澤菜奈美" />
+                                <h3>古澤菜奈美</h3>
+                            </td>
+                            <td style="text-align:center;">
+                                <img class="cardframe" src="./images/card/hotarunhime.png" alt="ほたるんひめ" title="ほたるんひめ" />
+                                <h3>ほたるんひめ</h3>
+                            </td>
+                        </tr>
+                    </table>
+                    <div style="text-align:right;"><a href="./event/">MORE</a></div>
+                    
+                </div>
+            </div>
+            
+            <hr class="clearfix" noshade/>
+            
+            <div id="hotcard">
+                <div style="text-align:right;">今日の記事ランキング</div>
+                <h3 style="background-color:rgba(0,0,0,0.5);border-radius:6px;color:white;padding:10px;padding-left:20px;width:98%;overflow:scroll;">毎日投稿中</h3>
+                
+                <div style="background-color:rgba(0,0,0,0.5);border-radius:6px;color:white;padding:10px;padding-left:20px;">
+                    
+                    <a href="./event/">MORE</a>
+                    
+                    <div>
+                        <div>
+                            マツコも紹介！即売り切れる「伝説のポテチ」
+                        </div>
+                        <div>
+                        【検証】ペヤングにチューハイ入れてみた結果…
+                        </div>
+                        <div>
+                        贅沢4層…！優しい甘さの「黒蜜きなこかき氷」
+                        </div>
+                        <div>
+                        超話題！人気『巻き』アイス店からタピオカが！
+                        </div>
+                        <div>
+                            映えスイーツ！？あの食材が『モナカ』に…！
+                        </div>
+                        <div>
+                            MORE
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <div class="thecardgame-frame" id="thecardgame-privacy">
+                <a href="./card.html" target="_blank">
+                    <h2>1. ホーム</h2></a>
+            </div>
+            
+            <div class="thecardgame-frame" id="thecardgame-privacy">
+                <a href="./news/" target="_blank">
+                    <h2>2. お知らせ</h2></a>
+            </div>
+            
+            <div class="thecardgame-frame" id="thecardgame-privacy">
+                <a href="./menu.html" target="_blank">
+                    <h2>3. お品書き</h2></a>
+            </div>
+            
+            <div class="thecardgame-frame" id="thecardgame-privacy">
+                <a href="./shop.html" target="_blank">
+                    <h2>4. 店舗案内</h42</a>
+            </div>
+            
+            <div class="thecardgame-frame" id="thecardgame-privacy">
+                <a href="./contact.html" target="_blank">
+                    <h4>5. ご意見・お問い合わせ</h4></a>
+            </div>
+            
+            <div class="thecardgame-frame" id="thecardgame-privacy">
+                <a href="./quality.html" target="_blank">
+                    <h4>6. 品質基準のこだわり</h4></a>
+            </div>
+            
+            <div class="thecardgame-frame" id="thecardgame-privacy">
+                <a href="./company.html" target="_blank">
+                    <h2>7. 会社概要</h2></a>
+            </div>
+
+            <div class="thecardgame-frame" id="thecardgame-law">
+                <a href="https://thecardgame.base.shop/law" target="_blank">
+                    <h4>特定商取引法に基づく表記</h4></a>
+            </div>
+            <div class="thecardgame-frame" id="thecardgame-privacy">
+                <a href="https://thecardgame.base.shop/privacy" target="_blank">
+                    <h4>プライバシーポリシー</h4></a>
+            </div>
+            <div class="thecardgame-frame" id="thecardgame-privacy">
+                <a href="./recruit.html" target="_blank">
+                    <h2>求人情報</h2></a>
+            </div>
+            
+            <hr class="clearfix" noshade/>
+            
+            <br  />
+            
+            <br  />
+            App Store
+            Google Play
+            ABOUT CHEERZ
+            お問い合わせ
+            FAQ
+            利用規約
+            プライバシーポリシー
+            資金決済法に基づく表記
+            特商法に基づく表記
+            ©CHEERZ
+            <br  />
+            
+            <footer>
+                <p>このホームページに記載の画像・文章の著作権は「(仮)THE カードゲーム」もしくは、作品・情報の提供者に帰属します。無断転載・利用を禁じます。</p>
+                Copyright(C)2018-<span class="stagecard"><a href="./card.html">(仮)THE カードゲーム</a></span>. All rihts Reserved .
+            </footer>
+            
+        </div>
+        <style>
+            #animation {
+                width:100%;
+                height:800px;
+                background-image:url("./images/card-bg.jpg");
+            }
+        #card-bg {
+            background-image:url("./images/card-bg.jpg");
+            height:400px;
+        }
+        a {
+            color:rgba(100,230,255,0.8);
+            text-decoration:none;
+            text-shadow:
+            #55DDFF 2px 0px,  #FFFFFF -2px 0px,
+            #55DDFF 0px -2px, #FFFFFF 0px 2px,
+            #55DDFF 2px 2px , #FFFFFF -2px 2px,
+            #55DDFF 2px -2px, #FFFFFF -2px -2px,
+            #55DDFF 1px 2px,  #FFFFFF -1px 2px,
+            #55DDFF 1px -2px, #FFFFFF -1px -2px,
+            #55DDFF 2px 1px,  #FFFFFF -2px 1px,
+            #55DDFF 2px -1px, #FFFFFF -2px -1px;
+        }
+        a:hover {
+            color:rgba(255,230,100,0.8);
+        }
+        .thecardgame-frame {
+            float:left;
+            height:44px;
+            width:200px;
+            margin:20px;
+            padding-left:20px;
+            padding-bottom:30px;
+            background-color:rgba(255,255,255,0.5);
+            border-radius:6px;
+        }
+        #thecardgame-privacy
+        {
+        }
+        </style>
+        
+        <hr class="clearfix" noshade/>
+        
+        <audio src="./bgm/BGM0002.mp3" preload="auto" />
+        
+        <hr class="clearfix" noshade/>
+        
+        <script>
+            var screen = {
+                width:document.body.clientWidth,
+                height:document.body.clientHeight,
+            }
+        //読み込み時の表示
+        window_load();
+        
+        //ウィンドウサイズ変更時に更新
+        window.onresize = window_load;
+        
+        //サイズの表示
+        function window_load() {
+            screen.width = document.body.clientWidth;
+            screen.height = document.body.clientHeight;
+        }
+        function random (min,max) {
+            var randomNumber = Math.floor( Math.random() * (max + 1 - min) ) + min ;
+            return randomNumber;
+        }
+        var animationItems = [
+                              {
+                              image : "./images/card/chinamiishikawa.png",
+                              url : "./card/chinaminishikawa.html",
+                              },
+                              {
+                              image : "./images/card/mokuseigekijo.png",
+                              url : "./card/mokuseigekijo.html",
+                              },
+                              {
+                              image : "./images/card/soubistudio.png",
+                              url : "./card/soubistudio.html",
+                              },
+                              ];
+                              var animation_images = document.getElementById("animation_images");
+                              var animation_urls = document.getElementById("animation_urls");
+                              var animation_count = random(0 , animationItems.length);
+                              var animationImages = function() {
+                                  animation_count++;
+                                  if (animationItems.length - 1 < animation_count) {
+                                      animation_count = 0;
+                                  }
+                                  animation_images.src = animationItems[animation_count].image;
+                                  animation_urls.href = animationItems[animation_count].url;
+                                  
+                                  var animationImagesAnime = anime({
+                                                                   targets: '#animation_images',
+                                                                   translateY: 100,
+                                                                   translateX: random(0,screen.width - 300),
+                                                                   scale: random(5,10) * 0.12,
+                                                                   rotate: '1turn'
+                                                                   });
+                              }
+        animationImages();
+        setInterval(animationImages, 3000);
+        
+        
+            </script>
+        
+    </body>
+</html>
