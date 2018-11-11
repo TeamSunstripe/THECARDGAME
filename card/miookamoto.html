@@ -196,7 +196,7 @@
                      'value': 1
                      });
                      cyberSePlay();
-
+                     
             }
         </script>
         <hr class="clearfix" noshade/>
@@ -212,11 +212,11 @@
         .menu_active {
             color:red;
         }
-            </style>
+        </style>
         
         <hr class="clearfix" noshade/>
         <table style="width:100%;">
-            <tr>
+            <tr style="background-color:white;">
                 <th style="width:50%;">
                     <h3 style="padding:20px;" class="menu_active" id="menu1">プロフィール</h3>
                 </th>
@@ -230,17 +230,17 @@
                 list:[],
                 func:"",
             };
-
-            for(var m = 1; m <= 2;m++) {
-                menuObject.list[m - 1] = {
-                    object:"",
-                }
-               menuObject.list[m - 1].object = document.getElementById("menu" + m);
-
-               menuObject.list[m - 1].object.onclick = function () {
-                   menuObject.func(this.id);
-               }
+        
+        for(var m = 1; m <= 2;m++) {
+            menuObject.list[m - 1] = {
+                object:"",
             }
+            menuObject.list[m - 1].object = document.getElementById("menu" + m);
+            
+            menuObject.list[m - 1].object.onclick = function () {
+                menuObject.func(this.id);
+            }
+        }
         
         menuObject.func = function (clickMenu) {
             for (var o = 0;o < menuObject.list.length;o++) {
@@ -268,9 +268,8 @@
             }
         }
         
-
             </script>
-
+        
         <hr class="clearfix" noshade/>
         
         <div id="miookamotoProfile" class="card_title">
@@ -278,235 +277,355 @@
             
         </div>
         <div  id="miookamotoProfileList">
-        <div style="width:100%;overflow:scroll;">
+            <div style="width:100%;overflow:scroll;">
+                <table class="card stagecard" style="width:97%;background-color:rgba(255,255,255,0.5);">
+                    <tr style="background-color:rgba(255,255,255,1.0);">
+                        <th style="min-width:100px;">項目</th>
+                        <th colspan="2">内容 <a name="nomal"> </a></th>
+                    </tr>
+                    <tr style="background-color:rgba(255,255,255,1.0);height:50px;">
+                        <th>種類</th>
+                        <td>Character Card</td>
+                        <td rowspan="10" style="overflow:scroll;text-align:center;max-width:300px;width:100%;">
+                            <h3>Twitter アクセス診断実施 (2018/11/15 - 2018/11/25)</h3>
+                            <div style="text-align:center;max-width:300px;width:100%;">
+                                <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">【 <a href="https://twitter.com/hashtag/THECARDGAME?src=hash&amp;ref_src=twsrc%5Etfw">#THECARDGAME</a> お知らせ】 🎵<br>ご紹介 岡本美緒<a href="https://t.co/JVLOatCuzi">https://t.co/JVLOatCuzi</a><br>🗞ちゃんみおこと岡本美緒さん アイスマニアな一面も全面な登場となったSRのイベントでも日々の配信で邁進中<br>応援よろしくね♪<a href="https://twitter.com/hashtag/%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%E6%83%85%E5%A0%B1?src=hash&amp;ref_src=twsrc%5Etfw">#イベント情報</a> <a href="https://t.co/UsSwB9FlGe">pic.twitter.com/UsSwB9FlGe</a></p>&mdash; THE CARD GAME (@thecardgame_JP) <a href="https://twitter.com/thecardgame_JP/status/1058851761404895232?ref_src=twsrc%5Etfw">November 3, 2018</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr style="background-color:rgba(255,255,255,1.0);height:50px;">
+                        <th>カードID</th>
+                        <td><a href="./miookamoto.html#nomal">miookamoto</a></td>
+                    </tr>
+                    <tr style="background-color:rgba(255,255,255,1.0);height:50px;">
+                        <th>タイトル</th>
+                        <td>岡本美緒</td>
+                    </tr>
+                    <tr style="background-color:rgba(255,255,255,1.0);height:50px;">
+                        <th>セリフ</th>
+                        <td>ちゃんみお王国民に<br />
+                            　　　　みんななろなろっ♡</td>
+                    </tr>
+                    <tr style="background-color:rgba(255,255,255,1.0);height:50px;">
+                        <th>行動力</th>
+                        <td>３</td>
+                    </tr>
+                    <tr style="background-color:rgba(255,255,255,1.0);height:50px;">
+                        <th>攻撃力</th>
+                        <td>３</td>
+                    </tr>
+                    <tr style="background-color:rgba(255,255,255,1.0);height:50px;">
+                        <th>守備力</th>
+                        <td>３</td>
+                    </tr>
+                    <tr style="background-color:rgba(255,255,255,1.0);height:50px;">
+                        <th>詳細</th>
+                        <td>
+                            <h2><a href="https://www.showroom-live.com/mio_room" target="_blank"><img src="../img/SHOWROOM_logo.svg.png" style="width:100px;"/></a></h2>
+                            <a href="https://www.showroom-live.com/room/profile?room_id=136226" target="_blank">https://www.showroom-live.com/mio_room</a></td>
+                    </tr>
+                    <tr style="background-color:rgba(255,255,255,1.0);height:50px;">
+                        <th>出身</th>
+                        <td>北海道</td>
+                    </tr>
+                    <tr style="background-color:rgba(255,255,255,1.0);height:50px;">
+                        <th>提供</th>
+                        <td>THE CARD GAME</td>
+                    </tr>
+                    <tr style="background-color:rgba(255,255,255,1.0);height:50px;">
+                        <th>入手方法</th>
+                        <td colspan="2">
+                            2018年10月以降にイベントに参加した時に手にすることができます。<br />
+                            スタッフにお声掛けください。<br />
+                            イベント時の物販時にも推しカードはご購入が可能です。<br />
+                            <h3><a href="https://thecardgame.base.shop/items/14181414/widget/large" target="_blank">購入ページ</a></h3>
+                        </td>
+                    </tr>
+                    
+                    <tr style="background-color:rgba(255,255,255,1.0);height:50px;">
+                        <th>ハート数</th>
+                        <td colspan="2" onclick='alertMessage("ハート数\n\nそれぞれのカードを選択してハートを押すと何かが起こるぞ！");'><spna id="miookamotoNomalCardHearts"></span></td>
+                    </tr>
+                    <tr style="background-color:rgba(255,255,255,1.0);height:50px;">
+                        <th>NEXT</th>
+                        <td colspan="2"><spna id="miookamotoNomalCardNext"></span></td>
+                    </tr>
+                    
+                </table>
+            </div>
+            
+            <script>
+                var miookamotoNomalCardHearts = document.getElementById("miookamotoNomalCardHearts");
+                countHearts(miookamotoNomalCardHearts,0);
+                var miookamotoNomalCardNext = document.getElementById("miookamotoNomalCardNext");
+                nextLevel(miookamotoNomalCardNext,0);
+                </script>
             
             <table class="card stagecard" style="width:97%;background-color:rgba(255,255,255,0.5);">
-                <tr style="background-color:rgba(255,255,255,0.5);">
-                    <th style="min-width:50px;width:20%">項目</th>
-                    <th style="min-width:100px;width:40%">内容 <a name="nomal"> </a></th>
-                    <th hidden>カード</th>
+                <tr style="background-color:rgba(255,255,255,1.0);">
+                    <th style="min-width:100px;">項目</th>
+                    <th colspan="2">内容 <a name="twiter"> </a></th>
                 </tr>
-                <tr style="background-color:rgba(255,255,255,0.5);height:50px;">
+                <tr style="background-color:rgba(255,255,255,1.0);height:50px;">
                     <th>種類</th>
                     <td>Character Card</td>
-                    <td rowspan="11" style="overflow:scroll;">
+                    <td rowspan="10" style="overflow:scroll;text-align:center;max-width:300px;width:100%;">
                         <div style="text-align:center;max-width:300px;width:100%;">
-                            <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">【 <a href="https://twitter.com/hashtag/THECARDGAME?src=hash&amp;ref_src=twsrc%5Etfw">#THECARDGAME</a> お知らせ】 🎵<br>ご紹介 岡本美緒<a href="https://t.co/JVLOatCuzi">https://t.co/JVLOatCuzi</a><br>🗞ちゃんみおこと岡本美緒さん アイスマニアな一面も全面な登場となったSRのイベントでも日々の配信で邁進中<br>応援よろしくね♪<a href="https://twitter.com/hashtag/%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%E6%83%85%E5%A0%B1?src=hash&amp;ref_src=twsrc%5Etfw">#イベント情報</a> <a href="https://t.co/UsSwB9FlGe">pic.twitter.com/UsSwB9FlGe</a></p>&mdash; THE CARD GAME (@thecardgame_JP) <a href="https://twitter.com/thecardgame_JP/status/1058851761404895232?ref_src=twsrc%5Etfw">November 3, 2018</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                            <img src="../images/card/miookamoto_twitter.png" alt="岡本美緒 Twitter" title="岡本美緒 Twitter"  style="width:300px;margin:auto;"/>
                         </div>
                     </td>
                 </tr>
-                <tr style="background-color:rgba(255,255,255,0.5);height:50px;">
+                <tr style="background-color:rgba(255,255,255,1.0);height:50px;">
                     <th>カードID</th>
-                    <td><a href="./miookamoto.html#nomal">miookamoto</a></td>
+                    <td><a href="./miookamoto.html#twitter">miookamoto#twitter</a></td>
                 </tr>
-                <tr style="background-color:rgba(255,255,255,0.5);height:50px;">
+                <tr style="background-color:rgba(255,255,255,1.0);height:50px;">
                     <th>タイトル</th>
                     <td>岡本美緒</td>
                 </tr>
-                <tr style="background-color:rgba(255,255,255,0.5);height:50px;">
+                <tr style="background-color:rgba(255,255,255,1.0);height:50px;">
                     <th>セリフ</th>
-                    <td>ちゃんみお王国民に<br />
-                        　　　　みんななろなろっ♡</td>
+                    <td>岡本美緒@ちゃんみお</td>
                 </tr>
-                <tr style="background-color:rgba(255,255,255,0.5);height:50px;">
+                <tr style="background-color:rgba(255,255,255,1.0);height:50px;">
                     <th>行動力</th>
-                    <td>３</td>
+                    <td>５</td>
                 </tr>
-                <tr style="background-color:rgba(255,255,255,0.5);height:50px;">
+                <tr style="background-color:rgba(255,255,255,1.0);height:50px;">
                     <th>攻撃力</th>
-                    <td>３</td>
+                    <td>５</td>
                 </tr>
-                <tr style="background-color:rgba(255,255,255,0.5);height:50px;">
+                <tr style="background-color:rgba(255,255,255,1.0);height:50px;">
                     <th>守備力</th>
-                    <td>３</td>
+                    <td>６</td>
                 </tr>
-                <tr style="background-color:rgba(255,255,255,0.5);height:50px;">
+                <tr style="background-color:rgba(255,255,255,1.0);height:50px;">
                     <th>詳細</th>
-                    <td><a href="https://www.showroom-live.com/mio_room" target="_blank"><img src="../img/SHOWROOM_logo.svg.png" style="width:100px;"/></a> <a href="https://www.showroom-live.com/room/profile?room_id=136226" target="_blank">https://www.showroom-live.com/mio_room</a></td>
+                    <td><h2><a href="https://www.twitter.com/25chanmiochan25" target="_blank">Twitter</a></h2><a href="https://www.twitter.com/25chanmiochan25" target="_blank">https://www.twitter.com/25chanmiochan25</a></td>
                 </tr>
-                <tr style="background-color:rgba(255,255,255,0.5);height:50px;">
+                <tr style="background-color:rgba(255,255,255,1.0);height:50px;">
+                    <th>出身</th>
+                    <td>北海道</td>
+                </tr>
+                <tr style="background-color:rgba(255,255,255,1.0);height:50px;">
+                    <th>提供</th>
+                    <td>THE CARD GAME</td>
+                </tr>
+                <tr style="background-color:rgba(255,255,255,1.0);height:50px;">
                     <th>入手方法</th>
-                    <td>
-                        2018年10月以降にイベントに参加した時に手にすることができます。<br />
+                    <td colspan="2">
+                        2018年10月のイベントに参加した予約注文した方が手にすることができます。<br />
                         スタッフにお声掛けください。<br />
                         イベント時の物販時にも推しカードはご購入が可能です。<br />
                         <h3><a href="https://thecardgame.base.shop/items/14181414/widget/large" target="_blank">購入ページ</a></h3>
                     </td>
                 </tr>
-
-                <tr style="background-color:rgba(255,255,255,0.5);height:50px;">
+                
+                <tr style="background-color:rgba(255,255,255,1.0);height:50px;">
                     <th>ハート数</th>
-                    <td onclick='alertMessage("ハート数\n\nそれぞれのカードを選択してハートを押すと何かが起こるぞ！");'><spna id="miookamotoNomalCardHearts"></span></td>
+                    <td colspan="2" onclick='alertMessage("ハート数\n\nそれぞれのカードを選択してハートを押すと何かが起こるぞ！");'><spna id="miookamotoNightschoolTwitterCardHearts"></span></td>
                 </tr>
-                <tr style="background-color:rgba(255,255,255,0.5);height:50px;">
+                
+                <tr style="background-color:rgba(255,255,255,1.0);height:50px;">
                     <th>NEXT</th>
-                    <td><spna id="miookamotoNomalCardNext"></span></td>
+                    <td colspan="2"><spna id="miookamotoNightschoolTwitterCardNext"></span></td>
                 </tr>
                 
             </table>
-        </div>
-        <script>
-            var miookamotoNomalCardHearts = document.getElementById("miookamotoNomalCardHearts");
-            countHearts(miookamotoNomalCardHearts,0);
-            var miookamotoNomalCardNext = document.getElementById("miookamotoNomalCardNext");
-            nextLevel(miookamotoNomalCardNext,0);
-            </script>
-        
-        <table class="card stagecard" style="width:97%;background-color:rgba(255,255,255,0.5);">
-            <tr style="background-color:rgba(255,255,255,0.5);">
-                <th style="min-width:50px;width:20%">項目</th>
-                <th>内容 <a name="eo1l20e"> </a></th>
-            </tr>
-            <tr style="background-color:rgba(255,255,255,0.5);height:50px;">
-                <th>種類</th>
-                <td>Character Card</td>
-                <td rowspan="11" style="overflow:scroll;">
-                    <div style="text-align:center;max-width:300px;width:100%;">
-                    </div>
-                </td>
-            </tr>
-            <tr style="background-color:rgba(255,255,255,0.5);height:50px;">
-                <th>カードID</th>
-                <td><a href="./miookamoto.html#eo1l20e">miookamoto#eo1l20e</a></td>
-            </tr>
-            <tr style="background-color:rgba(255,255,255,0.5);height:50px;">
-                <th>タイトル</th>
-                <td>岡本美緒</td>
-            </tr>
-            <tr style="background-color:rgba(255,255,255,0.5);height:50px;">
-                <th>セリフ</th>
-                <td>もりもり食べて元気になろう！</td>
-            </tr>
-            <tr style="background-color:rgba(255,255,255,0.5);height:50px;">
-                <th>行動力</th>
-                <td>３</td>
-            </tr>
-            <tr style="background-color:rgba(255,255,255,0.5);height:50px;">
-                <th>攻撃力</th>
-                <td>２</td>
-            </tr>
-            <tr style="background-color:rgba(255,255,255,0.5);height:50px;">
-                <th>守備力</th>
-                <td>５</td>
-            </tr>
-            <tr style="background-color:rgba(255,255,255,0.5);height:50px;">
-                <th>詳細</th>
-                <td>
-                    <h3><a href="https://t.livepocket.jp/e/o1l20" target="_blank">予約ページ</a></h3>
-                    予約購入していただくことが可能です。<br />
-                    イベント時の物販時にスタッフにお声掛けください。<br />
-                    イベント後に配布された内容が表示されます。<br />
-                </td>
-            </tr>
-            <tr style="background-color:rgba(255,255,255,0.5);height:50px;">
-                <th>ハート数</th>
-                <td onclick='alertMessage("ハート数\n\nそれぞれのカードを選択してハートを押すと何かが起こるぞ！");'><spna id="miookamotoNightschool0906CardHearts"></span></td>
-            </tr>
             
-            <tr style="background-color:rgba(255,255,255,0.5);height:50px;">
-                <th>NEXT</th>
-                <td><spna id="miookamotoNightschool0906CardNext"></span></td>
-            </tr>
+            <script>
+                var miookamotoNightschoolTwitterCardHearts = document.getElementById("miookamotoNightschoolTwitterCardHearts");
+                countHearts(miookamotoNightschoolTwitterCardHearts,0);
+                var miookamotoNightschoolTwitterCardNext = document.getElementById("miookamotoNightschoolTwitterCardNext");
+                nextLevel(miookamotoNightschoolTwitterCardNext,0);
+                </script>
             
-        </table>
-        
-        <script>
-            var miookamotoEo1l20CardHearts = document.getElementById("miookamotoEo1l20CardHearts");
-            countHearts(miookamotoEo1l20CardHearts,0);
+            <table class="card stagecard" style="width:97%;background-color:rgba(255,255,255,0.5);">
+                <tr style="background-color:rgba(255,255,255,1.0);">
+                    <th style="min-width:100px;">項目</th>
+                    <th colspan="2">内容 <a name="nightschool09"> </a></th>
+                </tr>
+                <tr style="background-color:rgba(255,255,255,1.0);height:50px;">
+                    <th>種類</th>
+                    <td>Character Card</td>
+                    <td rowspan="10" style="overflow:scroll;text-align:center;max-width:300px;width:100%;">
+                        <div style="text-align:center;max-width:300px;width:100%;">
+                            <img src="../images/card/miookamoto.png" alt="岡本美緒 SHOWROOM" title="岡本美緒 SHOWROOM" style="width:300px;"/>
+                        </div>
+                        <h4>イベントに参加して手に入れてね♡</h4>
+                    </td>
+                </tr>
+                <tr style="background-color:rgba(255,255,255,1.0);height:50px;">
+                    <th>カードID</th>
+                    <td><a href="./miookamoto.html#nightschool09">miookamoto#nightschool09</a></td>
+                </tr>
+                <tr style="background-color:rgba(255,255,255,1.0);height:50px;">
+                    <th>タイトル</th>
+                    <td>岡本美緒</td>
+                </tr>
+                <tr style="background-color:rgba(255,255,255,1.0);height:50px;">
+                    <th>セリフ</th>
+                    <td>アイスマニアなコスプレイヤー<br/>ちゃんみおこと岡本美緒です</td>
+                </tr>
+                <tr style="background-color:rgba(255,255,255,1.0);height:50px;">
+                    <th>行動力</th>
+                    <td>５</td>
+                </tr>
+                <tr style="background-color:rgba(255,255,255,1.0);height:50px;">
+                    <th>攻撃力</th>
+                    <td>５</td>
+                </tr>
+                <tr style="background-color:rgba(255,255,255,1.0);height:50px;">
+                    <th>守備力</th>
+                    <td>６</td>
+                </tr>
+                <tr style="background-color:rgba(255,255,255,1.0);height:50px;">
+                    <th>詳細</th>
+                    <td>
+                        <h3>モデル・コスプレイヤー</h3>
+                        このキャラクターがコスプレのアイテムをセットするごとにドロー＋１の能力を発揮する。コスト：１）撮影会：サイコロの数 x 1,000縁を得られる。（１ターン１回のみ）スキル「モデル」「コスプレイヤー」
+                    </td>
+                </tr>
+                <tr style="background-color:rgba(255,255,255,1.0);height:50px;">
+                    <th>出身</th>
+                    <td>北海道</td>
+                </tr>
+                <tr style="background-color:rgba(255,255,255,1.0);height:50px;">
+                    <th>提供</th>
+                    <td>THE CARD GAME</td>
+                </tr>
 
-            var miookamotoEo1l20CardNext = document.getElementById("miookamotoEo1l20CardNext");
-            nextLevel(miookamotoEo1l20CardNext,0);
-            </script>
-        
-        <table name="roid" class="card stagecard" style="width:97%;background-color:rgba(255,255,255,0.5);" hidden>
-            <tr style="background-color:rgba(255,255,255,0.5);">
-                <th style="min-width:50px;width:20%">項目</th>
-                <th>内容 <a name="roid"> </a></th>
-            </tr>
-            <tr style="background-color:rgba(255,255,255,0.5);height:50px;">
-                <th>種類</th>
-                <td>Character Card</td>
-            </tr>
-            <tr style="background-color:rgba(255,255,255,0.5);height:50px;">
-                <th>カードID</th>
-                <td><a href="./miookamoto.html#roid">miookamoto#roid</a></td>
-            </tr>
-            <tr style="background-color:rgba(255,255,255,0.5);height:50px;">
-                <th>タイトル</th>
-                <td>ロイド</td>
-            </tr>
-            <tr style="background-color:rgba(255,255,255,0.5);height:50px;">
-                <th>セリフ</th>
-                <td>おんでやんせ</td>
-            </tr>
-            <tr style="background-color:rgba(255,255,255,0.5);height:50px;">
-                <th>行動力</th>
-                <td>３</td>
-            </tr>
-            <tr style="background-color:rgba(255,255,255,0.5);height:50px;">
-                <th>攻撃力</th>
-                <td>２</td>
-            </tr>
-            <tr style="background-color:rgba(255,255,255,0.5);height:50px;">
-                <th>守備力</th>
-                <td>１</td>
-            </tr>
-            <tr style="background-color:rgba(255,255,255,0.5);height:50px;">
-                <th>詳細</th>
-                <td>チャージ１ / ドロー＋２</td>
-            </tr>
-            <tr style="background-color:rgba(255,255,255,0.5);height:50px;">
-                <th>ハート数</th>
-                <td onclick='alertMessage("ハート数\n\nそれぞれのカードを選択してハートを押すと何かが起こるぞ！");'><spna id="miookamotoRoidCardHearts"></span></td>
-            </tr>
-            <tr style="background-color:rgba(255,255,255,0.5);height:50px;">
-                <th>NEXT</th>
-                <td><spna id="miookamotoRoidCardNext"></span></td>
-            </tr>
+                <tr style="background-color:rgba(255,255,255,1.0);height:50px;">
+                    <th>入手方法</th>
+                    <td colspan="2">
+                        2018年10月のイベントの予約注文した方が手にすることができます。<br />
+                        スタッフにお声掛けください。<br />
+                        <h3><a href="https://thecardgame.base.shop/items/14181414/widget/large" target="_blank">購入ページ</a></h3>
+                        イベント後の物販時にも推しカードは、ネットでもご購入が可能です。<br />
+                    </td>
+                </tr>
+
+                <tr style="background-color:rgba(255,255,255,1.0);height:50px;">
+                    <th>ハート数</th>
+                    <td colspan="2" onclick='alertMessage("ハート数\n\nそれぞれのカードを選択してハートを押すと何かが起こるぞ！");'><spna id="miookamotoNightschool0906CardHearts"></span></td>
+                </tr>
+                
+                <tr style="background-color:rgba(255,255,255,1.0);height:50px;">
+                    <th>NEXT</th>
+                    <td colspan="2"><spna id="miookamotoNightschool0906CardNext"></span></td>
+                </tr>
+                
+            </table>
             
-        </table>
-        
-        <script>
-            var card_no = 0;
-            var cardList = [
-                            {
-                            "name":"nomal",
-                            "img":"miookamoto.png",
-                            },
-                            {
-                            "name":"eo1l20e",
-                            "img":"miookamoto.png",
-                            },
-                            ];
-                            
-                            var leftButtonDiv = document.getElementById("left-buuton");
-                            var rightButtonDiv = document.getElementById("right-buuton");
-                            leftButtonDiv.onclick = function leftButton () {
-                                card_no--;
-                                if (card_no < 0) {
-                                    card_no = cardList.length - 1;
+            <script>
+                var miookamotoNightschool0906CardHearts = document.getElementById("miookamotoNightschool0906CardHearts");
+                countHearts(miookamotoNightschool0906CardHearts,0);
+                
+                var miookamotoNightschool0906CardNext = document.getElementById("miookamotoNightschool0906CardNext");
+                nextLevel(miookamotoNightschool0906CardNext,0);
+                </script>
+            
+            <table name="roid" class="card stagecard" style="width:97%;background-color:rgba(255,255,255,0.5);" hidden>
+                <tr style="background-color:rgba(255,255,255,0.5);">
+                    <th style="width:80px;">項目</th>
+                    <th>内容 <a name="roid"> </a></th>
+                </tr>
+                <tr style="background-color:rgba(255,255,255,1.0);height:50px;">
+                    <th>種類</th>
+                    <td>Character Card</td>
+                </tr>
+                <tr style="background-color:rgba(255,255,255,1.0);height:50px;">
+                    <th>カードID</th>
+                    <td><a href="./miookamoto.html#roid">miookamoto#roid</a></td>
+                </tr>
+                <tr style="background-color:rgba(255,255,255,1.0);height:50px;">
+                    <th>タイトル</th>
+                    <td>ロイド</td>
+                </tr>
+                <tr style="background-color:rgba(255,255,255,1.0);height:50px;">
+                    <th>セリフ</th>
+                    <td>おんでやんせ</td>
+                </tr>
+                <tr style="background-color:rgba(255,255,255,1.0);height:50px;">
+                    <th>行動力</th>
+                    <td>３</td>
+                </tr>
+                <tr style="background-color:rgba(255,255,255,1.0);height:50px;">
+                    <th>攻撃力</th>
+                    <td>２</td>
+                </tr>
+                <tr style="background-color:rgba(255,255,255,1.0);height:50px;">
+                    <th>守備力</th>
+                    <td>１</td>
+                </tr>
+                <tr style="background-color:rgba(255,255,255,1.0);height:50px;">
+                    <th>詳細</th>
+                    <td>チャージ１ / ドロー＋２</td>
+                </tr>
+                <tr style="background-color:rgba(255,255,255,1.0);height:50px;">
+                    <th>出身</th>
+                    <td>北海道</td>
+                </tr>
+                <tr style="background-color:rgba(255,255,255,1.0);height:50px;">
+                    <th>提供</th>
+                    <td>THE CARD GAME</td>
+                </tr>
+                <tr style="background-color:rgba(255,255,255,1.0);height:50px;">
+                    <th>ハート数</th>
+                    <td onclick='alertMessage("ハート数\n\nそれぞれのカードを選択してハートを押すと何かが起こるぞ！");'><spna id="miookamotoRoidCardHearts"></span></td>
+                </tr>
+                <tr style="background-color:rgba(255,255,255,1.0);height:50px;">
+                    <th>NEXT</th>
+                    <td><spna id="miookamotoRoidCardNext"></span></td>
+                </tr>
+                
+            </table>
+            
+            <script>
+                var card_no = 0;
+                var cardList = [
+                                {
+                                "name":"nomal",
+                                "img":"miookamoto.png",
+                                },
+                                {
+                                "name":"twitter",
+                                "img":"miookamoto_twitter.png",
+                                },
+                                {
+                                "name":"nightschool09",
+                                "img":"miookamoto.png",
+                                },
+                                ];
+                                
+                                var leftButtonDiv = document.getElementById("left-buuton");
+                                var rightButtonDiv = document.getElementById("right-buuton");
+                                leftButtonDiv.onclick = function leftButton () {
+                                    card_no--;
+                                    if (card_no < 0) {
+                                        card_no = cardList.length - 1;
+                                    }
+                                    flipcardDiv.innerHTML = '<div class="board left"><div class="front"><a href="'
+                                    + "./miookamoto.html#" + cardList[card_no].name + '"><img src="' + "../images/card/" + cardList[card_no].img + '" style="width:350px;padding:30px;background-color:rgba(255,255,255,0.5);border-radius:6px;" /></a></div><div class="flipped" style="text-align:center;width:100%;"><a href="' + "./miookamoto.html#" + cardList[card_no].name + '"><img src="' + "../images/card/" + cardList[card_no].img +  '" style="width:350px;padding:30px;background-color:rgba(255,255,255,0.5);border-radius:6px;" /></a></div></div><a href="../card.html"><h1 style="text-align:center;width:100%;height:600px;">THE CARD GAME</h1></a>';
                                 }
-                                flipcardDiv.innerHTML = '<div class="board left"><div class="front"><a href="'
-                                + "./miookamoto.html#" + cardList[card_no].name + '"><img src="' + "../images/card/" + cardList[card_no].img + '" style="width:350px;padding:30px;background-color:rgba(255,255,255,0.5);border-radius:6px;" /></a></div><div class="flipped" style="text-align:center;width:100%;"><a href="' + "./miookamoto.html#" + cardList[card_no].name + '"><img src="' + "../images/card/" + cardList[card_no].img +  '" style="width:350px;padding:30px;background-color:rgba(255,255,255,0.5);border-radius:6px;" /></a></div></div><a href="../card.html"><h1 style="text-align:center;width:100%;height:600px;">THE CARD GAME</h1></a>';
-                            }
-        rightButtonDiv.onclick = function rightButton () {
-            card_no++;
-            if (cardList.length - 1 < card_no) {
-                card_no = 0;
+            rightButtonDiv.onclick = function rightButton () {
+                card_no++;
+                if (cardList.length - 1 < card_no) {
+                    card_no = 0;
+                }
+                flipcardDiv.innerHTML = '<div class="board left"><div class="front"><a href="'
+                + "./miookamoto.html#" + cardList[card_no].name + '"><img src="' + "../images/card/" + cardList[card_no].img + '" style="width:350px;padding:30px;background-color:rgba(255,255,255,0.5);border-radius:6px;" /></a></div><div class="flipped" style="text-align:center;width:100%;"><a href="' + "./miookamoto.html#" + cardList[card_no].name + '"><img src="' + "../images/card/" + cardList[card_no].img + '" style="width:350px;padding:30px;background-color:rgba(255,255,255,0.5);border-radius:6px;" /></a></div></div><a href="../card.html"><h1 style="text-align:center;width:100%;height:600px;">THE CARD GAME</h1></a>';
             }
-            flipcardDiv.innerHTML = '<div class="board left"><div class="front"><a href="'
-            + "./miookamoto.html#" + cardList[card_no].name + '"><img src="' + "../images/card/" + cardList[card_no].img + '" style="width:350px;padding:30px;background-color:rgba(255,255,255,0.5);border-radius:6px;" /></a></div><div class="flipped" style="text-align:center;width:100%;"><a href="' + "./miookamoto.html#" + cardList[card_no].name + '"><img src="' + "../images/card/" + cardList[card_no].img + '" style="width:350px;padding:30px;background-color:rgba(255,255,255,0.5);border-radius:6px;" /></a></div></div><a href="../card.html"><h1 style="text-align:center;width:100%;height:600px;">THE CARD GAME</h1></a>';
-        }
-        </script>
-        
-        
-        <script>
-            var miookamotoRoidCardHearts = document.getElementById("miookamotoRoidCardHearts");
-            countHearts(miookamotoRoidCardHearts,71);
-            var miookamotoRoidCardNext = document.getElementById("miookamotoRoidCardNext");
-            nextLevel(miookamotoRoidCardNext,0);
             </script>
-        
+            
+            
+            <script>
+                var miookamotoRoidCardHearts = document.getElementById("miookamotoRoidCardHearts");
+                countHearts(miookamotoRoidCardHearts,71);
+                var miookamotoRoidCardNext = document.getElementById("miookamotoRoidCardNext");
+                nextLevel(miookamotoRoidCardNext,0);
+                </script>
+            
         </div>
         <hr class="clearfix" noshade/>
         
@@ -525,35 +644,40 @@
             <h3 style="padding:20px;">履歴</h3>
         </div>
         <table class="card stagecard" style="width:97%;background-color:rgba(255,255,255,0.5);">
-            <tr style="background-color:rgba(255,255,255,0.5);">
+            <tr style="background-color:rgba(255,255,255,1.0);">
                 <th hidden>履歴ID</th>
                 <th>カードID</th>
                 <th>詳細を見る</th>
             </tr>
-            <tr style="background-color:rgba(255,255,255,0.5);height:50px;">
+            <tr style="background-color:rgba(255,255,255,1.0);height:50px;">
                 <td hidden>miookamoto00001</td>
                 <td><a href="./miookamoto.html">miookamoto</a></td>
                 <td>ページが更新されました</td>
             </tr>
-            <tr style="background-color:rgba(255,255,255,0.5);height:50px;" hidden>
+            <tr style="background-color:rgba(255,255,255,1.0);height:50px;">
                 <td hidden>miookamoto00002</td>
-                <td><a href="./miookamoto.html">miookamoto</a></td>
-                <td>関連グッズ 入荷されました</td>
-            </tr>
-            <tr style="background-color:rgba(255,255,255,0.5);height:50px;">
-                <td hidden>miookamoto00003</td>
                 <td><a href="./miookamoto.html#nomal">miookamoto</a></td>
                 <td>普及カード プロフィール作成</td>
             </tr>
-            <tr style="background-color:rgba(255,255,255,0.5);height:50px;" hidden>
+            <tr style="background-color:rgba(255,255,255,1.0);height:50px;">
+                <td hidden>miookamoto00003</td>
+                <td><a href="./miookamoto.html#twiter">miookamoto#twiter</a></td>
+                <td>普及カード プロフィール作成</td>
+            </tr>
+            <tr style="background-color:rgba(255,255,255,1.0);height:50px;">
+                <td hidden>miookamoto00006</td>
+                <td><a href="./miookamoto.html#eo1l20e">miookamoto#nightschool09</a></td>
+                <td>推しカード（イベント nightschool09） プロフィール作成</td>
+            </tr>
+            <tr style="background-color:rgba(255,255,255,1.0);height:50px;">
                 <td hidden>miookamoto00004</td>
-                <td><a href="./miookamoto.html#roid">miookamoto#roid</a></td>
-                <td>オリジナルカード プロフィール作成</td>
+                <td><a href="./miookamoto.html">miookamoto</a></td>
+                <td>関連グッズ 入荷されました</td>
             </tr>
             <tr style="background-color:rgba(255,255,255,0.5);height:50px;" hidden>
                 <td hidden>miookamoto00005</td>
-                <td><a href="./miookamoto.html#eo1l20e">miookamoto#eo1l20e</a></td>
-                <td>推しカード（イベント eo1l20e） プロフィール作成</td>
+                <td><a href="./miookamoto.html#roid">miookamoto#roid</a></td>
+                <td>オリジナルカード プロフィール作成</td>
             </tr>
         </table>
         
@@ -590,45 +714,13 @@
                 <tr>
                     <td style="width:50%">
                         <h2 class="submenu">PAY ID:推しカード作成</h2>
-                        <img src="../images/wallet/miookamotoQRPAYID.png" style="width:100%;"/>
+                        <img src="../images/wallet/miookamotoQRPAYID.png" style="width:100%;max-width:300px;"/>
                         <div style="padding:20px;">
                             <span style="color:red;">NEW</span> 更新されました
                         </div>
                     </td>
                 </tr>
-
-            </table>
-        </div>
-        
-        <hr class="clearfix" noshade/>
-        
-        <div id="myService">
-            <h3 style="padding-top:20px;padding-left:20px;">関連サービス</h3>
-            <table class="stagecard" style="width:100%;text-align:center;">
-                <tr>
-                    <td style="width:50%">
-                        <a href="../card.html">
-                            <h2 class="list_button marginLeft20" style="width:80%;height:25px;">公式サイト</h2>
-                        </a>
-                    </td>
-                    <td style="width:50%">
-                        <a href="../card.html">
-                            <h2 class="list_button marginLeft20" style="width:80%;height:25px;">THE CARD GAME</h2>
-                        </a>
-                    </td>
-                </tr>
-                <tr>
-                    <td style="width:50%">
-                        <a href="../memory/index.html">
-                            <h2 class="list_button marginLeft20" style="width:80%;height:25px;">MEMORY</h2>
-                        </a>
-                    </td>
-                    <td style="width:50%">
-                        <a href="../rulebook.html">
-                            <h2 class="list_button marginLeft20" style="width:80%;height:25px;">RULEBOOK</h2>
-                        </a>
-                    </td>
-                </tr>
+                
             </table>
         </div>
         
@@ -638,9 +730,8 @@
         <div style="padding:10px;" class="stagecard">
             
             <h2>THE CARD GAME</h2>
-            <h2>(仮)THE カードゲーム </h2>
             <h3 class="stagecard">■カード■  <a href='../card.html'>CARD</a> | <a href='../memory/index.html'>MEMORY</a> | <a href='../rulebook.html'>RULEBOOK</a></h3>
-            <div class="card" style="clear:both;background-color:rgba(255,255,255,0.5);max-width:500px;width:100%;">
+            <div class="card" style="clear:both;background-color:rgba(255,255,255,0.5);max-width:500px;width:100%;margin:auto;">
                 
                 <!--div class="flip-boards">
                  　<div class="board left">
@@ -664,56 +755,151 @@
         </style>
         
         <div class="card_title">
+            <h3 style="padding:20px;">VERSION一覧</h3>
+        </div>
+        <div class="accbox">
+            <!--ラベル 1-->
+            <div>
+                <label for="version1.0.0">VERSION 1.0.0</label>
+                <input type="checkbox" id="version1.0.0" class="cssacc" />
+                <div class="accshow">
+                    <!--ここに隠す中身-->
+                    <div style="float:left;width:180px;text-align:center;">
+                        <img src="../images/card/miookamoto_showroom.png" alt="岡本美緒 SHOWROOM" title="岡本美緒 SHOWROOM" style="width:100%;"/>
+                    </div>
+                    <div style="float:left;width:180px;text-align:center;">
+                        <img src="../images/card/miookamoto_twitter.png" alt="岡本美緒 Twitter" title="岡本美緒 Twitter"  style="width:100%;"/>
+                    </div>
+                    <hr class="clearfix" noshade/>
+                </div>
+            </div>
+            <!--//ラベル 1-->
+            <!--ラベル 2-->
+            <div hidden>
+                <label for="version2.0.0">VERSION 2.0.0</label>
+                <input type="checkbox" id="version2.0.0" class="cssacc" />
+                <div class="accshow">
+                    <!--ここに隠す中身-->
+                    <p>
+                    カード
+                    </p>
+                </div>
+            </div>
+            <!--//ラベル 2-->
+            <!--ラベル 3-->
+            <div hidden>
+                <label for="version3.0.0">VERSION 3.0.0</label>
+                <input type="checkbox" id="version3.0.0" class="cssacc" />
+                <div class="accshow">
+                    <!--ここに隠す中身-->
+                    <p>
+                    カード
+                    </p>
+                    
+                </div>
+            </div>
+            <!--//ラベル 3-->
+            
+            <!--ラベル 4-->
+            <div hidden>
+                <label for="version4.0.0">VERSION 4.0.0</label>
+                <input type="checkbox" id="version4.0.0" class="cssacc" />
+                <div class="accshow">
+                    <!--ここに隠す中身-->
+                    <p>
+                    カード
+                    </p>
+                    
+                </div>
+            </div>
+            <!--//ラベル 4-->
+        </div><!--//.accbox-->
+        
+        
+        <div class="card_title">
             <h3 style="padding:20px;">カード一覧</h3>
         </div>
         
         <div id="card_list">
             <h2><span style="font-size:0.5em;" hidden> ー 管理者のみに表示されます</span></h2>
             <table class="card stagecard" style="width:97%;background-color:rgba(255,255,255,0.5);">
-                <tr style="background-color:rgba(255,255,255,0.5);">
+                <tr style="background-color:rgba(255,255,255,1.0);">
                     <th hidden>カードID</th>
-                    <th>カード名</th>
-                    <th>詳細を見る</th>
+                    <th style="padding-left:20px;">カード名</th>
+                    <th style="text-align:center;">詳細を見る</th>
                 </tr>
-                <tr style="background-color:rgba(255,255,255,0.5);height:50px;">
+                <tr style="background-color:rgba(255,255,255,1.0);height:50px;">
                     <td hidden>kugimachimiyabi</td>
-                    <td>釘町みやび</td>
-                    <td><a href="./kugimachimiyabi.html">詳細を見る</a></td>
+                    <td style="padding-left:20px;">釘町みやび</td>
+                    <td style="text-align:center;"><a href="./kugimachimiyabi.html">詳細を見る</a></td>
                 </tr>
-                <tr style="background-color:rgba(255,255,255,0.5);height:50px;">
+                <tr style="background-color:rgba(255,255,255,1.0);height:50px;">
                     <td hidden>kentokomai</td>
-                    <td>こまいけんと</td>
-                    <td><a href="./kentokomai.html">詳細を見る</a></td>
+                    <td style="padding-left:20px;">こまいけんと</td>
+                    <td style="text-align:center;"><a href="./kentokomai.html">詳細を見る</a></td>
                 </tr>
-                <tr style="background-color:rgba(255,255,255,0.5);height:50px;">
+                <tr style="background-color:rgba(255,255,255,1.0);height:50px;">
                     <td hidden>kyoro</td>
-                    <td>伊藤麻衣（Kyoro）</td>
-                    <td><a href="./kyoro.html">詳細を見る</a></td>
+                    <td style="padding-left:20px;">伊藤麻衣（Kyoro）</td>
+                    <td style="text-align:center;"><a href="./kyoro.html">詳細を見る</a></td>
                 </tr>
-                <tr style="background-color:rgba(255,255,255,0.5);height:50px;">
+                <tr style="background-color:rgba(255,255,255,1.0);height:50px;">
                     <td hidden>miookamoto</td>
-                    <td>岡本美緒</td>
-                    <td><a href="./miookamoto.html">詳細を見る</a></td>
+                    <td style="padding-left:20px;">岡本美緒</td>
+                    <td style="text-align:center;"><a href="./miookamoto.html">詳細を見る</a></td>
                 </tr>
-                <tr style="background-color:rgba(255,255,255,0.5);height:50px;">
+                <tr style="background-color:rgba(255,255,255,1.0);height:50px;">
                     <td hidden>pinky</td>
-                    <td>ぴんきー</td>
-                    <td><a href="./pinky.html">詳細を見る</a></td>
+                    <td style="padding-left:20px;">ぴんきー</td>
+                    <td style="text-align:center;"><a href="./pinky.html">詳細を見る</a></td>
                 </tr>
                 <tr style="background-color:rgba(255,255,255,0.5);height:50px;" hidden>
                     <td hidden>soubistudio</td>
-                    <td>装美スタジオ</td>
-                    <td><a href="./soubistudio.html">詳細を見る</a></td>
+                    <td style="padding-left:20px;">装美スタジオ</td>
+                    <td style="text-align:center;"><a href="./soubistudio.html">詳細を見る</a></td>
                 </tr>
                 <tr style="background-color:rgba(255,255,255,0.5);height:50px;" hidden>
                     <td hidden>mokuseigekijo</td>
-                    <td>木星劇場</td>
-                    <td><a href="./mokuseigekijo.html">詳細を見る</a></td>
+                    <td style="padding-left:20px;">木星劇場</td>
+                    <td style="text-align:center;"><a href="./mokuseigekijo.html">詳細を見る</a></td>
                 </tr>
                 
             </table>
         </div>
         <br />
+        
+        <hr class="clearfix" noshade/>
+        
+        <div id="myService">
+            <h3 style="padding-top:20px;padding-left:20px;">関連サービス</h3>
+            <table class="stagecard" style="width:100%;text-align:center;">
+                <tr>
+                    <td style="width:50%">
+                        <a href="../card.html">
+                            <h2 class="list_button marginLeft20" style="width:80%;height:25px;">公式サイト</h2>
+                        </a>
+                    </td>
+                    <td style="width:50%">
+                        <a href="http://thecardgame.base.shop">
+                            <h2 class="list_button marginLeft20" style="width:80%;height:25px;">THE CARD SHOP</h2>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width:50%">
+                        <a href="../memory/index.html">
+                            <h2 class="list_button marginLeft20" style="width:80%;height:25px;">MEMORY</h2>
+                        </a>
+                    </td>
+                    <td style="width:50%">
+                        <a href="../rulebook.html">
+                            <h2 class="list_button marginLeft20" style="width:80%;height:25px;">RULEBOOK</h2>
+                        </a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        
         <hr class="clearfix" noshade/>
         <!-- シェアボタン [ここからコピー] -->
         <script>
@@ -853,7 +1039,7 @@
                     <img src="../images/link/night-school_logo.png" alt="素敵曜日！ナイトスクーる" title="素敵曜日！ナイトスクーる" style="max-width:300px;width:100%;background-color:black"/>
                 </a>
             </div>
-
+            
             <div style="float:left;">
                 <h4>番組</h4>
                 <a href="http://welkome.sunstripe-main.jp/" target="_blank">
@@ -917,8 +1103,9 @@
         
         
         <footer>
-            <p>このホームページに記載の画像・文章の著作権は「(仮)THE カードゲーム」もしくは、作品・情報の提供者に帰属します。無断転載・利用を禁じます。</p>
-            Copyright(C)2018-<span class="stagecard"><a href="../card.html">(仮)THE カードゲーム</a></span>. All rihts Reserved .
+            <p>このホームページに記載の画像・文章の著作権は「THE CARD GAME」もしくは、作品・情報の提供者に帰属します。無断転載・利用を禁じます。</p>
+            Copyright(C)2018-<span class="stagecard"><a href="../card.html">THE CARD GAME</a></span>. All rihts Reserved .
         </footer>
     </body>
 </html>
+
