@@ -41,29 +41,34 @@
         <!-- Example: <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> -->
         <header class="stagecard">
             <h1><a href="./card.html">THE CARD GAME OFFICIAL WEB SITE</a></h1>
-            <p><span>THE CARD GAME 公式サイト</p>
-                <div id="snsnav"><script>snsDocumentNav()</script></div>
-                <nav>
-                    <!--a href='./index.html'>TOP</a> |
-                     <!--a href='./news/'>NEWS</a> |
-                     <!--a href='./event/'>EVENT</a> |
-                     <!--a href='./introduction.html'>INTRODUCTION</a> |
-                     <!--a href='./member/'>MEMBER</a> |
-                     <!--a href='./link.html'>LINK</a> |
-                     <!--a href='./blog.html'>BLOG</a> |
-                     <!--a href='./about.html'>ABOUT</a> <br //-->
-                    <a href='./card.html'>CARD</a> |
-                    <a href='./news/index.html'>NEWS</a> |
-                    <a href='./memory/index.html'>MEMORY</a> |
-                    <a href='./rulebook.html'>RULEBOOK</a> |
-                    <a href="https://goo.gl/forms/2yAdqEgTXWACYvm92" target="_blank">プロデュースフォーム</a> |
-                    <a href="http://www.cometeo.com/room/PPMtpEGq/" target="_blank">B B S</a>
+            <p><span>THE CARD GAME 公式サイト</span></p>
+            <div id="snsnav"><script>snsDocumentNav()</script></div>
+            
+            <nav style="width:80%;margin:auto;">
+                <!--a href='./index.html'>TOP</a> |
+                 <!--a href='./news/'>NEWS</a> |
+                 <!--a href='./event/'>EVENT</a> |
+                 <!--a href='./introduction.html'>INTRODUCTION</a> |
+                 <!--a href='./member/'>MEMBER</a> |
+                 <!--a href='./link.html'>LINK</a> |
+                 <!--a href='./blog.html'>BLOG</a> |
+                 <!--a href='./about.html'>ABOUT</a> <br //-->
+                <ul>
+                    <li><a href='./card.html'>HOME</a></li>
+                    <li><a href="https://thebase.in/to_app?s=shop&shop_id=thecardgame-base-shop&follow=true" target="_blank">SHOP</a></li>
+                    <li hidden><a href='./news/index.html'>NEWS</a></li>
+                    <li hidden><a href='./memory/index.html'>MEMORY</a></li>
+                    <li><a href='./ambassador/list.html'>AMBASSADOR</a></li>
+                    <li><a href='./rulebook.html'>RULEBOOK</a></li>
+                    <li><a href="https://goo.gl/forms/2yAdqEgTXWACYvm92" target="_blank">PRODUCE</a></li>
+                    <li><a href="http://www.cometeo.com/room/PPMtpEGq/" target="_blank">B B S</a></li>
                     <!--a href='./system.html'>SYSTEM</a> |
                      <!--a href='./shop.html'>SHOP</a> <br />
                      <!--a href='./sitemap.html'>SITEMAP</a> |
                      <!--a href='./contact.html'>CONTACT</a/-->
-                </nav>
-                </header>
+                </ul>
+            </nav>
+        </header>
         
         <!--video autoplay muted controls poster="./images/flyer.jpg" id="movie" name="flyer" controls="controls">
          <source src="./movie/flyer.mp4" type="video/mp4" />
@@ -666,10 +671,10 @@
              item:[
                    "目標となるシナリオ数、日数に達成していない場合は、相手のターンになります。<br />" +
                    "※ 山札が０枚の時、捨て札をシャッフルすることで復活することが可能です。ただし、捨て札によっては、守備表示の捨て札は、山札に戻りません。<br />"
-
+                   
                    ]
              },
-
+             
              {
              title:"（７）イベント終了",
              item:[
@@ -713,7 +718,7 @@
                 phase = 0;
                 pStatusDescription.innerHTML = list[count].item[phase++];
             }
-                </script>
+            </script>
             
         </div>
         

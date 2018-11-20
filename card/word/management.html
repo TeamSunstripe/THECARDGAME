@@ -1,0 +1,1580 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>THE CARD GAME - 運営 - management - THEワードカード</title>
+        <meta charset="utf-8" />
+        <meta name="description" content="運営(management) - THEワードカード | THE CARD GAME / カードゲームで遊ぼう！" />
+        <meta name="author" content="SUNSTRIPE"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link rel="stylesheet" href="../../css/sns.css"/>
+        <link rel="stylesheet" href="../../css/styles.css"/>
+        <!--[if lt IE 9]>
+         <script src="//cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
+         <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+         <![endif]-->
+        <link href="https://fonts.googleapis.com/css?family=Audiowide|Black+Ops+One|Cabin+Sketch|Fredericka+the+Great|Poiret+One|Press+Start+2P|VT323|Josefin+Slab" rel="stylesheet"/>
+        <link rel="shortcut icon" href=""/>
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    </head>
+    <style>
+        header {
+            height:899px;
+            background-color:black;
+            /*background-image: url("../images/card-bg.jpg");*/
+            background-position: right bottom;
+        }
+    #movie {
+        position:absolute;
+        top:-200px;
+        left:10px;
+        width:100%;
+        min-width:1200px;
+        height:1200px;
+    }
+    
+    @media screen and ( min-width:400px ) {
+        header {
+            width:100%;
+            position:relative;
+            overflow:scroll;
+        }
+    }
+    
+        </style>
+    <body>
+
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121197913-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            
+            gtag('config', 'UA-121197913-1');
+            </script>
+        
+        <script type="text/javascript" src="../../js/sns.js"></script>
+        <script type="text/javascript" src="../../js/cardgame.js"></script>
+        
+        <style>
+            body {
+                color:black;
+                background-color:rgba(200,200,255,0.5);
+                font-family: 'Josefin Slab', serif;
+            }
+        a {
+            color:white;
+            text-decoration:none;
+        }
+        </style>
+        
+        <!-- ヘッダー //-->
+        <header class="stagecard">
+            <video autoplay muted controls loop poster="../../images/card-bg.jpg" id="movie" name="cyber" controls="controls" preload="none">
+                <source src="../../movie/cyber.mp4" type="video/mp4" />
+                <img src="../../images/card-bg.jpg" />
+            </video>
+            
+            <script>
+                var movie = document.getElementById("movie");
+                movie.controls = false;
+                </script>
+        </header>
+        
+        <div id="flipcard_div" class="flip-boards">
+            <div class="board left">
+                <div class="front">
+                    <a href="../word/curriculum.html">
+                        <img src="../../images/card/word/curriculum.png" style="width:350px;padding:30px;background-color:rgba(255,255,255,0.5);border-radius:6px;" />
+                    </a>
+                </div>
+                <div class="flipped" style="text-align:center;width:100%;">
+                    <a href="../word/curriculum.html">
+                        <img src="../../images/card/word/curriculum.png" style="width:350px;padding:30px;background-color:rgba(255,255,255,0.5);border-radius:6px;" />
+                    </a>
+                </div>
+            </div>
+            <a href="../../card.html"><h1 style="text-align:center;width:100%;height:600px;">THE CARD GAME</h1></a>
+        </div>
+        
+        <div id="thisLikes_div" class="flip-heart">
+            <div class="board left">
+                <div class="front">
+                    <img src="../../images/likes/icon_heart.png" style="width:50px;border-radius:6px;" />
+                </div>
+                <div class="flipped">
+                    <img src="../../images/likes/icon_heart.png" style="width:50px;border-radius:6px;" />
+                </div>
+            </div>
+        </div>
+        
+        <div id="left-buuton" style="position:absolute;top:300px;left:30px;width:100px;height:100px;">
+            <img src="../../img/left-button.png" style="width:100%"/>
+        </div>
+        <div id="right-buuton" style="position:absolute;top:300px;right:30px;width:100px;height:100px;">
+            <img src="../../img/right-button.png" style="width:100%"/>
+        </div>
+        
+        <script>
+            
+            var screen = {
+                width:document.body.clientWidth,
+                height:document.body.clientHeight,
+            }
+        
+        var flipcard = {
+            top:60,
+            left:(screen.width/2.0) - 320,
+        };
+        
+        var flipcardDiv = document.getElementById("flipcard_div");
+        var thisLikesDiv = document.getElementById("thisLikes_div");
+        flipcardDiv.style.position = 'absolute';
+        flipcardDiv.style.top = flipcard.top + 'px';
+        flipcardDiv.style.left = flipcard.left + 'px';
+        
+        if ( flipcard ) {
+            changeFlipCard( flipcard );
+            changeFlipHeart( flipcard );
+        }
+        
+        function changeFlipCard ( _flipcard ) {
+            flipcardDiv.style.position = 'absolute';
+            flipcardDiv.style.top = _flipcard.top + 'px';
+            flipcardDiv.style.left = _flipcard.left + 'px';
+        }
+        function changeFlipHeart ( _flipcard ) {
+            thisLikesDiv.style.position = 'absolute';
+            thisLikesDiv.style.top = (_flipcard.top + 560) + 'px';
+            thisLikesDiv.style.left = _flipcard.left + 'px';
+        }
+        //読み込み時の表示
+        window_load();
+        
+        //ウィンドウサイズ変更時に更新
+        window.onresize = window_load;
+        
+        //サイズの表示
+        function window_load() {
+            screen.width = document.body.clientWidth;
+            screen.height = document.body.clientHeight;
+            flipcard.left = (screen.width/2.0) - 320;
+            changeFlipCard( flipcard );
+            changeFlipHeart( flipcard );
+        }
+        
+            </script>
+        
+        <hr class="clearfix" noshade/>
+        
+        <div id="myWallet" hidden>
+            <div class="mywallet">
+                <span id="myWalletYen">
+                    <span id="mywallet_yen">0</span> <img src="../../images/wallet/icon_en.png" class="icons" style="width:30px;" />
+                </span>
+                <br />
+                <span id="myWalletPoint">
+                    <img src="../../images/wallet/icon_point.png" class="icons" style="width:10px;" /><span id="mywallet_point">5</span> ポイント
+                </span>
+                <span id="myWalletCoin">
+                    <img src="../../images/wallet/icon_coin.png" class="icons" style="width:10px;" /> <span id="mywallet_coin">0</span> コイン
+                </span>
+            </div>
+            <div class="add_button" hidden>
+                <img id="addButton" class="icons" src="../../images/wallet/icon_add_button.png" class="icons" style="width:50px;" />
+            </div>
+            <hr class="clearfix" noshade/>
+        </div>
+        
+        <script type="text/javascript" src="../../js/myWallet.js"></script>
+        <script>
+            thisLikes_div.onclick = function () {
+                mywallet_point.innerHTML = (mywallet_point.innerHTML - 1);
+                var event_label = "thisLikes?" + location.href;
+                gtag('event', "thisLikesOnClick", {
+                     'event_category': "thisLikes",
+                     'event_label': event_label,
+                     'value': 1
+                     });
+                     cyberSePlay();
+                     
+            }
+
+        </script>
+        <hr class="clearfix" noshade/>
+        
+        <style>
+            
+            #curriculumProfile
+            {
+                border-radius:3px;
+                margin-top:10px;
+                width:97%;
+            }
+        .menu_active {
+            color:red;
+        }
+        </style>
+        
+        <hr class="clearfix" noshade/>
+        
+        <!-- タブ //-->
+        <table style="width:100%;">
+            <tr style="background-color:white;">
+                <th style="width:50%;">
+                    <h3 style="padding:20px;" class="menu_active" id="menu1">プロフィール</h3>
+                </th>
+                <th style="width:50%;">
+                    <h3 style="padding:20px;" id="menu2">履歴</h3>
+                </th>
+            </tr>
+        </table>
+        
+        <script>
+            var menuObject = {
+                list:[],
+                func:"",
+            };
+        
+        for(var m = 1; m <= 2;m++) {
+            menuObject.list[m - 1] = {
+                object:"",
+            }
+            menuObject.list[m - 1].object = document.getElementById("menu" + m);
+            
+            menuObject.list[m - 1].object.onclick = function () {
+                menuObject.func(this.id);
+            }
+        }
+        
+        menuObject.func = function (clickMenu) {
+            for (var o = 0;o < menuObject.list.length;o++) {
+                if (menuObject.list[o].object.id == clickMenu) {
+                    var menuDiv = document.getElementById(clickMenu);
+                    menuDiv.class = "";
+                    menuDiv.style.color = "red";
+                }
+                else {
+                    var menuDiv = document.getElementById(menuObject.list[o].object.id);
+                    menuDiv.class = "menu_active";
+                    menuDiv.style.color = "black";
+                }
+            }
+            var curriculumProfileDiv = document.getElementById("curriculumProfile");
+            var curriculumProfileListDiv = document.getElementById("curriculumProfileList");
+            
+            if("menu1" != clickMenu) {
+                curriculumProfileDiv.hidden = true;
+                curriculumProfileListDiv.hidden = true;
+            }
+            else {
+                curriculumProfileDiv.hidden = false;
+                curriculumProfileListDiv.hidden = false;
+            }
+        }
+        </script>
+        
+        
+        
+        <div id="curriculumProfile" class="card_title">
+            <h3 style="padding:20px;">プロフィール</h3>
+        </div>
+        
+        <div style="width:100%;overflow:scroll;" id="curriculumProfileList">
+            
+            <table class="card stagecard" style="width:97%;background-color:rgba(255,255,255,0.5);">
+                <tr style="background-color:rgba(255,255,255,1.0);">
+                    <th style="min-width:100px;">項目</th>
+                    <th colspan="2">内容 <a name="nomal"> </a></th>
+                </tr>
+                <tr style="background-color:rgba(255,255,255,1.0);height:50px;">
+                    <th>種類</th>
+                    <td>Character Card</td>
+                    <td rowspan="10" style="overflow:scroll;">
+                        <h3>Twitter アクセス診断実施 (2018/11/15 - 2018/11/25)</h3>
+                        <div style="text-align:center;max-width:300px;width:100%;">
+                            <!-- pushtwitter //-->
+                            <img src="../../images/card/word/curriculum.png" alt="カリキュラム SHOWROOM" title="カリキュラム SHOWROOM" style="width:100%;" hidden/>
+                        </div>
+                    </td>
+                </tr>
+                <tr style="background-color:rgba(255,255,255,1.0);height:50px;">
+                    <th>カードID</th>
+                    <td><a href="./curriculum.html#nomal">curriculum</a></td>
+                </tr>
+                <tr style="background-color:rgba(255,255,255,1.0);height:50px;">
+                    <th>タイトル</th>
+                    <td>運営/management</td>
+                </tr>
+                <tr style="background-color:rgba(255,255,255,1.0);height:50px;">
+                    <th>セリフ</th>
+                    <td>運営</td>
+                </tr>
+                <tr style="background-color:rgba(255,255,255,1.0);height:50px;">
+                    <th>行動力</th>
+                    <td>３</td>
+                </tr>
+                <tr style="background-color:rgba(255,255,255,1.0);height:50px;">
+                    <th>攻撃力</th>
+                    <td>３</td>
+                </tr>
+                <tr style="background-color:rgba(255,255,255,1.0);height:50px;">
+                    <th>守備力</th>
+                    <td>３</td>
+                </tr>
+                <tr style="background-color:rgba(255,255,255,1.0);height:50px;">
+                    <th>詳細</th>
+                    <td>
+                        <h2>公式サイト</h2>
+                        <a href="https://the.themedia.jp" target="_blank">https://the.themedia.jp</a></td>
+                </tr>
+                
+                <tr style="background-color:rgba(255,255,255,1.0);height:50px;">
+                    <th>出身</th>
+                    <td>THE Media</td>
+                </tr>
+                <tr style="background-color:rgba(255,255,255,1.0);height:50px;">
+                    <th>提供</th>
+                    <td>THE CARD GAME</td>
+                </tr>
+                <tr style="background-color:rgba(255,255,255,1.0);height:50px;">
+                    <th>入手方法</th>
+                    <td colspan="2">
+                        2018年10月以降にイベントに参加した時に手にすることができます。<br />
+                        スタッフにお声掛けください。<br />
+                        カリキュラムのTHEWORDカードはございません。<br />
+                        <h3><a href="https://thecardgame.base.shop/" target="_blank">購入ページ</a></h3>
+                    </td>
+                </tr>
+                
+                <tr style="background-color:rgba(255,255,255,1.0);height:50px;" hidden>
+                    <th>ハート数</th>
+                    <td colspan="2" onclick='alertMessage("ハート数\n\nそれぞれのカードを選択してハートを押すと何かが起こるぞ！");'><spna id="curriculumNomalCardHearts"></span></td>
+                </tr>
+                <tr style="background-color:rgba(255,255,255,1.0);height:50px;">
+                    <th>NEXT</th>
+                    <td colspan="2"><spna id="curriculumNomalCardNext"></span></td>
+                </tr>
+                
+                <div hidden>
+                    <script>
+                        var curriculumNomalInfo =
+                        {
+                            /* ユーザーがTwitterでこのツイートを見た回数*/
+                            "インプレッション":276,
+                            "エンゲージメント総数":39,
+                            "メディアのエンゲージメント":16,
+                            "リンクのクリック数":8,
+                            "詳細のクリック数":6,
+                            "いいね":3,
+                            "プロフィールのクリック数":3,
+                            "リツイート":2,
+                            "返信":1,
+                            "ハッシュタグのクリック数":0,
+                        }
+                    var curriculumNomalCardHeartsCount = 0;
+                    for(var i in curriculumNomalInfo) {
+                        curriculumNomalCardHeartsCount += parseInt(curriculumNomalInfo[i], 10);
+                    }
+                    </script>
+                </div>
+            </table>
+        </div>
+        
+        <script>
+            var curriculumNomalCardHearts = document.getElementById("curriculumNomalCardHearts");
+            countHearts(curriculumNomalCardHearts,curriculumNomalCardHeartsCount);
+            var curriculumNomalCardNext = document.getElementById("curriculumNomalCardNext");
+            nextLevel(curriculumNomalCardNext,0);
+            </script>
+        
+        <script>
+            var card_no = 0;
+            var cardList = [
+                            {
+                            "name":"nomal",
+                            "img":"curriculum.png",
+                            },
+                            ];
+                            
+                            
+                            var leftButtonDiv = document.getElementById("left-buuton");
+                            var rightButtonDiv = document.getElementById("right-buuton");
+                            leftButtonDiv.onclick = function leftButton () {
+                                card_no--;
+                                if (card_no < 0) {
+                                    card_no = cardList.length - 1;
+                                    
+                                    
+                                }
+                                flipcardDiv.innerHTML = '<div class="board left"><div class="front"><a href="'
+                                + "../word/curriculum.html#" + cardList[card_no].name + '"><img src="' + "../../images/card/word/" + cardList[card_no].img + '" style="width:350px;padding:30px;background-color:rgba(255,255,255,0.5);border-radius:6px;" /></a></div><div class="flipped" style="text-align:center;width:100%;"><a href="' + "../word/curriculum.html#" + cardList[card_no].name + '"><img src="' + "../../images/card/word/" + cardList[card_no].img +  '" style="width:350px;padding:30px;background-color:rgba(255,255,255,0.5);border-radius:6px;" /></a></div></div><a href="../card.html"><h1 style="text-align:center;width:100%;height:600px;">THE CARD GAME</h1></a>';
+                            }
+        rightButtonDiv.onclick = function rightButton () {
+            card_no++;
+            if (cardList.length - 1 < card_no) {
+                card_no = 0;
+            }
+            flipcardDiv.innerHTML = '<div class="board left"><div class="front"><a href="'
+            + "../word/curriculum.html#" + cardList[card_no].name + '"><img src="' + "../../images/card/word/" + cardList[card_no].img + '" style="width:350px;padding:30px;background-color:rgba(255,255,255,0.5);border-radius:6px;" /></a></div><div class="flipped" style="text-align:center;width:100%;"><a href="' + "../word/curriculum.html#" + cardList[card_no].name + '"><img src="' + "../../images/card/word/" + cardList[card_no].img + '" style="width:350px;padding:30px;background-color:rgba(255,255,255,0.5);border-radius:6px;" /></a></div></div><a href="../card.html"><h1 style="text-align:center;width:100%;height:600px;">THE CARD GAME</h1></a>';
+        }
+            </script>
+        
+        <hr class="clearfix" noshade/>
+        
+        <style>
+            
+            #curriculumHistory
+            {
+                border-radius:3px;
+                margin-top:10px;
+                width:97%;
+            }
+        
+            </style>
+        
+        <div id="curriculumHistory" class="card_title">
+            <h3 style="padding:20px;">履歴</h3>
+        </div>
+        <table class="card stagecard" style="width:97%;background-color:rgba(255,255,255,0.5);">
+            <tr style="background-color:rgba(255,255,255,1.0);">
+                <th hidden>履歴ID</th>
+                <th>カードID</th>
+                <th>詳細を見る</th>
+            </tr>
+            <tr style="background-color:rgba(255,255,255,1.5);height:50px;">
+                <td hidden>curriculum00001</td>
+                <td><a href="./curriculum.html">curriculum</a></td>
+                <td>ページが更新されました</td>
+            </tr>
+            <tr style="background-color:rgba(255,255,255,1.0);height:50px;">
+                <td hidden>curriculum00002</td>
+                <td><a href="./curriculum.html#nomal">curriculum#nomal</a></td>
+                <td>普及カード プロフィール作成</td>
+            </tr>
+            <tr style="background-color:rgba(255,255,255,1.0);height:50px;" hidden>
+                <td hidden>curriculum00003</td>
+                <td><a href="./curriculum.html">curriculum</a></td>
+                <td>関連グッズ 入荷されました</td>
+            </tr>
+            <tr style="background-color:rgba(255,255,255,0.5);height:50px;" hidden>
+                <td hidden>curriculum00004</td>
+                <td><a href="./miookamoto.html#newcard">curriculum#newcard</a></td>
+                <td>オリジナルカード プロフィール作成</td>
+            </tr>
+        </table>
+        
+        <hr class="clearfix" noshade/>
+        
+        <style>
+            
+            #curriculumService {
+                border-radius:3px;
+                margin-top:10px;
+                width:97%;
+            }
+        
+            </style>
+        
+        <div id="curriculumService"  class="card_title" style="width:100%;overflow:scroll;">
+            <h3 style="padding-top:20px;padding-left:20px;">関連グッズ</h3>
+            <table class="stagecard" style="width:100%;text-align:center;">
+                <tr>
+                    <td style="width:50%">
+                        <h2 class="submenu">2018年10月 冊子</h2>
+                        <iframe frameborder="0" style="height:480px;width:320px;" src="https://thecardgame.base.shop/items/13998003/widget/large" ></iframe>
+                        <div style="padding:20px;">
+                            <span style="color:red;">NEW</span> 入荷されました
+                        </div>
+                    </td>
+                    <td style="width:50%" hidden>
+                        <h2 class="submenu">推しカード作成</h2>
+                        <iframe frameborder="0" style="height:480px;width:320px;" src="https://thecardgame.base.shop/items/13998003/widget/large" ></iframe>
+                        <div style="padding:20px;">
+                            <span style="color:red;">NEW</span> 入荷されました
+                        </div>
+                    </td>
+                    <td style="width:50%" hidden>
+                        <iframe frameborder="0" style="height:480px;width:320px;" src="https://thecardgame.base.shop/items/12037606/widget/large" ></iframe>
+                        <div style="padding:20px;">
+                            <span style="color:red;">NEW</span> 入荷されました
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width:50%">
+                    </td>
+                </tr>
+                
+            </table>
+        </div>
+        
+        <hr class="clearfix" noshade/>
+        
+        <div style="padding:10px;" class="stagecard">
+            
+            <h2>THE CARD GAME</h2>
+            <h3 class="stagecard">■カード■  <a href='../../card.html'>CARD</a> | <a href='../../memory/index.html'>MEMORY</a> | <a href='../../rulebook.html'>RULEBOOK</a></h3>
+            <div class="card" style="clear:both;background-color:rgba(255,255,255,0.5);max-width:500px;width:100%;margin:auto;">
+                
+                <!--div class="flip-boards">
+                 　<div class="board left">
+                 　　<div class="front"><h2>パネル：表</h2></div>
+                 　　<div class="flipped"><h2>パネル：裏</h2></div>
+                 　</div>
+                 </div-->
+                ＊ 閲覧するたびに改善ポイントなどもいただきたいので予期せぬ変更・削除などはございます、<br />
+                ＊ 本人・団体の許可を得て、掲載させていただいております。<br />
+                ＊ このシステムは、AI機能を採用しており、徐々に学習して成長していきます。<br />
+                ＊ 「いいね」の数、「リツイート」の数、「閲覧」の数、「ハート」を押す回数、「プロデューサー」の応援数、「ダウンロード」の数などの情報により変動いたします。<br />
+            </div>
+        </div>
+        <style>
+            body {
+                background-image: url("../../img/bg.png");
+                background-repeat: repeat;
+                background-attachment: fixed;
+                background-position: right bottom
+            }
+        </style>
+        
+        <div class="card_title">
+            <h3 style="padding:20px;">アイドル一覧</h3>
+        </div>
+        
+        <div>
+            <script>
+                var idolList = [
+                                //{title:"アイドル一覧"},
+                                //1970年代（記事なし）
+                                {title:"あいあい"},
+                                {title:"キューピット"},
+                                {title:"ザ・シュークリー"},
+                                {title:"ドレミファン"},
+                                {title:"はつみ・ひ"},
+                                {title:"BIBI（早坂あきよ・小西直子）"},
+                                {title:"フィーバー（北川まゆみ・岡広いづみ・渡井なおみ）"},
+                                {title:"フラワーキッス"},
+                                {title:"ポピーズ"},
+                                {title:"ラブ・ウインクス"},
+                                {title:"ラブリーズ"},
+                                {title:"リトル・ピンク"},
+                                //1980年代
+                                /*売上ベスト10に入ったグループ*/
+                                {title:"あみん（岡村孝子、加藤晴子）"},
+                                {title:"Wink（相田翔子、鈴木早智子）"},
+                                {title:"おニャン子クラブ - 『夕やけニャンニャン』（フジテレビ）"},
+                                {title:"うしろゆびさされ組（高井麻巳子、岩井由紀子）"},
+                                {title:"うしろ髪ひかれ隊（工藤静香、生稲晃子、斉藤満喜子）"},
+                                {title:"GO-BANG'S"},
+                                {title:"シュガー(Sugar)"},
+                                {title:"BaBe"},
+                                {title:"プリンセス・プリンセス"},
+                                {title:"わらべ - 『欽ちゃんのどこまでやるの!?』（テレビ朝日）"},
+                                //その他デビュー
+                                {title:"アイドル夢工場 - 「コミュニケーションカーニバル 夢工場'87」（フジサンケイグループ）"},
+                                {title:"アイリーン&エリカ"},
+                                {title:"あすか組（小高恵美、小沢なつき、石田ひかり） - 『花のあすか組!』（フジテレビ）"},
+                                {title:"麻生真美子&キャプテン"},
+                                {title:"A-Cha"},
+                                {title:"アンナアン"},
+                                {title:"イエイエ・ガールズ"},
+                                {title:"ICHIGOちゃん"},
+                                {title:"A-Cups"},
+                                {title:"エンジェルス"},
+                                {title:"オールナイターズ - 『オールナイトフジ』（フジテレビ）"},
+                                {title:"おかわりシスターズ"},
+                                {title:"おあずけススターズ"},
+                                {title:"オナッターズ"},
+                                {title:"ニャンギラス - 前述のおニャン子クラブのユニット"},
+                                {title:"オレンジ・シスターズ - ジャニーズ事務所が手掛けた最後の女性タレント"},
+                                {title:"風間三姉妹（浅香唯、大西結花、中村由真） - 『スケバン刑事III 少女忍法帖伝奇』（フジテレビ）"},
+                                {title:"きゃんきゃん"},
+                                {title:"キャプテン"},
+                                {title:"きゃんみゆき&林檎プロモーション"},
+                                {title:"キララとウララ"},
+                                {title:"クラッシュギャルズ（ライオネス飛鳥、長与千種） - 全日本女子プロレスのタッグチーム"},
+                                {title:"シーエックス"},
+                                {title:"シャワー"},
+                                {title:"少女隊"},
+                                {title:"SHOW-YA"},
+                                {title:"スーパーギャル"},
+                                {title:"スターボー"},
+                                {title:"聖子ちゃんず"},
+                                {title:"セイントフォー"},
+                                {title:"セブンティーンクラブ"},
+                                {title:"ソフトクリーム"},
+                                {title:"ザ・チェリーズ"},
+                                {title:"チャイルズ - ラサール石井プロデュース。『笑っていいとも!』（フジテレビ）に出演した「いいとも青年隊」5代目メンバーであり、磯野貴理子が参加していた。"},
+                                {title:"ツインキー"},
+                                {title:"パンジー"},
+                                {title:"パンプキン"},
+                                {title:"BANANA"},
+                                {title:"ヒーローキャリー"},
+                                {title:"B・C・G'"},
+                                {title:"美少女か・ら・ふ・るギャング"},
+                                {title:"ブスっ子くらぶ"},
+                                {title:"ベリーズ"},
+                                {title:"ポピンズ"},
+                                {title:"ホワイトタイガース - 「ツムライリュージョン」（ツムラ）"},
+                                {title:"モモコクラブ - 『Momoco』（学研）、『モモコクラブ』（TBSテレビ）"},
+                                {title:"やまだかつてないWink（山田邦子、横山知枝） - 『邦ちゃんのやまだかつてないテレビ』（フジテレビ）に登場した、Wink（既述）のパロディユニット（当初は「ものまね」）"},
+                                {title:"RaCCo組"},
+                                {title:"ラジオっ娘〜Lady oh! - ニッポン放送"},
+                                {title:"レモンエンジェル"},
+                                {title:"ロコとエッコ"},
+                                //1990年代
+                                {title:"うらりんギャル（山口もえなど） - 『今田耕司のシブヤ系うらりんご』（フジテレビ）"},
+                                {title:"大阪パフォーマンスドール"},
+                                {title:"沖縄アクターズ"},
+                                {title:"SUPER MONKEY'S → 安室奈美恵 with SUPER MONKEY'S"},
+                                {title:"MAX"},
+                                {title:"SPEED（島袋寛子、今井絵理子、上原多香子、新垣仁絵）"},
+                                {title:"D&D"},
+                                {title:"B.B.WAVES"},
+                                {title:"Folder5"},
+                                {title:"BREEZE"},
+                                {title:"y'z factory"},
+                                {title:"ReD"},
+                                {title:"オーロラ五人娘 - 『おたくの星座』（ゲーム）、『フィーバーガールズI』（デジパチ）"},
+                                {title:"乙女塾 - 当時フジテレビが主催していたタレント育成講座の名称であり、同局の『パラダイスGoGo!!』のレギュラー"},
+                                {title:"Qlair"},
+                                {title:"CoCo"},
+                                {title:"ribbon"},
+                                {title:"COLOR"},
+                                {title:"ギリギリガールズ"},
+                                {title:"黒BUTAオールスターズ（持田かおり（現：持田香織）など） - 『黒BUTA天国』（文化放送）"},
+                                {title:"コスプレックス"},
+                                {title:"cotton"},
+                                {title:"こんぺいとう"},
+                                {title:"桜っ子クラブさくら組（加藤紀子、菅野美穂、胡桃沢ひろ子など） - 『桜っ子クラブ』（テレビ朝日）"},
+                                {title:"KEY WEST CLUB（中谷美紀、東恵子）"},
+                                {title:"C.C.ガールズ"},
+                                {title:"シェイプUPガールズ"},
+                                {title:"SPLASH"},
+                                {title:"Say a Little Prayer"},
+                                {title:"制服向上委員会"},
+                                {title:"寿隊"},
+                                {title:"Hellow"},
+                                {title:"4人1組"},
+                                {title:"チェキッ娘 - ドリームキャスト（セガ）、『DAIBAッテキ!!』『DAIBAクシン!!』（フジテレビ）"},
+                                {title:"chee's"},
+                                {title:"NEOかしまし娘"},
+                                {title:"NEOちゃっきり娘"},
+                                {title:"METAMO"},
+                                {title:"T-BACKS"},
+                                {title:"Z-1"},
+                                {title:"Dio"},
+                                {title:"東京パフォーマンスドール（篠原涼子など）"},
+                                {title:"TPD DASH!!"},
+                                {title:"UL-SAYS"},
+                                {title:"ViVA!"},
+                                {title:"ゴルビーズ"},
+                                {title:"ファイヤードルズ"},
+                                {title:"原宿ジェンヌ"},
+                                {title:"DORA（永井美奈子、薮本雅子、米森麻美） - 日本テレビの女子アナウンサーユニット"},
+                                {title:"七つ星"},
+                                {title:"Niki-Niki"},
+                                {title:"ねずみっ子クラブ（植可澄美（仲根かすみ）など） - 『とんねるずの生でダラダラいかせて!!』（日本テレビ）"},
+                                {title:"パイレーツ"},
+                                {title:"ハミングバード - 『アイドル防衛隊ハミングバード』（アニメ）"},
+                                {title:"原宿探検隊"},
+                                {title:"VENUS"},
+                                {title:"HiP（ホリプロ・アイドル・パラダイス）"},
+                                {title:"フェアリーテール"},
+                                {title:"FLIP-FLAP"},
+                                {title:"BABY'S"},
+                                {title:"ザ・ポチ!"},
+                                {title:"まニャン子クラブ - 『鶴光の噂のゴールデンアワー』（ニッポン放送）"},
+                                {title:"マヒマヒ (ユニット) - 『シンデレラドリーム ミッドナイト☆パーティー』（TBSラジオ）"},
+                                {title:"Mi-Ke - もともとはB.B.クィーンズのバックコーラスメンバー"},
+                                {title:"MISSION - 『アイドルハイスクール芸能女学館』（フジテレビ）"},
+                                {title:"南青山少女歌劇団"},
+                                {title:"南青山勇気組"},
+                                {title:"Melody"},
+                                {title:"Ya&Ya CLUBポチ組 - 『ピッカピカ音楽館』（テレビ朝日）"},
+                                {title:"YURIMARI"},
+                                {title:"楽天使"},
+                                {title:"B'dash"},
+                                {title:"Lip's"},
+                                {title:"Y2（わいわい）クラブ - テレビ東京"},
+                                //2000年代
+                                //スターダストプロモーション系のグループは、2010年代にまとめて列挙
+                                
+                                {title:"ハロー!プロジェクト"},
+                                {title:"モーニング娘。"},
+                                {title:"タンポポ → タンポポ#（2009年 - ）"},
+                                {title:"プッチモニ → プッチモニV（2009年 - ）"},
+                                {title:"ミニモニ。 → 新ミニモニ。（2009年 - ）"},
+                                {title:"ミニハムず"},
+                                {title:"W（ダブルユー）"},
+                                {title:"モーニング娘。さくら組・モーニング娘。おとめ組"},
+                                {title:"月島きらり starring 久住小春 (モーニング娘。)"},
+                                {title:"エコモニ。"},
+                                {title:"あややムwithエコハムず"},
+                                {title:"モーニング娘。誕生10年記念隊"},
+                                {title:"ドリームモーニング娘。"},
+                                {title:"太陽とシスコムーン → T&Cボンバー（2000年 - ）"},
+                                {title:"カントリー娘。"},
+                                {title:"カントリー娘。に石川梨華（モーニング娘。）"},
+                                {title:"カントリー娘。に紺野と藤本（モーニング娘。）"},
+                                {title:"カントリー・ガールズ"},
+                                {title:"ココナッツ娘 → ココナッツ娘。（2000年 - ）"},
+                                {title:"メロン記念日"},
+                                {title:"シェキドル"},
+                                {title:"Gatas Brilhantes H.P."},
+                                {title:"音楽ガッタス"},
+                                {title:"ハロー!プロジェクト・キッズ"},
+                                {title:"℃-ute"},
+                                {title:"Berryz工房"},
+                                {title:"ハロプロエッグ → ハロプロ研修生"},
+                                {title:"ともいき・木を植えたい"},
+                                {title:"しゅごキャラエッグ!"},
+                                {title:"S/mileage → スマイレージ（2009年 - ）→アンジュルム（2015年 - ）"},
+                                {title:"アップアップガールズ（仮）"},
+                                {title:"Juice=Juice"},
+                                {title:"こぶしファクトリー"},
+                                {title:"つばきファクトリー"},
+                                {title:"ハロプロ関西"},
+                                {title:"SI☆NA"},
+                                {title:"シャッフルユニット"},
+                                {title:"ハロー!プロジェクトオールスターズ"},
+                                {title:"美勇伝 → 続・美勇伝（2009年 - ）"},
+                                {title:"POCKY GIRLS&Venus Mousse"},
+                                {title:"ごまっとう"},
+                                {title:"後浦なつみ"},
+                                {title:"DEF.DIVA"},
+                                {title:"GAM"},
+                                {title:"ROMANS"},
+                                {title:"ZYX → ZYX-α（2009年 - ）"},
+                                {title:"あぁ!"},
+                                {title:"Buono!"},
+                                {title:"High-King"},
+                                {title:"ガーディアンズ4"},
+                                {title:"きら☆ぴか"},
+                                {title:"MilkyWay"},
+                                {title:"アテナ&ロビケロッツ"},
+                                {title:"安倍なつみ&矢島舞美（℃-ute）"},
+                                {title:"NICE GIRL プロジェクト!"},
+                                {title:"THE ポッシボー → チャオ ベッラ チンクエッティ"},
+                                {title:"キャナァーリ倶楽部"},
+                                {title:"AKB48グループ"},
+                                {title:"AKB48"},
+                                {title:"ほね組 from AKB48"},
+                                {title:"ICE from AKB48"},
+                                {title:"Chocolove from AKB48"},
+                                {title:"クレヨンフレンズ from AKB48"},
+                                {title:"ノースリーブス"},
+                                {title:"お菓子なシスターズ"},
+                                {title:"渡り廊下走り隊 → 渡り廊下走り隊7"},
+                                {title:"ナットウエンジェル → ナットウエンジェルZ"},
+                                {title:"Queen & Elizabeth"},
+                                {title:"チームドラゴン from AKB48"},
+                                {title:"フレンチ・キス"},
+                                {title:"ミニスカート"},
+                                {title:"Not yet"},
+                                {title:"DiVA → DIVA"},
+                                {title:"チームZ"},
+                                {title:"おじゃる丸シスターズ"},
+                                {title:"BABY GAMBA"},
+                                {title:"スケバンGirls"},
+                                {title:"NO NAME"},
+                                {title:"AKB48 チームサプライズ"},
+                                {title:"指原莉乃 with アンリレ"},
+                                {title:"てんとうむChu!"},
+                                {title:"ニャーKB with ツチノコパンダ"},
+                                {title:"乃木坂AKB"},
+                                {title:"じゃんけん民"},
+                                {title:"坂道AKB"},
+                                {title:"SKE48"},
+                                {title:"ラブ・クレッシェンド"},
+                                {title:"SDN48"},
+                                {title:"NMB48"},
+                                {title:"HKT48"},
+                                {title:"fairy w!nk"},
+                                {title:"NGT48"},
+                                {title:"STU48"},
+                                {title:"AKBアイドリング!!!"},
+                                {title:"アイドリング!!!（フジテレビ）"},
+                                {title:"NEO fromアイドリング!!!"},
+                                {title:"HIP♡ATTACK fromアイドリング!!!"},
+                                {title:"フリフリアイドリング!!!"},
+                                {title:"ギザギザアイドリング!!!"},
+                                {title:"キュンキュンアイドリング!!!"},
+                                {title:"バンバンアイドリング!!!"},
+                                {title:"ときめきアイドリング!!!"},
+                                {title:"ぷよぷよアイドリング!!!"},
+                                {title:"関西アイドリング!!!"},
+                                {title:"PansonWorks×アイドリング!!!"},
+                                {title:"アイドロング!!!"},
+                                {title:"ChocoLe"},
+                                {title:"シークレットガールズ"},
+                                {title:"ブーイング!!!"},
+                                {title:"EARTH"},
+                                {title:"Early Morning - 『アナ★バン!』（フジテレビ）"},
+                                {title:"アイドルカレッジ"},
+                                {title:"アジュール"},
+                                {title:"アフィリア・サーガ・イースト → アフィリア・サーガ → 純情のアフィリア"},
+                                {title:"『マスカットシリーズ』(テレビ東京)"},
+                                {title:"恵比寿マスカッツ"},
+                                {title:"恵比寿★マスカッツ"},
+                                {title:"恵比寿マスカッツ"},
+                                {title:"Osaka翔Gangs"},
+                                {title:"オトメ☆コーポレーション"},
+                                {title:"Carezza"},
+                                {title:"Girl's BOX"},
+                                {title:"SweetS"},
+                                {title:"可憐Girl's"},
+                                {title:"完熟娘。"},
+                                {title:"キャラメル☆リボン"},
+                                {title:"キャンパスナイターズ - 『キャンパスナイトフジ』（フジテレビ）"},
+                                {title:"『クイズ!ヘキサゴンII』関連ユニット"},
+                                {title:"Pabo"},
+                                {title:"Famille 〜ファミーユ〜"},
+                                {title:"ココロコロン"},
+                                {title:"コスメティックロボット"},
+                                {title:"Survivё → Survivё-ZERO → Survive-ZERO"},
+                                {title:"Suppli Mode"},
+                                {title:"C-ZONE"},
+                                {title:"SHAKE"},
+                                {title:"JK21"},
+                                {title:"しず風"},
+                                {title:"推定少女"},
+                                {title:"Starmarie"},
+                                {title:"Springs"},
+                                {title:"セクシー☆オールシスターズ"},
+                                {title:"爆乳戦隊パイレンジャー"},
+                                {title:"爆乳三国志"},
+                                {title:"美脚戦隊スレンダー"},
+                                {title:"D-Rive"},
+                                {title:"胸の谷間にうもれ隊"},
+                                {title:"爆乳ヤンキー"},
+                                {title:"爆乳甲子園"},
+                                {title:"ZONE"},
+                                {title:"W∞アンナ"},
+                                {title:"DANCEROID"},
+                                {title:"Chu!☆Lips"},
+                                {title:"choice?"},
+                                {title:"DVL → Rev. from DVL"},
+                                {title:"テクプリ"},
+                                {title:"天上智喜 → 天上智喜The Grace"},
+                                {title:"てん・むす"},
+                                {title:"d-trance"},
+                                {title:"Tomato n'Pine"},
+                                {title:"Dream5"},
+                                {title:"9nine"},
+                                {title:"中野腐女子シスターズ → 中野腐女シスターズ → 中野風女シスターズ"},
+                                {title:"腐男塾 → 風男塾"},
+                                {title:"ナチュラルポイント"},
+                                {title:"Negicco"},
+                                {title:"hy4_4yh"},
+                                {title:"ぱすぽ☆ → PASSPO☆"},
+                                {title:"バニラビーンズ"},
+                                {title:"PARADISE GO!! GO!!"},
+                                {title:"HALCALI"},
+                                {title:"80 pan"},
+                                {title:"bump.y"},
+                                {title:"BEE-HIVE"},
+                                {title:"Perfume"},
+                                {title:"Buzy"},
+                                {title:"BOYSTYLE"},
+                                {title:"Bibus Music Club"},
+                                {title:"Pinkish"},
+                                {title:"VENUS"},
+                                {title:"B.L.T.アイドル（略） - 『ルドイア☆星惑三第』（日本テレビ）"},
+                                {title:"Peachy's - 『〜ジョーデキ!POP COMPANY〜POP屋』（フジテレビ）"},
+                                {title:"美少女クラブ21 → 美少女クラブ31"},
+                                {title:"HINOIチーム"},
+                                {title:"Fine"},
+                                {title:"Feam"},
+                                {title:"PLIME"},
+                                {title:"BRAN-KO - 『王様のブランチ』(TBS)"},
+                                {title:"HOP CLUB"},
+                                {title:"Whiteberry"},
+                                {title:"まなみのりさ"},
+                                {title:"まりもみ"},
+                                {title:"MarryDoll"},
+                                {title:"雅〜MIYABI〜"},
+                                {title:"メグリアイ"},
+                                {title:"女猿"},
+                                {title:"ゆいかおり"},
+                                {title:"YGA"},
+                                {title:"ワンギャル - 『ワンダフル』(TBS)"},
+                                //2010年代
+                                //ハロー!プロジェクト関連、AKB48グループ関連、アイドリング!!!関連のグループは、2000年代にまとめて列挙
+                                {title:"iDOL Street"},
+                                {title:"SUPER☆GiRLS"},
+                                {title:"Cheeky Parade"},
+                                {title:"GEM"},
+                                {title:"わーすた"},
+                                {title:"ITP（アイドルのたまごプロジェクト）"},
+                                {title:"虹色幻想曲 〜プリズム・ファンタジア〜"},
+                                {title:"マボロシ可憐GeNE"},
+                                {title:"Hauptharmonie"},
+                                {title:"モエギノジノム"},
+                                {title:"アークジュエル系"},
+                                {title:"Ange☆Reve"},
+                                {title:"Doll☆Elements"},
+                                {title:"愛乙女☆DOLL"},
+                                {title:"Luce Twinkle Wink☆"},
+                                {title:"Stella☆Beats"},
+                                {title:"Jewel☆Neige"},
+                                {title:"Chu☆Oh!Dolly"},
+                                {title:"アリスプロジェクト"},
+                                {title:"ぴゅあふる"},
+                                {title:"チェリーブロッサム"},
+                                {title:"仮面女子"},
+                                {title:"アリス十番"},
+                                {title:"スチームガールズ"},
+                                {title:"アーマーガールズ"},
+                                {title:"街角景気☆仮面女子↑"},
+                                {title:"OZ"},
+                                {title:"ぱー研"},
+                                {title:"スライムガールズ"},
+                                {title:"usa☆usa少女倶楽部"},
+                                {title:"ライムベリー"},
+                                {title:"デスラビッツ → です。ラビッツ"},
+                                {title:"坂道シリーズ（ソニー・ミュージックレコーズ）"},
+                                {title:"乃木坂46"},
+                                {title:"HoneyWorks meets さゆりんご軍団 + 真夏さんリスペクト軍団 from 乃木坂46"},
+                                {title:"欅坂46"},
+                                {title:"けやき坂46"},
+                                {title:"さくら学院"},
+                                {title:"重音部 BABYMETAL"},
+                                {title:"クッキング部 ミニパティ"},
+                                {title:"バトン部 Twinklestars"},
+                                {title:"科学部 科学究明機構ロヂカ?"},
+                                {title:"シャイニングウィル系"},
+                                {title:"AeLL."},
+                                {title:"怪傑!トロピカル丸"},
+                                {title:"純情!トロピカル丸"},
+                                {title:"青春!トロピカル丸"},
+                                {title:"全力少女R"},
+                                {title:"RuRian"},
+                                {title:"One Stopin Step"},
+                                {title:"STARDUST PLANET（スターダストプロモーション）"},
+                                {title:"ももいろクローバー → ももいろクローバーZ"},
+                                {title:"KAGAJO☆4S"},
+                                {title:"クリィミー・パフェ"},
+                                {title:"私立恵比寿中学"},
+                                {title:"チームしゃちほこ → TEAM SHACHI"},
+                                {title:"たこやきレインボー"},
+                                {title:"ばってん少女隊"},
+                                {title:"ときめき♡宣伝部"},
+                                {title:"みにちあ☆ベアーズ"},
+                                {title:"momonaki"},
+                                {title:"桜エビ〜ず"},
+                                {title:"3B junior"},
+                                {title:"ロッカジャポニカ"},
+                                {title:"はちみつロケット"},
+                                {title:"奥澤村"},
+                                {title:"リーフシトロン"},
+                                {title:"マジェスティックセブン"},
+                                {title:"スマイル学園"},
+                                {title:"電音部 UNDERFACE"},
+                                {title:"ディアステージ系"},
+                                {title:"でんぱ組.inc"},
+                                {title:"妄想キャリブレーション"},
+                                {title:"AIKATSU☆STARS!"},
+                                {title:"STAR☆ANIS"},
+                                {title:"Mia REGINA"},
+                                {title:"シンセカイセン"},
+                                {title:"CYNHN"},
+                                {title:"ディア☆"},
+                                {title:"ENGAG.ING"},
+                                {title:"虹のコンキスタドール"},
+                                {title:"ベボガ!"},
+                                {title:"ココロモヨヲ"},
+                                {title:"閃光プラネタゲート"},
+                                {title:"ラストアイドルファミリー（ラストアイドル）"},
+                                {title:"ラストアイドル → LaLuce"},
+                                {title:"Good Tears"},
+                                {title:"シュークリームロケッツ"},
+                                {title:"Someday Somewhere"},
+                                {title:"Love Cocchi"},
+                                {title:"WACK系"},
+                                {title:"BiS"},
+                                {title:"BiSH"},
+                                {title:"GANG PARADE"},
+                                {title:"BILLIE IDLE"},
+                                {title:"EMPiRE"},
+                                {title:"アイドルネッサンス"},
+                                {title:"アイリス (by MORADOLL)"},
+                                {title:"i☆Ris"},
+                                {title:"青山☆聖ハチャメチャハイスクール"},
+                                {title:"アキシブproject"},
+                                {title:"asfi"},
+                                {title:"新しい学校のリーダーズ"},
+                                {title:"天晴れ!原宿"},
+                                {title:"AppleTale"},
+                                {title:"amiinA"},
+                                {title:"あゆみくりかまき"},
+                                {title:"アリスインアリス"},
+                                {title:"あヴぁんだんど"},
+                                {title:"Ange"},
+                                {title:"E-girls"},
+                                {title:"Stand-Up!Hearts → イケてるハーツ"},
+                                {title:"=LOVE"},
+                                {title:"いちごみるく色に染まりたい"},
+                                {title:"HR"},
+                                {title:"Especia"},
+                                {title:"エムトピ"},
+                                {title:"エモクルスコップ → エモップ"},
+                                {title:"エレクトリックリボン"},
+                                {title:"大阪☆春夏秋冬"},
+                                {title:"ALLOVER"},
+                                {title:"OS☆U"},
+                                {title:"乙女新党"},
+                                {title:"おとめボタン"},
+                                {title:"おはガールちゅ!ちゅ!ちゅ!"},
+                                {title:"OFR48"},
+                                {title:"CoverGirls"},
+                                {title:"神宿"},
+                                {title:"仮面ライダーGIRLS"},
+                                {title:"GALETTe*"},
+                                {title:"川崎純情小町☆"},
+                                {title:"KÜHN"},
+                                {title:"KissBee"},
+                                {title:"KissBeeyouth"},
+                                {title:"KissBeeWEST"},
+                                {title:"Gallop+"},
+                                {title:"CANDY GO!GO!"},
+                                {title:"Candy☆Drops"},
+                                {title:"Q'ulle"},
+                                {title:"Cupitron"},
+                                {title:"清竜人25"},
+                                {title:"キラポジョ"},
+                                {title:"煌めき☆アンフォレント"},
+                                {title:"KNU23 → KNU"},
+                                {title:"GEOアイドル部"},
+                                {title:"劇場版ゴキゲン帝国"},
+                                {title:"callme"},
+                                {title:"最高じぇねれーしょん"},
+                                {title:"最終未来兵器mofu"},
+                                {title:"CY8ER"},
+                                {title:"SUMMER ROCKET"},
+                                {title:"サンスポアイドルリポーター SIR"},
+                                {title:"さんみゅ〜"},
+                                {title:"G☆Girls"},
+                                {title:"しず風&絆〜KIZUNA〜"},
+                                {title:"SHiNY SHiNY"},
+                                {title:"SiAM&POPTUNe"},
+                                {title:"sugartrap"},
+                                {title:"じゅじゅ"},
+                                {title:"ジュネス☆プリンセス"},
+                                {title:"純粋カフェ・ラッテ"},
+                                {title:"神使轟く、激情の如く。"},
+                                {title:"ステーション♪"},
+                                {title:"splash!"},
+                                {title:"SPACE GIRLS PLANET"},
+                                {title:"スルースキルズ"},
+                                {title:"せのしすたぁ"},
+                                {title:"There There Theres"},
+                                {title:"ぜんぶ君のせいだ。"},
+                                {title:"旋律フリージア"},
+                                {title:"sora tob sakana"},
+                                {title:"Task have Fun"},
+                                {title:"Dancing Dolls"},
+                                {title:"ダンシング☆プリンセス"},
+                                {title:"つぼみ"},
+                                {title:"Chelip"},
+                                {title:"つりビット"},
+                                {title:"強がりセンセーション"},
+                                {title:"DISDOL"},
+                                {title:"tipToe."},
+                                {title:"・・・・・・・・・（ドッツ）"},
+                                {title:"東京女子流"},
+                                {title:"Tokyo Cheer② Party"},
+                                {title:"DokiDoki☆ドリームキャンパス"},
+                                {title:"危ない女の子シスターズ"},
+                                {title:"とちおとめ25"},
+                                {title:"Dream Factory"},
+                                {title:"Dorothy Little Happy"},
+                                {title:"drop → ナナランド"},
+                                {title:"ナト☆カン"},
+                                {title:"なないろファンタジー"},
+                                {title:"22/7"},
+                                {title:"nanoCUNE"},
+                                {title:"生ハムと焼うどん"},
+                                {title:"なんきんペッパー"},
+                                {title:"NECOPLASTIC → ネコプラ"},
+                                {title:"NECRONOMIDOL"},
+                                {title:"notall"},
+                                {title:"Party Rockets → Party Rockets GT"},
+                                {title:"Purpure☆N.E.O"},
+                                {title:"バクステ外神田一丁目"},
+                                {title:"PassCode"},
+                                {title:"パナシェ!"},
+                                {title:"ハニースパイス"},
+                                {title:"palet → PALET"},
+                                {title:"バンドじゃないもん!"},
+                                {title:"HeartsMaker"},
+                                {title:"BANZAI JAPAN"},
+                                {title:"Beeすく〜る"},
+                                {title:"BRW108"},
+                                {title:"VIC:CESS"},
+                                {title:"姫carat → 凸凹凸凹-ルリロリ-"},
+                                {title:"ひめキュンフルーツ缶"},
+                                {title:"Phantom Voice"},
+                                {title:"フィロソフィーのダンス"},
+                                {title:"Fairies → フェアリーズ"},
+                                {title:"復活!ミニスカポリス"},
+                                {title:"FES☆TIVE"},
+                                {title:"風男塾"},
+                                {title:"ザ・フーパーズ"},
+                                {title:"フラップガールズスクール"},
+                                {title:"pramo"},
+                                {title:"Prizmmy☆"},
+                                {title:"blue chee's"},
+                                {title:"FRUITPOCHETTE"},
+                                {title:"フルーティー"},
+                                {title:"predia"},
+                                {title:"平成琴姫"},
+                                {title:"ベイビーレイズ → ベイビーレイズJAPAN"},
+                                {title:"BELLRING少女ハート"},
+                                {title:"放課後プリンセス"},
+                                {title:"P♡ttya"},
+                                {title:"WHY@DOLL"},
+                                {title:"WhiteLaceZOKU"},
+                                {title:"マジカル・パンチライン"},
+                                {title:"マシュマロ3d+"},
+                                {title:"まどもあ54世"},
+                                {title:"まねきケチャ"},
+                                {title:"Malcolm Mask McLaren"},
+                                {title:"MIGMA SHELTER"},
+                                {title:"3776"},
+                                {title:"me-me"},
+                                {title:"ミライスカート"},
+                                {title:"ミラクルマーチ"},
+                                {title:"miracle2 from ミラクルちゅーんず!"},
+                                {title:"ミルクス　→　ミルクス本物"},
+                                {title:"むすびズム"},
+                                {title:"Mary Angel"},
+                                {title:"Maison book girl"},
+                                {title:"原宿物語 → monogatari"},
+                                {title:"ヤなことそっとミュート"},
+                                {title:"山口活性学園"},
+                                {title:"ヤンチャン学園 音楽部"},
+                                {title:"夢みるアドレセンス"},
+                                {title:"ゆるめるモ!"},
+                                {title:"Lucky Color's"},
+                                {title:"Re:Clash"},
+                                {title:"littleHOOP"},
+                                {title:"RYUKYU IDOL"},
+                                {title:"RYUTist"},
+                                {title:"lyrical school"},
+                                {title:"LinQ"},
+                                {title:"リンクス→リンクSTAR`s"},
+                                {title:"りんご娘"},
+                                {title:"リンダ3世"},
+                                {title:"RECOJO"},
+                                {title:"READY TO KISS"},
+                                {title:"Rev. from DVL"},
+                                {title:"ROSARIO+CROSSv"},
+                                {title:"ロマンスターズ"},
+
+
+                ]
+                document.write("<div class='accbox'>");
+                for(var i = 0; i<idolList.length;i++){
+                    document.write("<!--ラベル 1-->");
+                    document.write("<div>");
+                    document.write("<label for='version" + i + "'>" +
+                                   idolList[i].title
+                                   + "</label>");
+                    document.write("<input type='checkbox' id='version" + i + "' class='cssacc' />");
+                    document.write("<div class='accshow'>");
+                    document.write("<!--ここに隠す中身-->");
+                    document.write("<div style='float:left;width:180px;text-align:center;'>");
+                    document.write("<a href='https://www.google.co.jp/search?q=" + idolList[i].title + "' target='_blank'>");
+                    document.write("<img src='../../images/card/word/curriculum.png' alt='" + idolList[i].title + "' title='" + idolList[i].title + "' style='width:100%;'/>");
+                    document.write("</a>");
+                    document.write("</div>");
+                    document.write("<div style='float:left;width:180px;text-align:center;' hidden>");
+                    document.write("<img src='../../images/card/word/curriculum_twitter.png' alt='カリキュラム Twitter' title='カリキュラム Twitter' style='width:100%;'/>");
+                    document.write("</div>");
+                    document.write("<hr class='clearfix' noshade/>");
+                    document.write("</div>");
+                    document.write("</div>");
+                }
+            document.write("</div><!--//.accbox-->");
+                </script>
+        </div>
+        
+        
+        <div class="card_title">
+            <h3 style="padding:20px;">VERSION一覧</h3>
+        </div>
+        
+        <div class="accbox">
+            <!--ラベル 1-->
+            <div>
+                <label for="version1.0.0">VERSION 1.0.0</label>
+                <input type="checkbox" id="version1.0.0" class="cssacc" />
+                <div class="accshow">
+                    <!--ここに隠す中身-->
+                    <div style="float:left;width:180px;text-align:center;">
+                        <img src="../../images/card/word/curriculum.png" alt="カリキュラム SHOWROOM" title="カリキュラム SHOWROOM" style="width:100%;"/>
+                    </div>
+                    <div style="float:left;width:180px;text-align:center;" hidden>
+                        <img src="../../images/card/word/curriculum_twitter.png" alt="カリキュラム Twitter" title="カリキュラム Twitter"  style="width:100%;"/>
+                    </div>
+                    <hr class="clearfix" noshade/>
+                </div>
+            </div>
+            <!--//ラベル 1-->
+            <!--ラベル 2-->
+            <div hidden>
+                <label for="version2.0.0">VERSION 2.0.0</label>
+                <input type="checkbox" id="version2.0.0" class="cssacc" />
+                <div class="accshow">
+                    <!--ここに隠す中身-->
+                    <p>
+                    カード
+                    </p>
+                </div>
+            </div>
+            <!--//ラベル 2-->
+            <!--ラベル 3-->
+            <div hidden>
+                <label for="version3.0.0">VERSION 3.0.0</label>
+                <input type="checkbox" id="version3.0.0" class="cssacc" />
+                <div class="accshow">
+                    <!--ここに隠す中身-->
+                    <p>
+                    カード
+                    </p>
+                    
+                </div>
+            </div>
+            <!--//ラベル 3-->
+            
+            <!--ラベル 4-->
+            <div hidden>
+                <label for="version4.0.0">VERSION 4.0.0</label>
+                <input type="checkbox" id="version4.0.0" class="cssacc" />
+                <div class="accshow">
+                    <!--ここに隠す中身-->
+                    <p>
+                    カード
+                    </p>
+                    
+                </div>
+            </div>
+            <!--//ラベル 4-->
+        </div><!--//.accbox-->
+        
+        
+        <div class="card_title">
+            <h3 style="padding:20px;">カード一覧</h3>
+        </div>
+        
+        <div id="card_list">
+            <h2><span style="font-size:0.5em;" hidden> ー 管理者のみに表示されます</span></h2>
+            <table class="card stagecard" style="width:97%;background-color:rgba(255,255,255,0.5);">
+                <tr style="background-color:rgba(255,255,255,1.0);">
+                    <th hidden>カードID</th>
+                    <th style="padding-left:20px;">カード名</th>
+                    <th style="text-align:center;">詳細を見る</th>
+                </tr>
+                <tr style="background-color:rgba(255,255,255,1.0);height:50px;">
+                    <td hidden>curriculum</td>
+                    <td style="padding-left:20px;">カリキュラム</td>
+                    <td style="text-align:center;"><a href="../word/curriculum.html">詳細を見る</a></td>
+                </tr>
+                <tr style="background-color:rgba(255,255,255,1.0);height:50px;" hidden>
+                    <td hidden>kugimachimiyabi</td>
+                    <td style="padding-left:20px;">釘町みやび</td>
+                    <td style="text-align:center;"><a href="../kugimachimiyabi.html">詳細を見る</a></td>
+                </tr>
+                <tr style="background-color:rgba(255,255,255,1.0);height:50px;" hidden>
+                    <td hidden>kentokomai</td>
+                    <td style="padding-left:20px;">こまいけんと</td>
+                    <td style="text-align:center;"><a href="../kentokomai.html">詳細を見る</a></td>
+                </tr>
+                <tr style="background-color:rgba(255,255,255,1.0);height:50px;" hidden>
+                    <td hidden>kyoro</td>
+                    <td style="padding-left:20px;">伊藤麻衣（Kyoro）</td>
+                    <td style="text-align:center;"><a href="../kyoro.html">詳細を見る</a></td>
+                </tr>
+                <tr style="background-color:rgba(255,255,255,1.0);height:50px;" hidden>
+                    <td hidden>miookamoto</td>
+                    <td style="padding-left:20px;">岡本美緒</td>
+                    <td style="text-align:center;"><a href="../miookamoto.html">詳細を見る</a></td>
+                </tr>
+                <tr style="background-color:rgba(255,255,255,1.0);height:50px;" hidden>
+                    <td hidden>pinky</td>
+                    <td style="padding-left:20px;">ぴんきー</td>
+                    <td style="text-align:center;"><a href="../pinky.html">詳細を見る</a></td>
+                </tr>
+                <tr style="background-color:rgba(255,255,255,0.5);height:50px;" hidden>
+                    <td hidden>soubistudio</td>
+                    <td style="padding-left:20px;">装美スタジオ</td>
+                    <td style="text-align:center;"><a href="../soubistudio.html">詳細を見る</a></td>
+                </tr>
+                <tr style="background-color:rgba(255,255,255,0.5);height:50px;" hidden>
+                    <td hidden>mokuseigekijo</td>
+                    <td style="padding-left:20px;">木星劇場</td>
+                    <td style="text-align:center;"><a href="../mokuseigekijo.html">詳細を見る</a></td>
+                </tr>
+                
+            </table>
+        </div>
+        <br />
+        
+        <hr class="clearfix" noshade/>
+        
+        <div id="myService">
+            <h3 style="padding-top:20px;padding-left:20px;">関連サービス</h3>
+            <table class="stagecard" style="width:100%;text-align:center;">
+                <tr>
+                    <td style="width:50%">
+                        <a href="../../card.html">
+                            <h2 class="list_button marginLeft20" style="width:80%;height:25px;">公式サイト</h2>
+                        </a>
+                    </td>
+                    <td style="width:50%">
+                        <a href="http://thecardgame.base.shop">
+                            <h2 class="list_button marginLeft20" style="width:80%;height:25px;">THE CARD SHOP</h2>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width:50%">
+                        <a href="../../memory/index.html">
+                            <h2 class="list_button marginLeft20" style="width:80%;height:25px;">MEMORY</h2>
+                        </a>
+                    </td>
+                    <td style="width:50%">
+                        <a href="../../rulebook.html">
+                            <h2 class="list_button marginLeft20" style="width:80%;height:25px;">RULEBOOK</h2>
+                        </a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        
+        <hr class="clearfix" noshade/>
+        <!-- シェアボタン [ここからコピー] -->
+        <script>
+            snsDocument();
+            </script>
+        <!-- シェアボタン [ここまでコピー] -->
+        
+        <hr class="clearfix" noshade/>
+        
+        <div id="stage" style="background-color:white;color:black;padding:10px;width:97%;text-align:center;">
+            <h4>PR</h4>
+            <div id="cardgameproject">
+                <a href="http://stage-card.karaage.site/card.html" target="_blank">
+                    <img src="http://stage-card.karaage.site/images/link/card-game_pr.png" alt="カードゲーム化プロジェクト" title="カードゲーム化プロジェクト" style="width:100%;"/>
+                </a>
+            </div>
+            宣伝協力
+            <h3 id="cardgameprojectButton" class="reserve_button">コピーする</h3>
+        </div>
+        
+        <script>
+            function execCopy(string){
+                var temp = document.createElement('div');
+                
+                temp.appendChild(document.createElement('pre')).textContent = string;
+                
+                var s = temp.style;
+                s.position = 'fixed';
+                s.left = '-100%';
+                
+                document.body.appendChild(temp);
+                document.getSelection().selectAllChildren(temp);
+                
+                var result = document.execCommand('copy');
+                
+                document.body.removeChild(temp);
+                // true なら実行できている falseなら失敗か対応していないか
+                return result;
+            }
+        var cardgameproject = document.getElementById('cardgameproject');
+        var cardgameprojectButton = document.getElementById('cardgameprojectButton');
+        cardgameprojectButton.onclick = function()
+        {
+            var succeeded = execCopy(cardgameproject.innerHTML);
+            
+            if(succeeded){
+                alert('コピーできました');
+            }
+            else {
+                alert('このブラウザでは対応していません');
+            }
+        };
+        </script>
+        
+        <hr class="clearfix" noshade/>
+        
+        <div id="stage" style="background-color:white;color:black;padding:10px;">
+            <div class="event_box" style="width:97%;">
+                <div class="text_left" style="float:left;width:50%;">
+                    <a name="soubistudio"><h4>【　会　場　】</h4></a>
+                    装美スタジオ<br />
+                    ソウビスタジオ<br />
+                    <br />
+                    〒150-0011<br />
+                    東京都東京都渋谷区東2-23-6 装美スタジオ（現、忍者茶房内）<br />
+                    <br />
+                    TEL： 03-5778-4419<br />
+                    <h5>【H  P】</h5>
+                    <a href="http://oedo.club/" target="_blank">http://soubi.studio/</a><br />
+                    <h5>【アクセス】</h5>
+                    JR渋谷南口16b（恵比寿方面）出口　徒歩10分<br />
+                </div>
+                <div class="text_center" style="float:right;width:50%;">
+                    <a href="../soubistudio.html">
+                        <img src="../../images/card/soubistudio.png" style="max-width:400px;width:100%;"/>
+                    </a><br />
+                    <span style="color:red">NEW</span>カード化しました！
+                </div>
+                <hr class="clearfix" noshade/>
+            </div>
+        </div>
+        
+        <hr class="clearfix" noshade/>
+        
+        <div id="stage" style="background-color:white;color:black;padding:10px;">
+            <div class="event_box" style="width:97%;">
+                <div class="text_left" style="float:right;width:50%;">
+                    <a name="mokuseigekijo"><h4>【　会　場　】</h4></a>
+                    cafe＆bar 木星劇場<br />
+                    モクセイゲキジョウ<br />
+                    <br />
+                    〒171-0021<br />
+                    東京都豊島区西池袋5-1-5 第二春谷ビルB1<br />
+                    TEL： 03-5927-8998<br />
+                    <a href="http://mokusei-cafe.com/access/" target="_blank">http://mokusei-cafe.com/</a><br />
+                    <h5>【アクセス】</h5>
+                    池袋駅西口側 C3出口から徒歩約10秒。<br />
+                </div>
+                <div class="text_center" style="float:left;width:50%;">
+                    <a href="../mokuseigekijo.html">
+                        <img src="../../images/card/mokuseigekijo.png" style="max-width:400px;width:100%;"/>
+                    </a><br />
+                    <span style="color:red">NEW</span>カード化しました！
+                </div>
+                <hr class="clearfix" noshade/>
+            </div>
+            
+            
+        </div>
+        
+        <hr class="clearfix" noshade/>
+        
+        <div id="stage" style="background-color:white;color:black;padding:10px;">
+            <h4>PR</h4>
+            <div>
+                <a href="http://assignpromotion.sunstripe-main.jp/" target="_blank">
+                    <img src="../../images/link/assingpromotion_pr.png" alt="和DE撮影会モデル募集中！" title="和DE撮影会モデル募集中！" style="width:100%;background-color:black"/>
+                </a>
+            </div>
+        </div>
+        
+        <hr class="clearfix" noshade/>
+        
+        <div id="stage"  class="event_box" style="background-color:white;color:black;padding:10px;">
+            <h3>協力</h3>
+            <div style="float:left;">
+                <h4>会場</h4>
+                <a href="http://oedo.club/" target="_blank">
+                    <h3>お江戸倶楽部</h3>
+                    <img src="../../images/link/oedoclub_logo.png" alt="お江戸倶楽部" title="お江戸倶楽部" style="max-width:300px;width:100%;background-color:black"/>
+                </a>
+            </div>
+            <div style="float:left;">
+                <h4>番組</h4>
+                <a href="http://night-school.karaage.site/" target="_blank">
+                    <h3>下北FM「素敵曜日！ナイトスクーる」</h3>
+                    <img src="../../images/link/night-school_logo.png" alt="素敵曜日！ナイトスクーる" title="素敵曜日！ナイトスクーる" style="max-width:300px;width:100%;background-color:black"/>
+                </a>
+            </div>
+            
+            <div style="float:left;">
+                <h4>番組</h4>
+                <a href="http://welkome.sunstripe-main.jp/" target="_blank">
+                    <h3>下北FM「ライストゥーミートユー」</h3>
+                    <img src="../../images/link/welkome_logo.png" alt="ライストゥーミートユー" title="ライストゥーミートユー" style="max-width:300px;width:100%;background-color:black"/>
+                </a>
+            </div>
+            <hr class="clearfix" noshade/>
+        </div>
+        
+        <hr class="clearfix" noshade/>
+        
+        <div id="sitemap">
+            <a href="../../card.html">TOP</a> <br />
+            <a href="../../rulebook.html">RULEBOOK</a> <br />
+            <a href="../../ad.html">広告掲載して見ませんか？</a> <br />
+        </div>
+        
+        <div style="background-color:rgba(255,255,255,0.8);color:black;padding:10px;">
+            <table style="max-width:500px;width:90%;margin:auto;">
+                <tr>
+                    <td></td><td colspan="2">みなさんの「こうしてほしい」をお聞かせください。<br />
+                        <br />
+                        この投稿にお返事はしておりません、ご了承ください。<br />
+                        サイト改善に役立てさせていただきます。<br /></td>
+                </tr>
+                <tr>
+                    <td>ご意見</td><td></td><td></td>
+                </tr>
+                <tr>
+                    <td colspan="3"><input type="text" id="send-comment" name="send-comment" size="10" maxlength="200" style="width:100%;height:120px;" /></td>
+                </tr>
+                <tr>
+                    <td>名前</td><td>*</td><td><input type="text" id="send-nama" name="send-nama" size="40" maxlength="30" style="width:100%;height:30px;font-size:1.2em;" required/></td>
+                </tr>
+                <tr>
+                    <td>メールアドレス</td><td>*</td><td><input type="text" id="send-mailaddress" name="send-mail" style="width:100%;height:30px;font-size:1.2em;" required/></td>
+                </tr>
+                <tr>
+                    <td>サイト</td><td></td><td></td>
+                </tr>
+                <tr>
+                    <td colspan="3"><input type="text" id="send-site" name="send-site" size="10" style="width:100%;height:30px;font-size:1.2em;" /></td>
+                </tr>
+                
+                <tr hidden>
+                    <td colspan="3"><input type="checkbox" id="send-checkbox-notification" name="send-checkbox-notification" size="10" /> 新しいコメントをメールで通知</td>
+                </tr>
+                <tr>
+                    <td colspan="3"><input type="checkbox" id="send-checkbox-mail" name="send-checkbox-mail" size="10" /> 新しい投稿をメールで受け取る</td>
+                </tr>
+                <tr>
+                    <td colspan="3" style="text-align:center;"><button style="width:50%;height:50px;background-color:rgba(100,100,255,0.8);color:white;font-size:1.0em;" class="button-styles" onclick="sendtoMail();"/>意見を送る</button></td>
+                </tr>
+            </table>
+        </div>
+        
+        <div style="width:100%;margin:auto;" hidden>
+            <!-- 自動サイズAテキスト・ディスプレイ広告 -->
+            <ins class="adsbygoogle"
+                style="display:block"
+                data-ad-client="ca-pub-7067243457848182"
+                data-ad-slot="3541764190"
+                data-ad-format="auto"
+                data-full-width-responsive="true"></ins>
+            <script>
+                //(adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+        </div>
+        <!-- QRコード //-->
+        <div id="friend-qr">
+            <a href="https://line.me/R/ti/p/%40dqv6292a"><img height="36" border="0" alt="友だち追加" src="https://scdn.line-apps.com/n/line_add_friends/btn/ja.png"></a><br />
+            <img src="http://qr-official.line.me/L/viofM09uGU.png" />
+        </div>
+        
+        <!-- フッター //-->
+        <footer>
+            <p>このホームページに記載の画像・文章の著作権は「THE CARD GAME」もしくは、作品・情報の提供者に帰属します。無断転載・利用を禁じます。</p>
+            Copyright(C)2018-<span class="stagecard"><a href="../../card.html">THE CARD GAME</a></span>. All rihts Reserved .
+        </footer>
+    </body>
+</html>
