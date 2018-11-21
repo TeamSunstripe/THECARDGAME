@@ -74,7 +74,7 @@ h1{
 #snsnav {
     position:static;
     width:100%;
-    height:50px;
+    height:60px;
     text-align:right;
 }
 
@@ -87,6 +87,20 @@ h1{
     }
 }
 @media screen and ( min-width:800px ) {
+}
+
+nav li{
+    float:left;
+    width:120px;
+    text-align:center;
+    list-style-type: none;
+    border-bottom: inset 5px rgba(255,255,255,0.0);
+    background-color:rgba(255,255,255,0.8);
+    padding-top:20px;
+    height:30px;
+}
+nav li:hover {
+    border-bottom: inset 5px rgba(100,0,0,0.8);
 }
 
 footer {
@@ -773,5 +787,30 @@ footer {
     padding:10px;
     padding-left:30px;
 }
+#contents-menu {
+    border-top: inset 3px rgba(100,0,0,0.8);
+    border-bottom: inset 3px rgba(100,0,0,0.8);
+    padding:5px;
+}
+#notice {
+    border-top: inset 3px rgba(100,0,0,0.8);
+    border-bottom: inset 3px rgba(100,0,0,0.8);
+    padding:5px;
+}
+.notice {
+    border-bottom: inset 3px rgba(100,0,0,0.8);
+    padding:5px;
+}
+.notice_box {
+    height:100px;
+    overflow: scroll;
+}
 
-
+.menu_contents {
+    border-bottom: inset 1px rgba(100,0,0,0.8);
+    text-align:center;
+    padding:10px;
+    background-color:rgba(255,255,255,0.8);
+    color:white;
+    border: double 5px rgba(100,0,0,0.8);
+}
