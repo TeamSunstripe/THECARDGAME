@@ -317,6 +317,15 @@ footer {
     background-image: url("../img/bg.png");
 }
 
+.topics {
+    background-color:rgba(100,0,0,1.0);
+    color: #F7DE05;
+    padding-top:10px;
+    padding-left:20px;
+    padding-bottom:10px;
+    background-image: url("../img/bg.png");
+}
+
 #pickup {
     background-color:rgba(100,0,0,1.0);
     color: #F7DE05;
