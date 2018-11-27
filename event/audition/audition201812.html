@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>THE CARD GAME - Audition 2018.12</title>
+        <meta charset="utf-8" />
+        <!--meta name="robots" content="noindex, nofollow" /-->
+        <meta name="description" content="Audition 2018.12 - THE CARD GAME / カードゲームで遊ぼう！">
+            <meta name="author" content="SUNSTRIPE"/>
+            <meta name="viewport" content="width=device-width, initial-scale=1"/>
+            <link rel="stylesheet" href="../../css/sns.css"/>
+            <link rel="stylesheet" href="../../css/styles.css"/>
+            <!--[if lt IE 9]>
+             <script src="//cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
+             <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+             <![endif]-->
+            <link href="https://fonts.googleapis.com/css?family=Audiowide|Black+Ops+One|Cabin+Sketch|Fredericka+the+Great|Poiret+One|Press+Start+2P|VT323|Josefin+Slab" rel="stylesheet"/>
+            <link rel="shortcut icon" href=""/>
+            </head>
+    <body>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121197913-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            
+            gtag('config', 'UA-121197913-1');
+            </script>
+        <script type="text/javascript" src="../../js/sns.js"></script>
+        <script type="text/javascript" src="../../js/cardgame.js"></script>
+        <script type="text/javascript" src="../../js/charactercard.js"></script>
+        <script type="text/javascript" src="../../js/changecard.js"></script>
+        <script type="text/javascript" src="../../js/itemcard.js"></script>
+        <script type="text/javascript" src="../../js/scenecard.js"></script>
+        <script type="text/javascript" src="../../js/actioncard.js"></script>
+        
+        <style>
+            header {
+                //height:899px;
+                //background-color:black;
+                background-image: url("../../images/card-bg.jpg");
+                background-position: right bottom;
+            }
+        .card_bg {
+            background-image: url("../../images/card-bg.jpg");
+        }
+        .description {
+            background-color:rgba(255,255,255,0.8);
+            color:rgba(0,0,100,0.8);
+            padding:10px;
+        }
+        #movie {
+            position:absolute;
+            top:-200px;
+            left:10px;
+            width:100%;
+            min-width:1200px;
+            height:1200px;
+        }
+        
+        @media screen and ( min-width:400px ) {
+            header {
+                width:100%;
+                position:relative;
+                overflow:scroll;
+            }
+        }
+        button {
+            text-align:center;
+            margin:auto;
+            position: relative;
+            display: block;
+            padding: 0.25em 0.5em;
+            text-decoration: none;
+            color: #FFF;
+            background: #fd9535;/*色*/
+            border-radius: 4px;/*角の丸み*/
+            box-shadow: inset 0 2px 0 rgba(255,255,255,0.2), inset 0 -2px 0 rgba(0, 0, 0, 0.05);
+            font-weight: bold;
+            border: solid 2px #d27d00;/*線色*/
+        }
+        button:hover {/*触れたとき*/
+            opacity:0.8;
+        }
+        button:active {/*押したとき*/
+            box-shadow: 0 0 2px rgba(0, 0, 0, 0.30);
+            opacity:0.5;
+        }
+        body {
+            color:black;
+            background-color:rgba(200,200,255,0.5);
+            font-family: 'Josefin Slab', serif;
+        }
+        body {
+            background-image: url("../../img/bg.png");
+            background-repeat: repeat;
+            background-attachment: fixed;
+            background-position: right bottom
+        }
+        
+        a {
+            color:orange;
+            text-decoration:none;
+        }
+        a:hover {
+            opacity:0.5;
+        }
+        
+        #eventMonth
+        {
+            border-radius:3px;
+            margin-top:10px;
+            width:97%;
+        }
+        
+        .nav_new {
+            position:relative;
+            left:-40px;
+            font-size:10px;
+            bottom:25px;
+            color:red;
+            padding:4px;
+            padding-left:8px;
+            padding-right:8px;
+            border-radius:5px;
+            border: double 5px red;
+        }
+        .nav_top {
+            text-decoration:none;
+            font-size:30px;
+            color:rgba(100,0,0,0.5);
+            padding:10px;
+            padding-left:20px;
+            padding-right:20px;
+            border-radius:10px;
+            border: double 5px rgba(100,0,0,0.5);
+            background-color:rgba(255,255,255,0.5);
+        }
+        .nav_notice {
+            text-decoration:none;
+        }
+        </style>
+        <!-- Place your content here -->
+        <!-- SCRIPTS -->
+        <!-- Example: <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> -->
+        <header class="stagecard">
+            <h1><a href="../../card.html">THE CARD GAME OFFICIAL WEB SITE</a></h1>
+            <p><span>THE CARD GAME 公式サイト</span></p>
+            <div id="snsnav"><script>snsDocumentNav()</script></div>
+            
+            <nav style="width:80%;margin:auto;">
+                <!--a href='../../index.html'>TOP</a> |
+                 <!--a href='../../news/'>NEWS</a> |
+                 <!--a href='../../event/'>EVENT</a> |
+                 <!--a href='../../introduction.html'>INTRODUCTION</a> |
+                 <!--a href='../../member/'>MEMBER</a> |
+                 <!--a href='../../link.html'>LINK</a> |
+                 <!--a href='../../blog.html'>BLOG</a> |
+                 <!--a href='../../about.html'>ABOUT</a> <br //-->
+                <ul>
+                    <li><a href='../../card.html'>HOME</a></li>
+                    <li><a href="https://thebase.in/to_app?s=shop&shop_id=thecardgame-base-shop&follow=true" target="_blank">SHOP</a></li>
+                    <li hidden><a href='../../news/index.html'>NEWS</a></li>
+                    <li hidden><a href='../../memory/index.html'>MEMORY</a></li>
+                    <li><a href='../../ambassador/list.html'>AMBASSADOR</a></li>
+                    <li><a href='../../rulebook.html'>RULEBOOK</a></li>
+                    <li><a href="https://goo.gl/forms/2yAdqEgTXWACYvm92" target="_blank">PRODUCE</a></li>
+                    <li><a href="http://www.cometeo.com/room/PPMtpEGq/" target="_blank">B B S</a></li>
+                    <!--a href='./system.html'>SYSTEM</a> |
+                     <!--a href='./shop.html'>SHOP</a> <br />
+                     <!--a href='./sitemap.html'>SITEMAP</a> |
+                     <!--a href='./contact.html'>CONTACT</a/-->
+                </ul>
+            </nav>
+        </header>
+        
+        <!--video autoplay muted controls poster="./images/flyer.jpg" id="movie" name="flyer" controls="controls">
+         <source src="./movie/flyer.mp4" type="video/mp4" />
+         <img src="./images/flyer.jpg" />
+         </video>
+         <script>
+         var movie = document.getElementById("movie");
+         movie.controls = false;
+         </script-->
+        
+        <!--div>
+         <h3>PICKUP</h3>
+         </div-->
+        
+        <!-- div>
+         <div style="float:left;width:30%">
+         <h3>NEWS</h3>
+         </div>
+         <div style="float:left;width:30%">
+         <h3>GOODS</h3>
+         </div>
+         <div style="float:left;width:30%">
+         <h3>TWITTER</h3>
+         </div>
+         </div -->
+        <hr  style="clear:both;"/>
+        <div style="padding:10px;" class="stagecard">
+            
+            <h2>THE CARD GAME</h2>
+            <h3 class="stagecard">■カード■  <a href='../../card.html'>CARD</a> | <a href='../../news/index.html'>NEWS</a> | <a href='../memory/index.html'>MEMORY</a> | <a href="https://goo.gl/forms/2yAdqEgTXWACYvm92" target="_blank">プロデュースフォーム</a> | <a href='../../rulebook.html'>RULEBOOK</a></h3>
+            <!--h1 class="bg">ゲームの目的と概要</h1//-->
+            
+            <div style="text-align:center;padding:10px;background-color:rgba(255,255,255,0.5);">
+                <h3><span id="notice">お知らせ</span></h3>
+            </div>
+            <!-- トピックス [START] -->
+            
+            <article id="topicsList" class="notice_box">
+                
+            </article>
+            
+            <script type="text/javascript" src="../../js/topics.js"></script>
+            <!-- トピックス [END] -->
+            
+        </div>
+        
+        <h1 class="subtitle">THE CARD GAME - オーディション</h1>
+        
+        <main>
+            <h1 class="sublabel">オーディション内容</h1>
+            
+            <section class="card_bg">
+                <div class="description" style="backgorund-color:white;">
+                    THE CARD GAME 新人カード化 - オーディション
+                    <h3>主催</h3>
+                    <a href="http://assignpromotion.sunstripe-main.jp" target="_blank">アサインプロモーション</a>
+                    <h3>募集締切</h3>
+                    <span>2018/12/12</span>
+                    <h3>募集内容</h3>
+                    アサインプロモーションでは、フリーで活動している方のサポートを行っております。<br />
+                    今回は、「<a href="http://stage-card.karaage.site/card.html">THE CARD GAME</a>」を運営しており、下北FM内で「<a href="http://night-school.karaage.site">素敵曜日！ナイトスクーる</a>」などの番組制作を行い毎週木曜日に生放送を行っております。<br />
+                    今回の募集は<a href="http://stage-card.karaage.site/card.html">THE CARD GAME</a>のモデルおよびアンバサダーの募集となります。<br />
+                    合格者は、上記の番組で紹介したり、３ヶ月の活動の後、来年期から始まる３期メンバー募集の際も視野にメンバー加入・活動サポートを行ってまいります。<br />
+                    <br />
+                    番組への出演の活動のほか、様々なイベントのサポートをさせていただきます。<br />
+                    <br />
+                    カードゲームを楽しんだり、動画配信を行ってくれるメンバーを大募集しております。<br />
+                    <h3>合格者</h3>
+                    合格者は、メールが届き、カードを作成（Twitter / SHOWROOM / Ameblo）などの<a href="../../card.html">普及カード</a><br />
+                    <h3>合格者数</h3>
+                    １名〜３名<br />
+                    <h3>特典</h3>
+                    ・特設アンバサダーインタビューサイト<br />
+                    ・特設アンバサダーサイトの運用サポート<br />
+                    ・PR活動のイベントへの参加<br />
+                    <h3>オーディション参加費</h3>
+                    なし
+                    <h3>合格後にかかる費用</h3>
+                    ・交通費および飲食費、宿泊費など<br />
+
+                    <h3>報酬や給与、賞金や賞品、手当など</h3>
+                    ・物販でのバックシステムあり<br />
+                    ・その他、各イベント詳細はお問い合わせください<br />
+                    
+                    <h3>条件・応募資格</h3>
+                    ・オリジナルカードゲームを作成し楽しみたい方<br />
+                    ・都内（池袋・新宿・渋谷・下北沢など）で活動が頻繁に出来る方<br />
+                    ・ダンス・パフォーマンスに自信がある方<br />
+                    ・１８歳～３０歳の男性・女性<br />
+                    ・メールやSNSでのDMでのやり取りが出来る方<br />
+                    ・郵送および直接カードを受け取れる方<br />
+                    
+                    <h3>合格者の流れ</h3>
+                    <span>合格者へ2018/12/25までにご連絡いたします。</span> <br />
+                    <span>面談およびDMなどのやり取りによりカード作成の打ち合わせ</span> <br />
+
+                    <h3>応募方法</h3>
+                    <h4>【WEB】</h4>
+                    <a href="https://goo.gl/forms/EfM1qr8RE3csYTjn2" target="_blank">https://goo.gl/forms/EfM1qr8RE3csYTjn2</a>
+                    <h4>【Email】</h4>
+                    <a href="#audition-mail">audition@sunstripe.main.jp</a>
+                </div>
+            </section>
+            <section class="card_bg">
+                <h1 class="sublabel">新人カードモデル募集</h1>
+                <div class="description">
+                    <h2>新人カードモデルを大募集！！</h2>
+                    オリジナルカードゲームが好きな方<br />
+                    コスプレ写真やファッション写真をカード化に興味がある方<br />
+                    <div style="padding:10px;float:left;">
+                        <a class="menu_contents" style="color:rgba(0,0,255,0.8);" href="../../rulebook.html#charactercard">キャラクターカード</a>
+                    </div>
+                    <div style="padding:10px;float:left;">
+                        <a class="menu_contents" style="color:rgba(0,0,255,0.8);" href="../../rulebook.html#changecard">チェンジカード</a>
+                    </div>
+                    <div style="padding:10px;float:left;">
+                        <a class="menu_contents" style="color:rgba(0,0,255,0.8);" href="../../rulebook.html#itemcard">アイテムカード</a>
+                    </div>
+                    <div style="padding:10px;float:left;">
+                        <a class="menu_contents" style="color:rgba(0,0,255,0.8);" href="../../rulebook.html#sceancard">シーンカード</a>
+                    </div>
+                    <div style="padding:10px;float:left;">
+                        <a class="menu_contents" style="color:rgba(0,0,255,0.8);" href="../../rulebook.html#actioncard">アクションカード</a>
+                    </div>
+                    <div style="padding:10px;float:left;">
+                        <a class="menu_contents" style="color:rgba(0,0,255,0.8);" href="../../rulebook.html#scenarioCard">シナリオカード</a>
+                    </div>
+                    <hr class="clearfix" noshade/>
+                    
+                    <h2>やっていただく内容</h2>
+                    「写真・コスプレ写真やエピソード」いくつかの種類があると今後４０種類のオリジナルカードを作成・販売および運用いたします。<br/>
+                    新人カードモデルに興味がある方を募集中<br />
+                    <br />
+                    
+                    <div style="width:100%;text-align:center;">
+                        <a href="#card_model" class="menu_contents" style="color:rgba(0,0,255,0.8);"> 書類選考あり </a>
+                    </div>
+                    <br />
+                </div>
+                <h2 style="text-align:center;"><a href="../../ambassador/list.html">アンバサダー紹介</a></h2>
+                <div style="width: 100%;overflow: scroll;text-align:center;">
+                    <table style="width: 100%;">
+                        <tr>
+                            <td hidden>
+                                <a href="../../card/aogiriako.html">
+                                    <img class="imageHover" src="../../images/card/aogiriako.png" alt="青桐亜子" title="青桐亜子" style="width:120px;border-radius:6px;"/>
+                                </a>
+                            </td>
+                            <td hidden>
+                                <a href="../../card/arisauki.html">
+                                    <img class="imageHover" src="../../images/card/arisauki.png" alt="宇城ありさ" title="宇城ありさ" style="width:120px;border-radius:6px;"/>
+                                </a>
+                            </td>
+                            <td>
+                                <a href="../../card/chinaminishikawa.html">
+                                    <img class="imageHover" src="../../images/card/chinamiishikawa.png" alt="にしかわちなみ" title="にしかわちなみ" style="width:120px;border-radius:6px;"/>
+                                </a>
+                            </td>
+                            <td>
+                                <a href="../../card/harunaaharu.html">
+                                    <img class="imageHover" src="../../images/card/harunaaharu.png" alt="はるなあはる" title="はるなあはる" style="width:120px;border-radius:6px;"/>
+                                </a>
+                            </td>
+                            <td>
+                                <a href="../../card/hotarunhime.html">
+                                    <img class="imageHover" src="../../images/card/hotarunhime.png" alt="ほたるんひめ" title="ほたるんひめ" style="width:120px;border-radius:6px;"/>
+                                </a>
+                            </td>
+                            <td>
+                                <a href="../../card/kugimachimiyabi.html">
+                                    <img class="imageHover" src="../../images/card/kugimachimiyabi.png" alt="釘町みやび" title="釘町みやび" style="width:120px;border-radius:6px;"/>
+                                </a>
+                            </td>
+                            <td>
+                                <a href="../../card/kentokomai.html">
+                                    <img class="imageHover" src="../../images/card/kentokomai.png" alt="こまいけんと" title="こまいけんと" style="width:120px;border-radius:6px;"/>
+                                </a>
+                            </td>
+                            <td>
+                                <a href="../../card/kyoro.html">
+                                    <img class="imageHover" src="../../images/card/kyoro.png" alt="伊藤麻衣" title="伊藤麻衣" style="width:120px;border-radius:6px;"/>
+                                </a>
+                            </td>
+                            <td>
+                                <a href="../../card/miookamoto.html">
+                                    <img class="imageHover" src="../../images/card/miookamoto.png" alt="岡本美緒" title="岡本美緒" style="width:120px;border-radius:6px;"/>
+                                </a>
+                            </td>
+                            <td hidden>
+                                <a href="../../card/nanamifurusawa.html">
+                                    <img class="imageHover" src="../../images/card/nanamifurusawa.png" alt="古澤菜奈美" title="古澤菜奈美" style="width:120px;border-radius:6px;"/>
+                                </a>
+                            </td>
+                            <td>
+                                <a href="../../card/pinky.html">
+                                    <img class="imageHover" src="../../images/card/pinky.png" alt="ぴんきー" title="ぴんきー" style="width:120px;border-radius:6px;"/>
+                                </a>
+                            </td>
+                            <td>
+                                <a href="../../card/vanillafukazawa.html">
+                                    <img class="imageHover" src="../../images/card/vanillafukazawa.png" alt="深沢ばにら" title="深沢ばにら" style="width:120px;border-radius:6px;"/>
+                                </a>
+                            </td>
+                        </tr>
+                    </table>
+                    <br />
+                </div>
+                <div style="width:100%;text-align:center;">
+                    <a href="../../ambassador/list.html" class="menu_contents" style="color:rgba(0,0,255,0.8);"> 一覧を見る </a>
+                </div>
+                <br />
+                </sction>
+                <section class="card_bg">
+                    <h1 class="sublabel">読者モデル募集</h1>
+                    <aside class="description">
+                        可愛い服装、お洒落が好きな方<br />
+                        ファッション雑誌に興味がある<br />
+                        雑誌に載ってみたい方！<br />
+                        <h2>やっていただく内容</h2>
+                        <p>「写真・コスプレ写真やエピソード、地元愛やそれぞれのイベントページ」<br />
+                        読者モデルさんの活動のサポートのご協力をいたします。</p>
+                        <h2>配布場所</h2>
+                        <ul>
+                            <li>弊社主催イベント</li>
+                            <li>芸能関係者への配布</li>
+                            <li>WEB情報誌・SNSへ拡散</li>
+                        </ul>
+                        <h2>特典</h2>
+                        モデルさんへは無料１部冊子を配布！！<br />
+                        （遠方の方からは、郵送でお送りいたします。）<br />
+                        <br />
+                        
+                        <div>
+                            弊社運用しております１ヶ月毎に配布される情報冊子<br />
+                            読者モデル.専属モデルに興味がある方を募集中<br />
+                            <br />
+                            <div style="width:100%;text-align:center;">
+                                <a href="#info_model" class="menu_contents" style="color:rgba(0,0,255,0.8);"> 書類選考あり </a>
+                            </div>
+                            <br />
+                        </div>
+                        
+                    </aside>
+                    <h2 style="text-align:center;"><a href="../../ambassador/list.html">現在販売中の冊子</a></h2>
+                    <div style="width: 100%;overflow: scroll;text-align:center;">
+                        <table style="width: 100%;">
+                            <tr>
+                                <td style="width:33%;">
+                                    <iframe frameborder="0" height="220" width="160" src="https://thecardgame.base.shop/items/14547100/widget/small" ></iframe>
+                                </td>
+                                <td style="width:34%;">
+                                    <iframe frameborder="0" height="220" width="160" src="https://thecardgame.base.shop/items/13998003/widget/small" ></iframe>
+                                </td>
+                                <td style="width:33%;">
+                                    <iframe frameborder="0" height="220" width="160" src="https://thecardgame.base.shop/items/13951932/widget/small" ></iframe>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </section>
+                <section class="card_bg">
+                    <h1 class="sublabel">インフルエンサー,インスタグラマー募集</h1>
+                    <div class="description">
+                        <p>
+                        モデル、読者モデル、芸能人、タレントなどは<br />
+                        現在は、特別な人がなるお仕事ではありません。ただ、なりたいと思ってなれるものでもありません。<br />
+                        インフルエンサー・インスタグラマーという言葉が昨今注目されていますが、ただインスタグラムを挙げているだけでは、モデルやタレントではありません。<br />
+                        現在我々は、番組制作およびグッズ製作のサポートを行っております。<br />
+                        また、Twitter(ツイッター),Instagram(インスタ),FacebookなどのSNS,BLOGなど<br />
+                        動画配信 LINE LIVE (ラインライブ）、SHOWROOM（ショールーム）など<br />
+                        で発信をご協力いただきます。<br />
+                        </p>
+                        <h2>やっていただく内容</h2>
+                        <p>
+                        弊社からお送りするカードデッキを用いて、カードゲームを楽しんで頂きます。<br />
+                        写真や動画、動画配信などでカードゲームの楽しさや魅力を発信して頂きます。<br />
+                        ゲームルールに関しては<br /><br />
+                        <a class="menu_contents" style="color:rgba(0,0,255,0.8);" href="../../rulebook.html">ルールブック</a>
+                        <br /><br />をご覧ください。
+                        </p>
+                        <h2>特典</h2>
+                        現在販売中のオリジナルカード約４０枚ほどのデッキをお渡しいたします。<br />
+                        自身のオリジナルカードデッキを作成および物販運用のサポートをいたします。<br />
+                        <br />
+                    </div>
+                </section>
+                </main>
+        <aside>
+            <h1 class="subtitle">THE CARD GAME - 許可・条件について</h1>
+            
+            <section class="card_bg">
+                <h2 class="sublabel">未成年の方や事務所の方へ</h2>
+                
+                <div class="description">
+                    <p>
+                    学生の方や芸能事務所および劇団の方は、親御様の許可および事務所の許可を得て頂く必要があります。<br />
+                    必ずマネージャーや事務所の許可を得てエントリーください。<br />
+                    </p>
+                </div>
+                
+                <h1 class="sublabel">応募条件</h1>
+                <div class="description">
+                    <p>
+                    関東在住で東京を中心に活動出来る<br />
+                    18歳以上の女性､男性<br />
+                    約束を守れる方<br />
+                    </p>
+                </div>
+                
+                <h1 class="sublabel">応募方法・WEB､メール</h1>
+                <div class="description">
+                    <p>
+                    下記の応募ボタンより応募頂くか
+                    <div style="width:100%;text-align:center;">
+                        <a href="#info_mail" class="menu_contents" style="color:rgba(0,0,255,0.8);"> 応募する </a>
+                    </div>
+                    </p>
+                </div>
+                
+                <h1 class="sublabel">応募方法・郵送</h1>
+                <div class="description">
+                    <p>郵送で応募される方は下記項目をお送り下さい</p>
+                    <ul>
+                        <li>●　名前（フリガナ）・年齢</li>
+                        　   <li>●　現在の職業</li>
+                        　   <li>●　住所・連絡先（携帯・メールアドレス）</li>
+                        　   <li>●　身長・体重・スリーサイズ</li>
+                        　   <li>●　写真（顔・全身がハッキリ写ってるもの）</li>
+                        　   <li>●　今までの活動経歴あれば</li>
+                    </ul>
+                    
+                    <div class="menu_contents" style="color:black;width:80%;background-color:white;margin:auto;padding:10px;">
+                        〒173-027<br />
+                        東京都板橋区南町46-14 ミヤビヒルズ大山306<br />
+                        アサインプロモーション<br />
+                        「オーディション」係<br />
+                    </div>
+                    <a href="http://assignpromotion.sunstripe-main.jp" target="_blank">アサインプロモーション</a>
+                </div>
+                <a name="card_model"> >> </a>
+                <a name="info_model"> >> </a>
+                <a name="info_mail"> >> </a>
+                <h1 name="audition-mail" class="sublabel">送信フォーム・アンケートフォーム</h1>
+                <div class="description">
+                    <h1>フォーム</h1>
+                    <a href="https://goo.gl/forms/EfM1qr8RE3csYTjn2" target="_blank">https://goo.gl/forms/EfM1qr8RE3csYTjn2</a>
+                    <h1>メール</h1>
+                    <p>
+                    フォームが使用出来ない方やエラーの出る方<br />
+                    スマホ、 携帯からは 下記アドレスをメモして送って下さい
+                    </p>
+                </div>
+                
+                <aside>
+                    <h1 class="subtitle">THE CARD GAME - アンケート</h1>
+                </aside>
+                <div class="description">
+                    
+                <table style="max-width:500px;width:90%;margin:auto;">
+                    <tr>
+                        <td colspan="3"><h2 style="text-align:center;" class="sublabel"><a href="../../ambassador/list.html">送信フォーム</a></h2></td>
+                        
+                    </tr>
+                    <tr>
+                        <td colspan="3"><input type="text" id="audition-send-comment" name="audition-send-comment" size="10" maxlength="200" style="width:100%;height:120px;" /></td>
+                    </tr>
+                    <tr>
+                        <td class="sublabel">名前</td><td>*</td><td><input type="text" id="audition-send-nama" name="send-nama" size="40" maxlength="30" style="width:100%;height:30px;font-size:1.2em;" required/></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <h1 class="sublabel">アンケート</h1>
+                            <h4 class="sublabel"><label><input type="checkbox" name="audition-send-checkbox-questionnaire" value="talent"/>タレント</label></h4>
+                            <h4 class="sublabel"><label><input type="checkbox" name="audition-send-checkbox-questionnaire" value="actor"/>映像俳優</label></h4>
+                            <h4 class="sublabel"><label><input type="checkbox" name="audition-send-checkbox-questionnaire" value="stage-actor"/>舞台俳優</label></h4>
+                            <h4 class="sublabel"><label><input type="checkbox" name="audition-send-checkbox-questionnaire" value="artist"/>アーティスト</label></h4>
+                            <h4 class="sublabel"><label><input type="checkbox" name="audition-send-checkbox-questionnaire" value="idol"/>アイドル</label></h4>
+                            <h4 class="sublabel"><label><input type="checkbox" name="audition-send-checkbox-questionnaire" value="grabia"/>グラビア</label></h4>
+                            <h4 class="sublabel"><label><input type="checkbox" name="audition-send-checkbox-questionnaire" value="fastion"/>ファッションショーモデル</label></h4>
+                            <h4 class="sublabel"><label><input type="checkbox" name="audition-send-checkbox-questionnaire" value="catmodel"/>カットモデル</label></h4>
+                            <h4 class="sublabel"><label><input type="checkbox" name="audition-send-checkbox-questionnaire" value="saronmodel"/>美容室.有名サロンのサロンモデル</label></h4>
+                            <div class="description">
+                                <p>
+                                弊社が運用する番組への出演<br />
+                                タレント・ライブ・舞台・テレビ・映画活動<br />
+                                美容室・サロンのカットモデル、サロンモデル！<br />
+                                <br />
+                                興味があるものをチェックをお願いいたします。
+                                </p>
+                            </div>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td colspan="3"><h3 class="sublabel">メールアドレス</h3></td>
+                    </tr>
+                    <tr>
+                        <td>*</td><td colspan="2"><input type="text" id="audition-send-mailaddress" name="send-mail" style="width:100%;height:30px;font-size:1.2em;" required/></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3"><h3 class="sublabel">サイト</h3></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3"><input type="text" id="send-site" name="audition-send-site" size="10" style="width:100%;height:30px;font-size:1.2em;" /></td>
+                    </tr>
+                    
+                    <tr hidden>
+                        <td colspan="3"><input type="checkbox" id="audition-send-checkbox-notification" name="send-checkbox-notification" size="10" /> 新しいコメントをメールで通知</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3"><input type="checkbox" id="audition-send-checkbox-mail" name="send-checkbox-mail" size="10" /> 新しい投稿をメールで受け取る</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" style="text-align:center;">
+                            <button style="width:50%;height:50px;background-color:rgba(100,100,255,0.8);color:white;font-size:1.0em;" class="button-styles" onclick="auditionToMail();"/>audition@sunstripe.main.jp</button></td>
+                    </tr>
+                </table>
+                </div>
+            </section>
+        </aside>
+        
+        <h1 class="subtitle">THE CARD GAME 運営</h1>
+        
+        <section class="card_bg" style="text-align:center;">
+            <achive style="float:left;width:50%">
+                <h1 class="sublabel">カード制作</h1>
+                <h5 class="sublabel">主な制作</h5>
+                <h3 class="sublabel">THE CARD GAME</h3>
+                <a href="http://stage-card.karaage.site/card.html" target="_blank">
+                    <img class="imageHover" src="../../images/thecardgame_icon.png" alt="THE CARD GAME" title="THE CARD GAME" style="max-width:300px;width:100%;background-color:white"/>
+                </a>
+                <h3 class="sublabel">カード化プロジェクト</h3>
+                <a href="http://stage-card.karaage.site/card.html" target="_blank">
+                    <img class="imageHover" src="../../images/link/card-game_pr.png" alt="THE CARD GAME" title="THE CARD GAME" style="max-width:300px;width:100%;background-color:black"/>
+                </a>
+            </achive>
+            
+            <achive style="float:left;width:50%">
+                <h1 class="sublabel">番組制作</h1>
+                <h5 class="sublabel">主な番組</h5>
+                <h3 class="sublabel">下北FM「素敵曜日！ナイトスクーる」</h3>
+                <div>
+                    <a href="http://night-school.karaage.site/" target="_blank">
+                        <img class="imageHover" src="../../images/link/night-school_logo.png" alt="素敵曜日！ナイトスクーる" title="素敵曜日！ナイトスクーる" style="max-width:300px;width:100%;background-color:black"/>
+                    </a>
+                </div>
+                <hr class="clearfix" noshade/>
+                <h3 class="sublabel">下北FM「ライストゥーミートユー」</h3>
+                <div>
+                    <a href="http://welkome.sunstripe-main.jp/" target="_blank">
+                        <img class="imageHover" src="../../images/link/welkome_logo.png" alt="ライストゥーミートユー" title="ライストゥーミートユー" style="max-width:300px;width:100%;background-color:black"/>
+                    </a>
+                </div>
+                <hr class="clearfix" noshade/>
+            </achive>
+            
+            <achive style="float:left;width:50%">
+                <h1 class="sublabel">地域活動</h1>
+                <h4 class="sublabel">地域活性化プロジェクト</h4>
+                <div>
+                    <a href="https://www.facebook.com/RegionalActivationProject/" target="_blank">
+                        <img class="imageHover" src="../../images/link/areaproject.png" alt="地域活性化プロジェクト" title="地域活性化プロジェクト" style="max-width:300px;width:100%;background-color:black"/>
+                    </a>
+                </div>
+            </achive>
+            
+            <achive style="float:left;width:50%">
+                <h1 class="sublabel">ショップ販売</h1>
+                <h4 class="sublabel">THE CARD GAME 通販</h4>
+                <div>
+                    <a href="https://thecardgame.base.shop" target="_blank">
+                        <img class="imageHover" src="../../images/thecardgame_icon.png" alt="THE CARD GAME 通販" title="THE CARD GAME 通販" style="max-width:300px;width:100%;background-color:white"/>
+                    </a>
+                </div>
+                
+            </achive>
+            
+            <achive style="float:left;width:50%" hidden>
+                <h1 class="sublabel">ワークショップ運営</h1>
+            </achive>
+            <hr  style="clear:both;"/>
+        </section>
+        </section>
+        </main>
+        <!-- シェアボタン [ここからコピー] -->
+        <script>
+            snsDocument();
+            </script>
+        <!-- シェアボタン [ここまでコピー] -->
+        
+        <hr  style="clear:both;"/>
+        
+        <div id="stage" style="background-color:white;color:black;padding:10px;width:97%;">
+            <h4>PR</h4>
+            <div>
+                <a href="http://assignpromotion.sunstripe-main.jp/" target="_blank">
+                    <img class="imageHover" src="../../images/link/assingpromotion_pr.png" alt="和DE撮影会モデル募集中！" title="和DE撮影会モデル募集中！" style="width:100%;background-color:black"/>
+                </a>
+            </div>
+        </div>
+        
+        
+        <div style="background-color:rgba(255,255,255,0.8);color:black;padding:10px;">
+            <table style="max-width:500px;width:90%;margin:auto;">
+                <tr>
+                    <td></td><td colspan="2">みなさんの「こうしてほしい」をお聞かせください。<br />
+                        <br />
+                        この投稿にお返事はしておりません、ご了承ください。<br />
+                        サイト改善に役立てさせていただきます。<br /></td>
+                </tr>
+                <tr>
+                    <td>ご意見箱</td><td></td><td></td>
+                </tr>
+                <tr>
+                    <td colspan="3"><input type="text" id="send-comment" name="send-comment" size="10" maxlength="200" style="width:100%;height:120px;" /></td>
+                </tr>
+                <tr>
+                    <td>名前</td><td>*</td><td><input type="text" id="send-nama" name="send-nama" size="40" maxlength="30" style="width:100%;height:30px;font-size:1.2em;" required/></td>
+                </tr>
+                <tr>
+                    <td>メールアドレス</td><td>*</td><td><input type="text" id="send-mailaddress" name="send-mail" style="width:100%;height:30px;font-size:1.2em;" required/></td>
+                </tr>
+                <tr>
+                    <td>サイト</td><td></td><td></td>
+                </tr>
+                <tr>
+                    <td colspan="3"><input type="text" id="send-site" name="send-site" size="10" style="width:100%;height:30px;font-size:1.2em;" /></td>
+                </tr>
+                
+                <tr hidden>
+                    <td colspan="3"><input type="checkbox" id="send-checkbox-notification" name="send-checkbox-notification" size="10" /> 新しいコメントをメールで通知</td>
+                </tr>
+                <tr>
+                    <td colspan="3"><input type="checkbox" id="send-checkbox-mail" name="send-checkbox-mail" size="10" /> 新しい投稿をメールで受け取る</td>
+                </tr>
+                <tr>
+                    <td colspan="3" style="text-align:center;"><button style="width:50%;height:50px;background-color:rgba(100,100,255,0.8);color:white;font-size:1.0em;" class="button-styles" onclick="sendtoMail();"/>意見を送る</button></td>
+                </tr>
+            </table>
+        </div>
+        <div id="friend-qr">
+            <a href="https://line.me/R/ti/p/%40dqv6292a"><img height="36" border="0" alt="友だち追加" src="https://scdn.line-apps.com/n/line_add_friends/btn/ja.png"></a><br />
+            <img src="http://qr-official.line.me/L/viofM09uGU.png" />
+        </div>
+        
+        <ins class="adsbygoogle"
+            style="display:block"
+            data-ad-format="fluid"
+            data-ad-layout-key="-6t+ed+2i-1n-4w"
+            data-ad-client="ca-pub-7067243457848182"
+            data-ad-slot="8651148544"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        
+        
+        <div style="width:100%;margin:auto;">
+            <!-- 自動サイズAテキスト・ディスプレイ広告 -->
+            <ins class="adsbygoogle"
+                style="display:block"
+                data-ad-client="ca-pub-7067243457848182"
+                data-ad-slot="3541764190"
+                data-ad-format="auto"
+                data-full-width-responsive="true"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+        </div>
+        
+        <h2 style="text-align:center;margin:10px;"><a href="#top" class="nav_top">TOP</a></h2>
+        
+        
+        <h2>> <a href="#notice" class="nav_notice">INFORMATION</a></h2>
+        <hr />
+        
+        <footer>
+            <p>このホームページに記載の画像・文章の著作権は「THE CARD GAME」もしくは、作品・情報の提供者に帰属します。無断転載・利用を禁じます。</p>
+            Copyright(C)2018-<span class="stagecard"><a href="../../card.html">THE CARD GAME</a></span>. All rihts Reserved .
+        </footer>
+    </body>
+</html>
+
+
+
+
+
