@@ -86,6 +86,45 @@ function shareButtonReadSyncer(){
     
 }
 
+function auditionToMail() {
+    var sendNama = document.getElementById("audition-send-nama");
+    var sendMailAddress = document.getElementById("audition-send-mailaddress");
+    var sendCheckboxQuestionnaire = document.getElementsByName("audition-send-checkbox-questionnaire");
+    var sendCheckboxQuestionnaireString = "";
+    
+    if (sendNama.value == "" || sendMailAddress.value == "") {
+        alert("お名前とメールアドレスは必須項目です。");
+        return;
+    }
+    var flag = false; // 選択されているか否かを判定する変数
+    for (var i = 0; i < sendCheckboxQuestionnaire.length; i++) {
+        // i番目のチェックボックスがチェックされているかを判定
+        if (sendCheckboxQuestionnaire[i].checked) {
+            flag = true;
+            sendCheckboxQuestionnaireString += sendCheckboxQuestionnaire[i].value + ",";
+            //alert(document.audition.audition-send-checkbox-questionnaire[i].value + "が選択されました。");
+        }
+    }
+    
+    // 何も選択されていない場合の処理
+    if (!flag) {
+        alert("アンケートの項目が選択されていません。");
+    }
+    
+    var sendComment = document.getElementById("audition-send-comment");
+    var sendSite = document.getElementById("audition-send-site");
+    var sendCheckboxNotification = document.getElementById("audition-send-checkbox-notification");
+    var sendCheckboxMail = document.getElementById("audition-send-checkbox-mail");
+    var sendMail = "";
+    sendMail = "名前 : " + sendNama.value + "%0d%0aメールアドレス : " + sendMailAddress.value + " %0d%0aコメント : " + sendComment.value + "%0d%0aアンケート : " + sendCheckboxQuestionnaireString +"%0d%0a%0d%0a新しいコメントをメールで通知 : " + sendCheckboxNotification.checked + "%0d%0a新しい投稿をメールで受け取る : " + sendCheckboxMail.checked;
+    address = 'audition@sunstripe.main.jp';
+    subject = 'オーディション - お問い合わせ';
+    body = '本文' + sendMail;
+    
+    location.href = 'mailto:' + address + '?subject=' + subject + '&body=' + body;
+    
+}
+
 function sendtoMail() {
     var sendNama = document.getElementById("send-nama");
     var sendMailAddress = document.getElementById("send-mailaddress");
@@ -100,10 +139,9 @@ function sendtoMail() {
     var sendCheckboxMail = document.getElementById("send-checkbox-mail");
     var sendMail = "";
     sendMail = "名前 : " + sendNama.value + "%0d%0aメールアドレス : " + sendMailAddress.value + " %0d%0aコメント : " + sendComment.value + "%0d%0a%0d%0a新しいコメントをメールで通知 : " + sendCheckboxNotification.checked + "%0d%0a新しい投稿をメールで受け取る : " + sendCheckboxMail.checked;
-    address = 'stage-card@karaage.site';
+    address = 'cardgame@karaage.site';
     subject = 'お問い合わせ';
     body = '本文' + sendMail;
     
     location.href = 'mailto:' + address + '?subject=' + subject + '&body=' + body;
-    
-    }
+}
